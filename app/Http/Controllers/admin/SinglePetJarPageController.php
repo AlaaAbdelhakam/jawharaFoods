@@ -4,36 +4,36 @@ namespace App\Http\Controllers\admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\SingleMetallicTinsPageContent;
+use App\Models\SinglePetJarPageContent;
 use App\Models\Jawharacproduct;
 use File;
 use Storage;
 use Carbon\Carbon;
-class SingleMetallicTinsPageController extends Controller
+class SinglePetJarPageController extends Controller
 {
     public function create(){
         $models = Jawharacproduct::all();
 
-        return view('front.single_metallic_tins_page',compact('models'));
+        return view('front.single_pet_jar_page_contents',compact('models'));
     }
     public function insert(Request $request)
     {
         try {
             // $year = now()->year;
-            $main=SingleMetallicTinsPageContent::all();
+            $main=SinglePetJarPageContent::all();
             if($request->jawharacproducts_id == $main->jawharacproducts_id) {
-                $old= SingleMetallicTinsPageContent::find($request->jawharacproducts_id)->delete();
-                if ($request->img_MTfirst) {
-@unlink(public_path($old->img_MTfirst));
+                $old= SinglePetJarPageContent::find($request->jawharacproducts_id)->delete();
+                if ($request->img_PJfirst) {
+@unlink(public_path($old->img_PJfirst));
             }
-            if ($request->img_MTsecond ) {
-@unlink(public_path($old->img_MTsecond));
+            if ($request->img_PJsecond ) {
+@unlink(public_path($old->img_PJsecond));
             }
-            if ($request->img_MTthird) {
-@unlink(public_path($old->img_MTthird));
+            if ($request->img_PJthird) {
+@unlink(public_path($old->img_PJthird));
             }
             }
-            $directoryPath = 'public/uploads/singlemetallictinspage';
+            $directoryPath = 'public/uploads/singlepetjarpage';
             // if (Storage::disk('local')->exists($directoryPath)) {
             //   Storage::disk('local')->deleteDirectory($directoryPath);
             
@@ -61,7 +61,7 @@ class SingleMetallicTinsPageController extends Controller
             $data = array_merge($request->all(), $uploadedImages);
     
             // Create a new SingleMetallicTinsPageContent instance
-            SingleMetallicTinsPageContent::updateOrCreate($data);
+            SinglePetJarPageContent::updateOrCreate($data);
     
             return redirect()->back()->with('success', 'Data inserted successfully.');
         } catch (\Exception $e) {
@@ -69,4 +69,4 @@ class SingleMetallicTinsPageController extends Controller
             return back()->with('error', 'Error: ' . $e->getMessage())->withInput();
         }
     }
-    }
+}

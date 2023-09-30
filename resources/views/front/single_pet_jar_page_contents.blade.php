@@ -13,7 +13,7 @@
                                 </li>
                                 <li class="breadcrumb-item"><a href="{{route('admin.dashboard')}}">Main Page </a>
                                 </li>
-                                <li class="breadcrumb-item active">  Change single_metallic_tins_page_contents
+                                <li class="breadcrumb-item active">  Change single_pet_jar_page_contents
                                 </li>
                             </ol>
                         </div>
@@ -27,7 +27,7 @@
                         <div class="col-md-12">
                             <div class="card">
                                 <div class="card-header">
-                                    <h4 class="card-title" id="basic-layout-form">single_metallic_tins_page_contents </h4>
+                                    <h4 class="card-title" id="basic-layout-form">single_pet_jar_page_contents </h4>
                                     <a class="heading-elements-toggle"><i
                                             class="la la-ellipsis-v font-medium-3"></i></a>
                                     <div class="heading-elements">
@@ -44,7 +44,7 @@
                                 <div class="card-content collapse show">
                                     <div class="card-body">
                                         <form class="form"
-                                              action="{{route('insert_single_metallic_tins_page_contents')}}"
+                                              action="{{route('insert_single_pet_jar_page_contents')}}"
                                               method="POST"
                                               enctype="multipart/form-data">
                                             @csrf
@@ -62,7 +62,7 @@
 
                                             <div class="form-body">
 
-                                                <h4 class="form-section"><i class="ft-home"></i> insert_single_metallic_tins_page_contents </h4>
+                                                <h4 class="form-section"><i class="ft-home"></i> insert_single_pet_jar_page_contents </h4>
                                                 <div class="row">
                                                     <div class="col-md-6">
                                                         <div class="form-group">
@@ -98,13 +98,13 @@
 
                                                     <div class="col-md-6">
                                                         <div class="form-group">
-                                                            <label for="projectinput1">MTitem
+                                                            <label for="projectinput1"> PJitem
                                                                  </label>
                                                             <input type="text" 
                                                                    class="form-control"
                                                                    placeholder="  "
-                                                                   value="{{old('MTitem')}}"
-                                                                   name="MTitem">
+                                                                   value="{{old('PJitem')}}"
+                                                                   name="PJitem">
                                                             @error("name")
                                                             <span class="text-danger">{{$message}}</span>
                                                             @enderror
@@ -112,13 +112,13 @@
                                                     </div>
                                                     <div class="col-md-6">
                                                         <div class="form-group">
-                                                            <label for="projectinput1"> MTbrand
+                                                            <label for="projectinput1"> PJbrand
                                                                  </label>
                                                             <input type="text" 
                                                                    class="form-control"
                                                                    placeholder="  "
-                                                                   value="{{old('MTbrand')}}"
-                                                                   name="MTbrand">
+                                                                   value="{{old('PJbrand')}}"
+                                                                   name="PJbrand">
                                                             @error("name")
                                                             <span class="text-danger">{{$message}}</span>
                                                             @enderror
@@ -128,13 +128,13 @@
                                
                                                     <div class="col-md-6">
                                                         <div class="form-group">
-                                                            <label for="projectinput1"> MTcasepack
+                                                            <label for="projectinput1"> PJcasepack
                                                                  </label>
                                                             <input type="text" 
                                                                    class="form-control"
                                                                    placeholder="  "
-                                                                   value="{{old('MTcasepack')}}"
-                                                                   name="MTcasepack">
+                                                                   value="{{old('PJcasepack')}}"
+                                                                   name="PJcasepack">
                                                             @error("name")
                                                             <span class="text-danger">{{$message}}</span>
                                                             @enderror
@@ -142,13 +142,13 @@
                                                     </div>
                                                     <div class="col-md-6">
                                                         <div class="form-group">
-                                                            <label for="projectinput1"> MTorigin
+                                                            <label for="projectinput1"> PJorigin
                                                                  </label>
                                                             <input type="text" 
                                                                    class="form-control"
                                                                    placeholder="  "
-                                                                   value="{{old('MTorigin')}}"
-                                                                   name="MTorigin">
+                                                                   value="{{old('PJorigin')}}"
+                                                                   name="PJorigin">
                                                             @error("name")
                                                             <span class="text-danger">{{$message}}</span>
                                                             @enderror
@@ -160,13 +160,13 @@
 
                                                 <div class="col-md-6">
                                                     <div class="form-group">
-                                                        <label for="projectinput1"> MTingridients
+                                                        <label for="projectinput1"> PJingridients
                                                              </label>
                                                         <input type="text" 
                                                                class="form-control"
                                                                placeholder="  "
-                                                               value="{{old('MTingridients')}}"
-                                                               name="MTingridients">
+                                                               value="{{old('PJingridients')}}"
+                                                               name="PJingridients">
                                                         @error("name")
                                                         <span class="text-danger">{{$message}}</span>
                                                         @enderror
@@ -174,13 +174,13 @@
                                                 </div>
                                                 <div class="col-md-6">
                                                     <div class="form-group">
-                                                        <label for="projectinput1"> MTsealedshelflife
+                                                        <label for="projectinput1"> PJsealedshelflife
                                                              </label>
                                                         <input type="text" 
                                                                class="form-control"
                                                                placeholder="  "
-                                                               value="{{old('MTsealedshelflife')}}"
-                                                               name="MTsealedshelflife">
+                                                               value="{{old('PJsealedshelflife')}}"
+                                                               name="PJsealedshelflife">
                                                         @error("name")
                                                         <span class="text-danger">{{$message}}</span>
                                                         @enderror
@@ -195,13 +195,13 @@
 
                                             <div class="col-md-6">
                                                 <div class="form-group">
-                                                    <label for="projectinput1"> MTstorage
+                                                    <label for="projectinput1"> PJstorage
                                                          </label>
                                                     <input type="text" 
                                                            class="form-control"
                                                            placeholder="  "
-                                                           value="{{old('MTstorage')}}"
-                                                           name="MTstorage">
+                                                           value="{{old('PJstorage')}}"
+                                                           name="PJstorage">
                                                     @error("name")
                                                     <span class="text-danger">{{$message}}</span>
                                                     @enderror
@@ -209,13 +209,13 @@
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="form-group">
-                                                    <label for="projectinput1"> MTattributes
+                                                    <label for="projectinput1"> PJattributes
                                                          </label>
                                                     <input type="text" 
                                                            class="form-control"
                                                            placeholder="  "
-                                                           value="{{old('MTattributes')}}"
-                                                           name="MTattributes">
+                                                           value="{{old('PJattributes')}}"
+                                                           name="PJattributes">
                                                     @error("name")
                                                     <span class="text-danger">{{$message}}</span>
                                                     @enderror
@@ -232,13 +232,13 @@
 
                                         <div class="col-md-6">
                                             <div class="form-group">
-                                                <label for="projectinput1"> MTdrainedweight
+                                                <label for="projectinput1"> PJdrainedweight
                                                      </label>
                                                 <input type="text" 
                                                        class="form-control"
                                                        placeholder="  "
-                                                       value="{{old('MTdrainedweight')}}"
-                                                       name="MTdrainedweight">
+                                                       value="{{old('PJdrainedweight')}}"
+                                                       name="PJdrainedweight">
                                                 @error("name")
                                                 <span class="text-danger">{{$message}}</span>
                                                 @enderror
@@ -246,13 +246,13 @@
                                         </div>
                                         <div class="col-md-6">
                                             <div class="form-group">
-                                                <label for="projectinput1"> MTgrosscaseweight
+                                                <label for="projectinput1"> PJgrosscaseweight
                                                      </label>
                                                 <input type="text" 
                                                        class="form-control"
                                                        placeholder="  "
-                                                       value="{{old('MTgrosscaseweight')}}"
-                                                       name="MTgrosscaseweight">
+                                                       value="{{old('PJgrosscaseweight')}}"
+                                                       name="PJgrosscaseweight">
                                                 @error("name")
                                                 <span class="text-danger">{{$message}}</span>
                                                 @enderror
@@ -266,13 +266,13 @@
 
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <label for="projectinput1"> MTcasedimensions
+                                            <label for="projectinput1"> PJcasedimensions
                                                  </label>
                                             <input type="text" 
                                                    class="form-control"
                                                    placeholder="  "
-                                                   value="{{old('MTcasedimensions')}}"
-                                                   name="MTcasedimensions">
+                                                   value="{{old('PJcasedimensions')}}"
+                                                   name="PJcasedimensions">
                                             @error("name")
                                             <span class="text-danger">{{$message}}</span>
                                             @enderror
@@ -280,13 +280,13 @@
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <label for="projectinput1"> MTcasecube
+                                            <label for="projectinput1"> PJcasecube
                                                  </label>
                                             <input type="text" 
                                                    class="form-control"
                                                    placeholder="  "
-                                                   value="{{old('MTcasecube')}}"
-                                                   name="MTcasecube">
+                                                   value="{{old('PJcasecube')}}"
+                                                   name="PJcasecube">
                                             @error("name")
                                             <span class="text-danger">{{$message}}</span>
                                             @enderror
@@ -301,13 +301,13 @@
 
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="projectinput1"> MTtihi
+                                        <label for="projectinput1"> PJtihi
                                              </label>
                                         <input type="text" 
                                                class="form-control"
                                                placeholder="  "
-                                               value="{{old('MTtihi')}}"
-                                               name="MTtihi">
+                                               value="{{old('PJtihi')}}"
+                                               name="PJtihi">
                                         @error("name")
                                         <span class="text-danger">{{$message}}</span>
                                         @enderror
@@ -315,13 +315,13 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="projectinput1"> MTallergens
+                                        <label for="projectinput1"> PJallergens
                                              </label>
                                         <input type="text" 
                                                class="form-control"
                                                placeholder="  "
-                                               value="{{old('MTallergens')}}"
-                                               name="MTallergens">
+                                               value="{{old('PJallergens')}}"
+                                               name="PJallergens">
                                         @error("name")
                                         <span class="text-danger">{{$message}}</span>
                                         @enderror
@@ -330,23 +330,23 @@
                                 
                                 <div class="col-md-6">
                 <div class="form-group">
-                                <label for="">img_MTfirst</label>
-                                <input type="file" name="img_MTfirst" class="form-control" placeholder="ارفق صورة">
+                                <label for="">img_PJfirst</label>
+                                <input type="file" name="img_PJfirst" class="form-control" placeholder="ارفق صورة">
                             </div>
 
 
                 
             <div class="form-group">
-                            <label for="">img_MTsecond</label>
-                            <input type="file" name="img_MTsecond" class="form-control" placeholder="ارفق صورة">
+                            <label for="">img_PJsecond</label>
+                            <input type="file" name="img_PJsecond" class="form-control" placeholder="ارفق صورة">
                         </div>
 
                     </div>
                     <div class="col-md-6">
 
         <div class="form-group">
-                        <label for="">img_MTthird</label>
-                        <input type="file" name="img_MTthird" class="form-control" placeholder="ارفق صورة">
+                        <label for="">img_PJthird</label>
+                        <input type="file" name="img_PJthird" class="form-control" placeholder="ارفق صورة">
                     </div>
 
 

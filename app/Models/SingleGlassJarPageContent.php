@@ -12,6 +12,6 @@ class SingleGlassJarPageContent extends Model
   
     public function product()
     {
-        return $this->belongsTo(App\Models\Jawharacproduct::class);
+        return $this->belongsTo(App\Models\Jawharacproduct::class, 'jawharacproducts_id');
     }
 }

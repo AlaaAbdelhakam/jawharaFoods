@@ -33,6 +33,9 @@ Route::group(['namespace' => 'App\Http\Controllers\admin','prefix' => 'admin'], 
    
     Route::get('/single_metallic_tins_page_contents', 'SingleMetallicTinsPageController@create')->name('create_single_metallic_tins_page_contents');
     Route::post('/single_metallic_tins_page_contentsinsert', 'SingleMetallicTinsPageController@insert')->name('insert_single_metallic_tins_page_contents');
+   
+    Route::get('/single_pet_jar_page_contents', 'SinglePetJarPageController@create')->name('create_single_pet_jar_page_contents');
+    Route::post('/single_pet_jar_page_contentsinsert', 'SinglePetJarPageController@insert')->name('insert_single_pet_jar_page_contents');
 
     Route::group(['prefix' => 'jawharaProduct'], function () {
         Route::get('/','JawharacProductController@index') -> name('admin.product');

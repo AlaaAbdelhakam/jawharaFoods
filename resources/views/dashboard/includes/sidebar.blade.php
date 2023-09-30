@@ -109,6 +109,28 @@
                         </a>
                     </li>
                     </li>
+                    <li class="active"><a class="menu-item" href=""
+                            data-i18n="nav.dash.ecommerce">single_metallic_tins_page </a>
+                    </li> 
+                        {{-- @endrole
+                        @role('superadmin') --}}
+
+                        <li><a class="menu-item" href="{{ route('create_single_metallic_tins_page_contents') }}" data-i18n="nav.dash.crypto">
+                            create new
+                        </a>
+                    </li>
+                    </li>
+                    <li class="active"><a class="menu-item" href=""
+                            data-i18n="nav.dash.ecommerce">single_pet_jar_page_contents </a>
+                    </li> 
+                        {{-- @endrole
+                        @role('superadmin') --}}
+
+                        <li><a class="menu-item" href="{{ route('create_single_pet_jar_page_contents') }}" data-i18n="nav.dash.crypto">
+                            create new
+                        </a>
+                    </li>
+                    </li>
 
 
 

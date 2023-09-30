@@ -47,7 +47,8 @@
                                               action="{{route('insert_single_glass_jar_page')}}"
                                               method="POST"
                                               enctype="multipart/form-data">
-                                            @csrf
+                                           
+                                              @csrf
 
                                             {{-- <div class="form-group">
                                                 <label> صوره الماركة </label>

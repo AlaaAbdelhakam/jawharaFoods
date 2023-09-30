@@ -20,20 +20,22 @@ class SingleGlassJarPageController extends Controller
     {
         try {
             // $year = now()->year;
-            $main=SingleGlassJarPageContent::all();
-            if($request->jawharacproducts_id == $main->jawharacproducts_id) {
-              $old=SingleGlassJarPageContent::find($request->jawharacproducts_id);
-              if ($request->img_GJfirst) {
-                @unlink(public_path($old->img_GJfirst));
+            $main = SingleGlassJarPageContent::where('jawharacproducts_id', $request->jawharacproducts_id)->first();
+
+            if ($main) {
+                if ($request->img_GJfirst) {
+@unlink(public_path($main->img_GJfirst));
+                }
+                if ($request->img_GJsecond) {
+@unlink(public_path($main->img_GJsecond));
+                }
+                if ($request->img_GJthird) {
+@unlink(public_path($main->img_GJthird));
+                }
+    
+                $main->delete();
             }
-            if ($request->img_GJsecond) {
-                @unlink(public_path($old->img_GJsecond));
-            }
-            if ($request->img_GJthird) {
-                @unlink(public_path($old->img_GJthird));
-            }
-            $old->delete();
-            }
+
             $directoryPath = 'public/uploads/singleglassjarpage';
             // if (Storage::disk('local')->exists($directoryPath)) {
             //   Storage::disk('local')->deleteDirectory($directoryPath);
@@ -58,7 +60,7 @@ class SingleGlassJarPageController extends Controller
             }
     
             // Combine uploaded images and request data
-            $data = array_merge($request->all(), $uploadedImages);
+            $data = array_merge($request->except(['_token']), $uploadedImages);
     
             // Create a new SingleGlassJarPageContent instance
             SingleGlassJarPageContent::updateOrCreate($data);
