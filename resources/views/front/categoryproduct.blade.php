@@ -417,17 +417,17 @@ height: 100% !important; */
                     <a href="#" style="color: #234b91;" class="nav-link dropdown-toggle"
                         data-bs-toggle="dropdown">Products</a>
                     <div class="dropdown-menu bg-light m-0">
-                        <a href="{{ route('singleproduct') }}" style="color: #234b91;" class="dropdown-item">Pickled
+                        <a href="" style="color: #234b91;" class="dropdown-item">Pickled
                             Peppers</a>
-                        <a href="{{ route('singleproduct') }}" style="color: #234b91;" class="dropdown-item">Pickled
+                        <a href="" style="color: #234b91;" class="dropdown-item">Pickled
                             Olives</a>
-                        <a href="{{ route('singleproduct') }}" style="color: #234b91;" class="dropdown-item">Pickled
+                        <a href="" style="color: #234b91;" class="dropdown-item">Pickled
                             Artichokes</a>
-                        <a href="{{ route('singleproduct') }}" style="color: #234b91;" class="dropdown-item">Pepper
+                        <a href="" style="color: #234b91;" class="dropdown-item">Pepper
                             Paste</a>
-                        <a href="{{ route('singleproduct') }}" style="color: #234b91;" class="dropdown-item">Roasted
+                        <a href="" style="color: #234b91;" class="dropdown-item">Roasted
                             Peppers</a>
-                        <a href="{{ route('singleproduct') }}" style="color: #234b91;"
+                        <a href="" style="color: #234b91;"
                             class="dropdown-item">Banderillas</a>
                     </div>
                 </div>
@@ -709,7 +709,7 @@ height: 100% !important; */
               <!--Text-->
               <p class="card-text" style="color: #234b91">{{ $post->description }}</p>
               <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
-              <button type="button" class="btn btn-light-blue btn-md" style="color: #234b91">Read more</button>
+              <a href="{{ route('singleproduct', $post->id) }}" class="btn btn-light-blue btn-md" style="color: #234b91">Read more</a>
         
             </div>
         

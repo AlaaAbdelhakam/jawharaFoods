@@ -8,7 +8,7 @@ use App\Http\Controllers\admin\CategoryController;
 use App\Http\Controllers\CalenderController;
 use App\Http\Controllers\FullCalendarController;
 use App\Http\Controllers\HomeController;
-use App\Http\Controllers\SongsController;
+use App\Http\Controllers\PostsController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -19,6 +19,12 @@ use App\Http\Controllers\SongsController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+// Assuming your namespace is 'App\Http\Controllers'
+Route::get('/singleproduct/{id}', [PostsController::class, 'index'])->name('singleproduct');
+// Assuming your namespace is 'App\Http\Controllers'
+Route::get('/categoryproduct/{id}', [PostsController::class, 'categoryproduct'])->name('categoryproducts');
+Route::get('/contactus', [PostsController::class, 'contact'])->name('contactus');
+
 Route::get('songs/create', [SongsController::class, 'create'])->name('song.create');
 Route::post('songs', [SongsController::class, 'store'])->name('song.store');
 Route::group(['namespace' => 'App\Http\Controllers\admin','prefix' => 'admin'], function () {
@@ -117,9 +123,9 @@ Route::post('/deleteevent','FullCalendarController@deleteEvent');
 
         
         Route::group(['prefix' => 'posts'], function() {
-            Route::get('/singleproduct', 'PostsController@index')->name('singleproduct');
-            Route::get('/categoryproduct/{id}', 'PostsController@categoryproduct')->name('categoryproduct');
-            Route::get('/contactus', 'PostsController@contact')->name('contactus');
+            // Route::get('/singleproduct/{id}', 'PostsController@index')->name('singleproduct');
+            // Route::get('/categoryproduct/{id}', 'PostsController@categoryproduct')->name('categoryproduct');
+            // Route::get('/contactus', 'PostsController@contact')->name('contactus');
 
            
             

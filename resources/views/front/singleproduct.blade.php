@@ -401,18 +401,17 @@ height: 100% !important; */
                     <a href="#" style="color: #234b91;" class="nav-link dropdown-toggle"
                         data-bs-toggle="dropdown">Products</a>
                     <div class="dropdown-menu bg-light m-0">
-                        <a href="{{ route('singleproduct') }}" style="color: #234b91;" class="dropdown-item">Pickled
+                        <a href="" style="color: #234b91;" class="dropdown-item">Pickled
                             Peppers</a>
-                        <a href="{{ route('singleproduct') }}" style="color: #234b91;" class="dropdown-item">Pickled
+                        <a href="" style="color: #234b91;" class="dropdown-item">Pickled
                             Olives</a>
-                        <a href="{{ route('singleproduct') }}" style="color: #234b91;" class="dropdown-item">Pickled
+                        <a href="" style="color: #234b91;" class="dropdown-item">Pickled
                             Artichokes</a>
-                        <a href="{{ route('singleproduct') }}" style="color: #234b91;" class="dropdown-item">Pepper
+                        <a href="" style="color: #234b91;" class="dropdown-item">Pepper
                             Paste</a>
-                        <a href="{{ route('singleproduct') }}" style="color: #234b91;" class="dropdown-item">Roasted
+                        <a href="" style="color: #234b91;" class="dropdown-item">Roasted
                             Peppers</a>
-                        <a href="{{ route('singleproduct') }}" style="color: #234b91;"
-                            class="dropdown-item">Banderillas</a>
+                        <a href="" style="color: #234b91;" class="dropdown-item">Banderillas</a>
                     </div>
                 </div>
                 <a href="contact.html" class="nav-item nav-link active" style="color: #234b91;">Contact</a>
@@ -1583,21 +1582,21 @@ height: 100% !important; */
                                     </div>
                                     <div class="carousel-inner">
                                         <div class="carousel-item active" data-bs-interval="10000">
-                                            <img src="{{ asset('singleproduct/img/first.jpg') }}"
+                                            <img src="{{ Storage::url($singleglassjar->first()->img_GJfirst) }}"
                                                 class="d-block w-100" alt="...">
                                             <div class="carousel-caption d-none d-md-block">
 
                                             </div>
                                         </div>
                                         <div class="carousel-item" data-bs-interval="2000">
-                                            <img src="{{ asset('singleproduct/img/second.jpg') }}"
+                                            <img src="{{ Storage::url($singleglassjar->first()->img_GJsecond) }}"
                                                 class="d-block w-100" alt="...">
                                             <div class="carousel-caption d-none d-md-block">
 
                                             </div>
                                         </div>
                                         <div class="carousel-item">
-                                            <img src="{{ asset('singleproduct/img/third.jpg') }}"
+                                            <img src="{{ Storage::url($singleglassjar->first()->img_GJthird) }}"
                                                 class="d-block w-100" alt="...">
                                             <div class="carousel-caption d-none d-md-block">
 
@@ -1716,15 +1715,13 @@ height: 100% !important; */
                         <main class="col-lg-6">
                             <div class="ps-lg-3">
                                 <h4 class="title text-dark">
-                                    Mushrooms Marinated with Garlic & Herbs #4
+                                    {{ $singleglassjar->first()->title }}
                                 </h4>
 
                                 <hr />
 
                                 <p>
-                                    Succulent and savory, our Divina mushrooms are grown and harvested in Kennett
-                                    Square, PA, (the mushroom capital of the world) before being preserved in a bright
-                                    and vinegary garlic and herb marinade.
+                                    {{ $singleglassjar->first()->description }}
                                 </p>
                                 <br>
                                 <h5>PRODUCT DETAILS</h5>
@@ -1732,57 +1729,56 @@ height: 100% !important; */
                                 <hr />
                                 <div class="row ">
                                     <dt class="col-5">ITEM #</dt>
-                                    <dd class="col-7">55000</dd>
+                                    <dd class="col-7">{{ $singleglassjar->first()->GJitem }}</dd>
                                     <hr />
                                     <dt class="col-5">BRAND</dt>
-                                    <dd class="col-7">Divina</dd>
+                                    <dd class="col-7">{{ $singleglassjar->first()->GJbrand }}</dd>
                                     <hr />
                                     <dt class="col-5">CASE PACK</dt>
-                                    <dd class="col-7">2/6.25 lb Pouch</dd>
+                                    <dd class="col-7">{{ $singleglassjar->first()->GJcasepack }}</dd>
                                     <hr />
                                     <dt class="col-5">ORIGIN</dt>
-                                    <dd class="col-7">USA</dd>
+                                    <dd class="col-7">{{ $singleglassjar->first()->GJorigin }}</dd>
                                     <hr />
 
                                     <dt class="col-5">INGREDIENTS</dt>
-                                    <dd class="col-7">mushrooms, water, soybean oil, red peppers, distilled vinegar,
-                                        garlic, salt, oregano, marjoram</dd>
+                                    <dd class="col-7">{{ $singleglassjar->first()->GJingridients }}</dd>
                                     <hr />
 
                                     <dt class="col-5">SEALED SHELF LIFE</dt>
-                                    <dd class="col-7">24 months dry</dd>
+                                    <dd class="col-7">{{ $singleglassjar->first()->GJsealedshelflife }}</dd>
                                     <hr />
 
                                     <dt class="col-5">STORAGE</dt>
-                                    <dd class="col-7">Dry</dd>
+                                    <dd class="col-7">{{ $singleglassjar->first()->GJstorage }}</dd>
                                     <hr />
 
                                     <dt class="col-5">ATTRIBUTES</dt>
-                                    <dd class="col-7">Dairy Free, Gluten Free, Non-GMO, Vegan, Vegetarian</dd>
+                                    <dd class="col-7">{{ $singleglassjar->first()->GJattributes }}</dd>
                                     <hr />
 
                                     <dt class="col-5">DRAINED WEIGHT</dt>
-                                    <dd class="col-7">8.5 lb</dd>
+                                    <dd class="col-7">{{ $singleglassjar->first()->GJdrainedweight }}</dd>
                                     <hr />
 
                                     <dt class="col-5">GROSS CASE WEIGHT</dt>
-                                    <dd class="col-7">8.5 lb</dd>
+                                    <dd class="col-7">{{ $singleglassjar->first()->GJgrosscaseweight }}</dd>
                                     <hr />
 
                                     <dt class="col-5">CASE DIMENSIONS</dt>
-                                    <dd class="col-7">14.3" x 8.3" x 5.7" (LxWxH)</dd>
+                                    <dd class="col-7">{{ $singleglassjar->first()->GJcasedimensions }}</dd>
                                     <hr />
 
                                     <dt class="col-5">CASE CUBE</dt>
-                                    <dd class="col-7">0.39</dd>
+                                    <dd class="col-7">{{ $singleglassjar->first()->GJcasecube }}</dd>
                                     <hr />
 
                                     <dt class="col-5">TI-HI</dt>
-                                    <dd class="col-7">15x11</dd>
+                                    <dd class="col-7">{{ $singleglassjar->first()->GJtihi }}</dd>
                                     <hr />
 
                                     <dt class="col-5">ALLERGENS</dt>
-                                    <dd class="col-7">None</dd>
+                                    <dd class="col-7">{{ $singleglassjar->first()->GJallergens }}</dd>
                                     <hr />
                                 </div>
 
@@ -1866,21 +1862,21 @@ height: 100% !important; */
                                     </div>
                                     <div class="carousel-inner">
                                         <div class="carousel-item active" data-bs-interval="10000">
-                                            <img src="{{ asset('singleproduct/img/first.jpg') }}"
+                                            <img src="{{ Storage::url($singlepetjar->first()->img_PJfirst) }}"
                                                 class="d-block w-100" alt="...">
                                             <div class="carousel-caption d-none d-md-block">
 
                                             </div>
                                         </div>
                                         <div class="carousel-item" data-bs-interval="2000">
-                                            <img src="{{ asset('singleproduct/img/second.jpg') }}"
+                                            <img src="{{ Storage::url($singlepetjar->first()->img_PJsecond) }}"
                                                 class="d-block w-100" alt="...">
                                             <div class="carousel-caption d-none d-md-block">
 
                                             </div>
                                         </div>
                                         <div class="carousel-item">
-                                            <img src="{{ asset('singleproduct/img/third.jpg') }}"
+                                            <img src="{{ Storage::url($singlepetjar->first()->img_PJthird) }}"
                                                 class="d-block w-100" alt="...">
                                             <div class="carousel-caption d-none d-md-block">
 
@@ -1999,15 +1995,13 @@ height: 100% !important; */
                         <main class="col-lg-6">
                             <div class="ps-lg-3">
                                 <h4 class="title text-dark">
-                                    Mushrooms Marinated with Garlic & Herbs #5
+                                    {{ $singlepetjar->first()->title }}
                                 </h4>
 
                                 <hr />
 
                                 <p>
-                                    Succulent and savory, our Divina mushrooms are grown and harvested in Kennett
-                                    Square, PA, (the mushroom capital of the world) before being preserved in a bright
-                                    and vinegary garlic and herb marinade.
+                                    {{ $singlepetjar->first()->description }}
                                 </p>
                                 <br>
                                 <h5>PRODUCT DETAILS</h5>
@@ -2015,57 +2009,56 @@ height: 100% !important; */
                                 <hr />
                                 <div class="row ">
                                     <dt class="col-5">ITEM #</dt>
-                                    <dd class="col-7">55000</dd>
+                                    <dd class="col-7">{{ $singlepetjar->first()->PJitem }}</dd>
                                     <hr />
                                     <dt class="col-5">BRAND</dt>
-                                    <dd class="col-7">Divina</dd>
+                                    <dd class="col-7">{{ $singlepetjar->first()->PJbrand }}</dd>
                                     <hr />
                                     <dt class="col-5">CASE PACK</dt>
-                                    <dd class="col-7">2/6.25 lb Pouch</dd>
+                                    <dd class="col-7">{{ $singlepetjar->first()->PJcasepack }}</dd>
                                     <hr />
                                     <dt class="col-5">ORIGIN</dt>
-                                    <dd class="col-7">USA</dd>
+                                    <dd class="col-7">{{ $singlepetjar->first()->PJorigin }}</dd>
                                     <hr />
 
                                     <dt class="col-5">INGREDIENTS</dt>
-                                    <dd class="col-7">mushrooms, water, soybean oil, red peppers, distilled vinegar,
-                                        garlic, salt, oregano, marjoram</dd>
+                                    <dd class="col-7">{{ $singlepetjar->first()->PJingridients }}</dd>
                                     <hr />
 
                                     <dt class="col-5">SEALED SHELF LIFE</dt>
-                                    <dd class="col-7">24 months dry</dd>
+                                    <dd class="col-7">{{ $singlepetjar->first()->PJsealedshelflife }}</dd>
                                     <hr />
 
                                     <dt class="col-5">STORAGE</dt>
-                                    <dd class="col-7">Dry</dd>
+                                    <dd class="col-7">{{ $singlepetjar->first()->PJstorage }}</dd>
                                     <hr />
 
                                     <dt class="col-5">ATTRIBUTES</dt>
-                                    <dd class="col-7">Dairy Free, Gluten Free, Non-GMO, Vegan, Vegetarian</dd>
+                                    <dd class="col-7">{{ $singlepetjar->first()->PJattributes }}</dd>
                                     <hr />
 
                                     <dt class="col-5">DRAINED WEIGHT</dt>
-                                    <dd class="col-7">8.5 lb</dd>
+                                    <dd class="col-7">{{ $singlepetjar->first()->PJdrainedweight }}</dd>
                                     <hr />
 
                                     <dt class="col-5">GROSS CASE WEIGHT</dt>
-                                    <dd class="col-7">8.5 lb</dd>
+                                    <dd class="col-7">{{ $singlepetjar->first()->PJgrosscaseweight }}</dd>
                                     <hr />
 
                                     <dt class="col-5">CASE DIMENSIONS</dt>
-                                    <dd class="col-7">14.3" x 8.3" x 5.7" (LxWxH)</dd>
+                                    <dd class="col-7">{{ $singlepetjar->first()->PJcasedimensions }}</dd>
                                     <hr />
 
                                     <dt class="col-5">CASE CUBE</dt>
-                                    <dd class="col-7">0.39</dd>
+                                    <dd class="col-7">{{ $singlepetjar->first()->PJcasecube }}</dd>
                                     <hr />
 
                                     <dt class="col-5">TI-HI</dt>
-                                    <dd class="col-7">15x11</dd>
+                                    <dd class="col-7">{{ $singlepetjar->first()->PJtihi }}</dd>
                                     <hr />
 
                                     <dt class="col-5">ALLERGENS</dt>
-                                    <dd class="col-7">None</dd>
+                                    <dd class="col-7">{{ $singlepetjar->first()->PJallergens }}</dd>
                                     <hr />
                                 </div>
 
@@ -2149,21 +2142,21 @@ height: 100% !important; */
                                     </div>
                                     <div class="carousel-inner">
                                         <div class="carousel-item active" data-bs-interval="10000">
-                                            <img src="{{ asset('singleproduct/img/first.jpg') }}"
+                                            <img src="{{ Storage::url($singlemetallictins->first()->img_MTfirst) }}"
                                                 class="d-block w-100" alt="...">
                                             <div class="carousel-caption d-none d-md-block">
 
                                             </div>
                                         </div>
                                         <div class="carousel-item" data-bs-interval="2000">
-                                            <img src="{{ asset('singleproduct/img/second.jpg') }}"
+                                            <img src="{{ Storage::url($singlemetallictins->first()->img_MTsecond) }}"
                                                 class="d-block w-100" alt="...">
                                             <div class="carousel-caption d-none d-md-block">
 
                                             </div>
                                         </div>
                                         <div class="carousel-item">
-                                            <img src="{{ asset('singleproduct/img/third.jpg') }}"
+                                            <img src="{{ Storage::url($singlemetallictins->first()->img_MTthird) }}"
                                                 class="d-block w-100" alt="...">
                                             <div class="carousel-caption d-none d-md-block">
 
@@ -2287,15 +2280,13 @@ height: 100% !important; */
                         <main class="col-lg-6">
                             <div class="ps-lg-3">
                                 <h4 class="title text-dark">
-                                    Mushrooms Marinated with Garlic & Herbs #6
+                                    {{ $singlemetallictins->first()->title }}
                                 </h4>
 
                                 <hr />
 
                                 <p>
-                                    Succulent and savory, our Divina mushrooms are grown and harvested in Kennett
-                                    Square, PA, (the mushroom capital of the world) before being preserved in a bright
-                                    and vinegary garlic and herb marinade.
+                                    {{ $singlemetallictins->first()->description }}
                                 </p>
                                 <br>
                                 <h5>PRODUCT DETAILS</h5>
@@ -2303,57 +2294,56 @@ height: 100% !important; */
                                 <hr />
                                 <div class="row ">
                                     <dt class="col-5">ITEM #</dt>
-                                    <dd class="col-7">55000</dd>
+                                    <dd class="col-7">{{ $singlemetallictins->first()->MTitem }}</dd>
                                     <hr />
                                     <dt class="col-5">BRAND</dt>
-                                    <dd class="col-7">Divina</dd>
+                                    <dd class="col-7">{{ $singlemetallictins->first()->MTbrand }}</dd>
                                     <hr />
                                     <dt class="col-5">CASE PACK</dt>
-                                    <dd class="col-7">2/6.25 lb Pouch</dd>
+                                    <dd class="col-7">{{ $singlemetallictins->first()->MTcasepack }}</dd>
                                     <hr />
                                     <dt class="col-5">ORIGIN</dt>
-                                    <dd class="col-7">USA</dd>
+                                    <dd class="col-7">{{ $singlemetallictins->first()->MTorigin }}</dd>
                                     <hr />
 
                                     <dt class="col-5">INGREDIENTS</dt>
-                                    <dd class="col-7">mushrooms, water, soybean oil, red peppers, distilled vinegar,
-                                        garlic, salt, oregano, marjoram</dd>
+                                    <dd class="col-7">{{ $singlemetallictins->first()->MTingridients }}</dd>
                                     <hr />
 
                                     <dt class="col-5">SEALED SHELF LIFE</dt>
-                                    <dd class="col-7">24 months dry</dd>
+                                    <dd class="col-7">{{ $singlemetallictins->first()->MTsealedshelflife }}</dd>
                                     <hr />
 
                                     <dt class="col-5">STORAGE</dt>
-                                    <dd class="col-7">Dry</dd>
+                                    <dd class="col-7">{{ $singlemetallictins->first()->MTstorage }}</dd>
                                     <hr />
 
                                     <dt class="col-5">ATTRIBUTES</dt>
-                                    <dd class="col-7">Dairy Free, Gluten Free, Non-GMO, Vegan, Vegetarian</dd>
+                                    <dd class="col-7">{{ $singlemetallictins->first()->MTattributes }}</dd>
                                     <hr />
 
                                     <dt class="col-5">DRAINED WEIGHT</dt>
-                                    <dd class="col-7">8.5 lb</dd>
+                                    <dd class="col-7">{{ $singlemetallictins->first()->MTdrainedweight }}</dd>
                                     <hr />
 
                                     <dt class="col-5">GROSS CASE WEIGHT</dt>
-                                    <dd class="col-7">8.5 lb</dd>
+                                    <dd class="col-7">{{ $singlemetallictins->first()->MTgrosscaseweight }}</dd>
                                     <hr />
 
                                     <dt class="col-5">CASE DIMENSIONS</dt>
-                                    <dd class="col-7">14.3" x 8.3" x 5.7" (LxWxH)</dd>
+                                    <dd class="col-7">{{ $singlemetallictins->first()->MTcasedimensions }}</dd>
                                     <hr />
 
                                     <dt class="col-5">CASE CUBE</dt>
-                                    <dd class="col-7">0.39</dd>
+                                    <dd class="col-7">{{ $singlemetallictins->first()->MTcasecube }}</dd>
                                     <hr />
 
                                     <dt class="col-5">TI-HI</dt>
-                                    <dd class="col-7">15x11</dd>
+                                    <dd class="col-7">{{ $singlemetallictins->first()->MTtihi }}</dd>
                                     <hr />
 
                                     <dt class="col-5">ALLERGENS</dt>
-                                    <dd class="col-7">None</dd>
+                                    <dd class="col-7">{{ $singlemetallictins->first()->MTallergens }}</dd>
                                     <hr />
                                 </div>
 

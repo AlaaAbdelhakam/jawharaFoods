@@ -808,7 +808,7 @@ height: 100% !important; */
 
             <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
                 @foreach($categories as $post)
-                <a href="{{route('categoryproduct',$post->id)}}">
+                <a href="{{ route('categoryproducts', $post->id) }}">
                 <div class="col-lg-4 col-md-6 portfolio-item {{ $post->id }}">
                     <img src="{{ asset($post->image) }}" class="img-fluid"
                         alt="">

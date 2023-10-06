@@ -364,9 +364,9 @@
                                             @endforeach
                                     </optgroup>
                                 </select>
-                                @error('jawharacategories_id')
+                                {{-- @error('jawharacategories_id')
                                     <span class="text-danger"> {{ $message }}</span>
-                                @enderror
+                                @enderror --}}
                             </div>
                         </div>
                         </div>

@@ -4,8 +4,11 @@ namespace App\Http\Controllers;
 
 use App\Models\Post;
 use App\Models\Jawharacategory;
+use App\Models\Jawharacproduct;
 use App\Models\SingleGlassJarPageContent;
 use Illuminate\Http\Request;
+use App\Models\SingleMetallicTinsPageContent;
+use App\Models\SinglePetJarPageContent;
 
 class PostsController extends Controller
 {
@@ -14,19 +17,24 @@ class PostsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    // public function index($id)
-    // {
-    //     // $posts = Post::latest()->paginate(10);
-    //     $singleglassjar = SingleGlassJarPageContent::where('jawharacproducts_id',$id)->get();
+    public function index($id)
+    {
+        // $posts = Post::latest()->paginate(10);
+        
+        $singleglassjar = SingleGlassJarPageContent::where('jawharacproducts_id',$id)->get();
+        $singlemetallictins = SingleMetallicTinsPageContent::where('jawharacproducts_id',$id)->get();
+        $singlepetjar = SinglePetJarPageContent::where('jawharacproducts_id',$id)->get();
+        $product = Jawharacproduct::find($id);
+        $title=Jawharacproduct::where('id',$id)->first()->title;
 
-    //     return view('front.singleproduct');
-    // }
+        return view('front.singleproduct',compact('singleglassjar','product','title','singlemetallictins','singlepetjar'));
+    }
     public function categoryproduct($id)
     {
         // $posts = Post::latest()->paginate(10);
         $category = Jawharacategory::find($id);
         $title=Jawharacategory::where('id',$id)->first()->title;
-        return view('front.categoryproduct',compact('category','title'));
+        return view('front.categoryproduct', compact('category','title'));
     }
 
     /**
