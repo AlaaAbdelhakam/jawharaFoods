@@ -28,18 +28,21 @@ Route::get('/contactus', [PostsController::class, 'contact'])->name('contactus')
 Route::get('songs/create', [SongsController::class, 'create'])->name('song.create');
 Route::post('songs', [SongsController::class, 'store'])->name('song.store');
 Route::group(['namespace' => 'App\Http\Controllers\admin','prefix' => 'admin'], function () {
- 
+
     Route::get('/createMainPage', 'MainPageController@create')->name('createMainPage');
     Route::post('/insertMainpage', 'MainPageController@insert')->name('insertMainPage');
-   
-   
+
+
     Route::get('/single_glass_jar_Page', 'SingleGlassJarPageController@create')->name('create_single_glass_jar_page');
     Route::post('/single_glass_jar_pageinsert', 'SingleGlassJarPageController@insert')->name('insert_single_glass_jar_page');
-   
-   
+
+    Route::get('/single_plastic_barrels_page', 'SinglePlasticBarrelsPageContentController@create')->name('create_single_plastic_barrels_page_content');
+    Route::post('/single_plastic_barrels_pageinsert', 'SinglePlasticBarrelsPageContentController@insert')->name('insert_single_plastic_barrels_page_contents_page');
+
+
     Route::get('/single_metallic_tins_page_contents', 'SingleMetallicTinsPageController@create')->name('create_single_metallic_tins_page_contents');
     Route::post('/single_metallic_tins_page_contentsinsert', 'SingleMetallicTinsPageController@insert')->name('insert_single_metallic_tins_page_contents');
-   
+
     Route::get('/single_pet_jar_page_contents', 'SinglePetJarPageController@create')->name('create_single_pet_jar_page_contents');
     Route::post('/single_pet_jar_page_contentsinsert', 'SinglePetJarPageController@insert')->name('insert_single_pet_jar_page_contents');
 
@@ -61,7 +64,6 @@ Route::group(['namespace' => 'App\Http\Controllers\admin','prefix' => 'admin'], 
         Route::post('update/{id}','JawharaCategoryController@update') -> name('admin.category.update');
         Route::get('delete/{id}','JawharaCategoryController@destroy') -> name('admin.category.delete');
     });
-  
 
 
 
@@ -69,7 +71,8 @@ Route::group(['namespace' => 'App\Http\Controllers\admin','prefix' => 'admin'], 
 
 
 
-    
+
+
 
 });
 
@@ -86,7 +89,7 @@ Route::post('calendar-crud-ajax', [CalenderController::class, 'calendarEvents'])
 // Route::get('singleproduct', [HomeController::class, 'index'])->name('singleproduct');
 
 Route::group(['namespace' => 'App\Http\Controllers'], function()
-{   
+{
     /**
      * Home Routes
      */
@@ -102,33 +105,31 @@ Route::post('/deleteevent','FullCalendarController@deleteEvent');
     Route::get('/article/{id}','front\ArticlesController@article')->name('article');
     Route::get('/category/{id}','front\ArticlesController@category')->name('category');
     Route::post('/comment/insert/{id}','front\ArticlesController@comment_insert')->name('comment');
-    
+
     Route::get('/comment/delete/{id}','front\ArticlesController@comment_delete') -> name('deletecomment');
-    
-    
+
+
     Route::post('/search','front\ArticlesController@search')->name('search');
     ###########################################################################################################
     // Route::get('/', 'HomeController@index')->name('home.index');
 
     // Route::group(['middleware' => ['guest']], function() {
-    
+
     // });
 
     // Route::group(['middleware' => ['auth', 'permission']], function() {
-     
-        
 
 
 
 
-        
+
+
+
         Route::group(['prefix' => 'posts'], function() {
             // Route::get('/singleproduct/{id}', 'PostsController@index')->name('singleproduct');
             // Route::get('/categoryproduct/{id}', 'PostsController@categoryproduct')->name('categoryproduct');
             // Route::get('/contactus', 'PostsController@contact')->name('contactus');
 
-           
-            
 
 
 
@@ -136,7 +137,9 @@ Route::post('/deleteevent','FullCalendarController@deleteEvent');
 
 
 
-            
+
+
+
             Route::post('/create', 'PostsController@store')->name('posts.store');
             Route::get('/{post}/show', 'PostsController@show')->name('posts.show');
             Route::get('/{post}/edit', 'PostsController@edit')->name('posts.edit');
@@ -156,12 +159,12 @@ Route::group([
     'prefix' => LaravelLocalization::setLocale(),
     'middleware' => ['localeSessionRedirect', 'localizationRedirect', 'localeViewPath','auth']
 ], function () {
-   
-        
+
+
     Route::group(['prefix' => 'admin'], function () {
     Route::get('/', [App\Http\Controllers\Dashboard\DashboardController::class, 'index'])->name('admin.dashboard');
 
-   
+
     });
 
 });
@@ -176,7 +179,7 @@ Route::group([
 
     Route::group(['namespace' => 'App\Http\Controllers\Dashboard', 'prefix' => 'admin'], function () {
 
-    
+
 
            Route::get('city/restore/one/{id}', 'CityController@restore')->name('city.restore');
            Route::get('city/restoreAll', 'CityController@restoreAll')->name('city.restore.all');
@@ -244,7 +247,7 @@ Route::group([
 
 
 
-           
+
         Route::group(['prefix' => 'city'], function () {
             Route::get('/','CityController@index') -> name('admin.city');
             Route::get('create','CityController@create') -> name('admin.city.create');
@@ -255,7 +258,7 @@ Route::group([
          });
 
          ################################## carmodels routes ######################################
-       
+
 
         ################################## end categories    #######################################
 
@@ -272,9 +275,9 @@ Route::group([
         ################################## end categories    #######################################
 
         ################################## cars routes ######################################
-      
+
         ################################## end brands    #######################################
-       
+
         ################################## drivers routes ######################################
         Route::group(['prefix' => 'drivers'], function () {
             // Route::get('/','DriversController@index') -> name('admin.drivers');
@@ -283,7 +286,7 @@ Route::group([
             // Route::get('edit/{id}','DriversController@edit') -> name('admin.drivers.edit');
             // Route::post('update/{id}','DriversController@update') -> name('admin.drivers.update');
             // Route::get('delete/{id}','DriversController@destroy') -> name('admin.drivers.delete');
-           
+
 
 
 
@@ -327,8 +330,8 @@ Route::group([
 
     });
 
-   
-        
+
+
 });
 
 
@@ -354,8 +357,8 @@ Route::group([
       Route::get('/category/remove/{id}','CategoryController@remove')->name('category.remove');
       Route::get('/category/edit/{id}','CategoryController@edit')->name('category.edit');
       Route::post('/category/update/{id}','CategoryController@update')->name('category.update');
-    
-    
+
+
       Route::get('/articles','ArticlesController@index')->name('articles.index');
       Route::get('/articles/create','ArticlesController@create')->name('articles.create');
       Route::get('/articles/trashed','ArticlesController@trashed')->name('articles.trashed');
@@ -372,15 +375,15 @@ Route::group([
 
 
     Route::group(['namespace' => 'App\Http\Controllers'], function()
-    {   
+    {
         Route::resource('roles', RolesController::class);
         Route::resource('permissions', PermissionsController::class);
-        
+
     });
     Route::group(['namespace' => 'App\Http\Controllers','prefix' => 'admin'], function () {
         // Route::get('/live_search','LiveSearchdriver@index')->name('search.drivers');
         // Route::get('/live_search/action',)->name('live_search.action');
-     
+
            Route::get('/driver/search', 'LiveSearchdriver@search')->name('search.driver.action');
            Route::get('/user/search', 'UserLiveSearch@search')->name('search.users');
            Route::get('/trip/search', 'TripLiveSearch@search')->name('search.trips');
@@ -390,10 +393,10 @@ Route::group([
            Route::get('/carmodel/search', 'CarmodelLiveSearch@search')->name('search.carmodels');
            Route::get('/car/search', 'CarLiveSearch@search')->name('search.car');
 
-           
-      
 
-    
+
+
+
         });
-        
+
 });

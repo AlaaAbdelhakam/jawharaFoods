@@ -22,7 +22,7 @@
                 </li> --}}
 
 
-                
+
 
 
 
@@ -78,9 +78,9 @@
                                    </a>
                           </li>
                       </ul>
-                  </li> 
-  
-  
+                  </li>
+
+
                    <li class="nav-item"><a href="">
                           <span class="menu-title" data-i18n="nav.dash.main">products   </span>
                           <span
@@ -90,17 +90,17 @@
                       <ul class="menu-content">
                           <li class="active"><a class="menu-item" href="{{route('admin.product')}}"
                                                   data-i18n="nav.dash.ecommerce"> show all </a>
-                          </li> 
+                          </li>
                    <li><a class="menu-item" href="{{route('admin.product.create')}}" data-i18n="nav.dash.crypto">add new
                                    </a>
-                          </li> 
+                          </li>
                    </ul>
-                  </li> 
+                  </li>
 
 
                     <li class="active"><a class="menu-item" href=""
                             data-i18n="nav.dash.ecommerce">single_glass_jar_page </a>
-                    </li> 
+                    </li>
                         {{-- @endrole
                         @role('superadmin') --}}
 
@@ -111,7 +111,7 @@
                     </li>
                     <li class="active"><a class="menu-item" href=""
                             data-i18n="nav.dash.ecommerce">single_metallic_tins_page </a>
-                    </li> 
+                    </li>
                         {{-- @endrole
                         @role('superadmin') --}}
 
@@ -122,11 +122,22 @@
                     </li>
                     <li class="active"><a class="menu-item" href=""
                             data-i18n="nav.dash.ecommerce">single_pet_jar_page_contents </a>
-                    </li> 
+                    </li>
                         {{-- @endrole
                         @role('superadmin') --}}
 
                         <li><a class="menu-item" href="{{ route('create_single_pet_jar_page_contents') }}" data-i18n="nav.dash.crypto">
+                            create new
+                        </a>
+                    </li>
+                    </li>
+                    <li class="active"><a class="menu-item" href=""
+                            data-i18n="nav.dash.ecommerce">single_plastic_barrels_page_contents </a>
+                    </li>
+                        {{-- @endrole
+                        @role('superadmin') --}}
+
+                        <li><a class="menu-item" href="{{ route('create_single_plastic_barrels_page_content') }}" data-i18n="nav.dash.crypto">
                             create new
                         </a>
                     </li>
@@ -139,16 +150,16 @@
 
                         <li class="active"><a class="menu-item" href=""
                             data-i18n="nav.dash.ecommerce"> Main Page content </a>
-                    </li> 
+                    </li>
                         {{-- @endrole --}}
                         {{-- @role('superadmin') --}}
 
                          <li><a class="menu-item" href="{{ route('createMainPage') }}" data-i18n="nav.dash.crypto">
-                            Update Content 
+                            Update Content
                         </a>
                     </li>
                     </li>
-                       
+
                     {{-- <li class="active"><a class="menu-item" href="{{ route('admin.company') }}"
                             data-i18n="nav.dash.ecommerce">الشركة المتعامل معها </a>
                     </li> --}}

@@ -17,17 +17,18 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&family=Open+Sans:wght@400;500;600&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="{{ asset('mainpage->first()/css/animate.css') }}">
 
-    <!-- Icon Font Stylesheet -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+        <!-- Icon Font Stylesheet -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
 
-
-    <link
+        <link
         href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
         rel="stylesheet">
 
+        <link rel="stylesheet" type="text/css" href="{{ asset('mainpage->first()/css/animate.css') }}">
     <!-- Vendor CSS Files -->
     <link href="{{ asset('assetsGallery/vendor/aos/aos.css') }}" rel="stylesheet">
     <link href="{{ asset('assetsGallery/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
@@ -79,8 +80,7 @@
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="{{ asset('contactus/css/bootstrap.min.css') }}" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+
 
     <!-- Template Stylesheet -->
     <link href="{{ asset('contactus/css/style.css') }}" rel="stylesheet">
@@ -590,7 +590,7 @@ height: 100% !important; */
         <div class="carousel-inner">
           <div class="carousel-item active">
             <img src="{{ asset('mainpage->first()/images/bg_1.jpg') }}" class="d-block w-100" alt="...">
-            
+
           </div>
           <div class="carousel-item">
             <img src="{{ asset('mainpage->first()/images/bg_2.jpg') }}" class="d-block w-100" alt="...">
@@ -781,17 +781,17 @@ height: 100% !important; */
 
 
     <!-- ======= Portfolio Section ======= -->
-    <section id="portfolio" class="portfolio">
-        <div class="container" data-aos="fade-up">
+    <section id="portfolio" class="portfolio" style="width:100%;height:100%;justify-content:center;align-items:center;">
+        <div class="container" data-aos="fade-up" style="width:100%;height:100%;justify-content:center;align-items:center;">
 
-            <div class="section-title">
+            <div class="section-title" style="width:100%;height:100%;justify-content:center;align-items:center;">
                 <h2 style="color: #234b91;">Portfolio</h2>
                 <h3>Check our <span style="color: #234b91;">Portfolio</span></h3>
                 <p style="color: #234b91;">Ut possimus qui ut temporibus culpa velit eveniet modi omnis est adipisci
                     expedita at voluptas atque
                     vitae autem.</p>
             </div>
-            
+
             <div class="row" data-aos="fade-up" data-aos-delay="100">
                 <div class="col-lg-12 d-flex justify-content-center">
                     <ul id="portfolio-flters">

@@ -443,7 +443,7 @@ height: 100% !important; */
     <!-- <section class="py-5">
         <div class="container">
           <div class="row gx-5">
-            
+
                         <div class="col-lg-5 mt-5 ml-3 mb-5">
                             <div class="card mb-3">
                                 <img class="card-img img-fluid" src="./img/first.jpg" alt="Card image cap" id="product-detail">
@@ -461,7 +461,7 @@ height: 100% !important; */
                                 <div id="multi-item-example" class="col-10 carousel slide carousel-multi-item" data-bs-ride="carousel">
                                     Start Slides
                                     <div class="carousel-inner product-links-wap" role="listbox">
-        
+
                                         First slide-->
     <!-- <div class="carousel-item active">
                                             <div class="row">
@@ -543,23 +543,23 @@ height: 100% !important; */
                         </div> -->
     <!-- col end -->
     <!--
-                 
+
         <div class="col-lg-1"></div>
-        
+
             <main class="col-lg-6">
               <div class="ps-lg-3">
                 <h4 class="title text-dark">
                     Mushrooms Marinated with Garlic & Herbs
                 </h4>
-               
+
                 <hr />
-      
+
                 <p>
                     Succulent and savory, our Divina mushrooms are grown and harvested in Kennett Square, PA, (the mushroom capital of the world) before being preserved in a bright and vinegary garlic and herb marinade.
                 </p>
                 <br>
                 <h5>PRODUCT DETAILS</h5>
-            
+
                <hr />
                 <div class="row ">
                   <dt class="col-5">ITEM #</dt>
@@ -574,43 +574,43 @@ height: 100% !important; */
                   <dt class="col-5">ORIGIN</dt>
                   <dd class="col-7">USA</dd>
                   <hr />
-                
+
                   <dt class="col-5">INGREDIENTS</dt>
                   <dd class="col-7">mushrooms, water, soybean oil, red peppers, distilled vinegar, garlic, salt, oregano, marjoram</dd>
                   <hr />
-             
+
                   <dt class="col-5">SEALED SHELF LIFE</dt>
                   <dd class="col-7">24 months dry</dd>
                   <hr />
-              
+
                   <dt class="col-5">STORAGE</dt>
                   <dd class="col-7">Dry</dd>
                   <hr />
-           
+
                   <dt class="col-5">ATTRIBUTES</dt>
                   <dd class="col-7">Dairy Free, Gluten Free, Non-GMO, Vegan, Vegetarian</dd>
                   <hr />
-         
+
                   <dt class="col-5">DRAINED WEIGHT</dt>
                   <dd class="col-7">8.5 lb</dd>
                   <hr />
-             
+
                   <dt class="col-5">GROSS CASE WEIGHT</dt>
                   <dd class="col-7">8.5 lb</dd>
                   <hr />
-          
+
                   <dt class="col-5">CASE DIMENSIONS</dt>
                   <dd class="col-7">14.3" x 8.3" x 5.7" (LxWxH)</dd>
                   <hr />
-      
+
                   <dt class="col-5">CASE CUBE</dt>
                   <dd class="col-7">0.39</dd>
                   <hr />
-           
+
                   <dt class="col-5">TI-HI</dt>
                   <dd class="col-7">15x11</dd>
                   <hr />
-             
+
                   <dt class="col-5">ALLERGENS</dt>
                   <dd class="col-7">None</dd>
                   <hr />
@@ -640,7 +640,7 @@ height: 100% !important; */
                   </div> -->
     <!-- </div> -->
     <!-- <br>
-                           
+
                 <a href="#" class="btn btn-warning shadow-0 p-3"> Buy now </a>
                 -->
     <!-- <a href="#" class="btn btn-light border border-secondary py-2 icon-hover px-3"> <i class="me-1 fa fa-heart fa-lg"></i> Save </a> -->
@@ -734,21 +734,21 @@ height: 100% !important; */
                                     </div>
                                     <div class="carousel-inner">
                                         <div class="carousel-item active" data-bs-interval="10000">
-                                            <img src="{{ asset('singleproduct/img/first.jpg') }}"
+                                            <img src="{{ Storage::url($singleplasticbarrels->first()->img_PBfirst) }}"
                                                 class="d-block w-100" alt="...">
                                             <div class="carousel-caption d-none d-md-block">
 
                                             </div>
                                         </div>
                                         <div class="carousel-item" data-bs-interval="2000">
-                                            <img src="{{ asset('singleproduct/img/second.jpg') }}"
+                                            <img src="{{ Storage::url($singleplasticbarrels->first()->img_PBsecond) }}"
                                                 class="d-block w-100" alt="...">
                                             <div class="carousel-caption d-none d-md-block">
 
                                             </div>
                                         </div>
                                         <div class="carousel-item">
-                                            <img src="{{ asset('singleproduct/img/third.jpg') }}"
+                                            <img src="{{ Storage::url($singleplasticbarrels->first()->img_PBthird) }}"
                                                 class="d-block w-100" alt="...">
                                             <div class="carousel-caption d-none d-md-block">
 
@@ -862,15 +862,15 @@ height: 100% !important; */
                         <main class="col-lg-6">
                             <div class="ps-lg-3">
                                 <h4 class="title text-dark">
-                                    Mushrooms Marinated with Garlic & Herbs #1
+                                    {{$singleplasticbarrels->first()->title}}
+
                                 </h4>
 
                                 <hr />
 
                                 <p>
-                                    Succulent and savory, our Divina mushrooms are grown and harvested in Kennett
-                                    Square, PA, (the mushroom capital of the world) before being preserved in a bright
-                                    and vinegary garlic and herb marinade.
+                                    {{$singleplasticbarrels->first()->description}}
+
                                 </p>
                                 <br>
                                 <h5>PRODUCT DETAILS</h5>
@@ -878,57 +878,56 @@ height: 100% !important; */
                                 <hr />
                                 <div class="row ">
                                     <dt class="col-5">ITEM #</dt>
-                                    <dd class="col-7">55000</dd>
+                                    <dd class="col-7">{{$singleplasticbarrels->first()->PBitem}}</dd>
                                     <hr />
                                     <dt class="col-5">BRAND</dt>
-                                    <dd class="col-7">Divina</dd>
+                                    <dd class="col-7">{{$singleplasticbarrels->first()->PBbrand}}</dd>
                                     <hr />
                                     <dt class="col-5">CASE PACK</dt>
-                                    <dd class="col-7">2/6.25 lb Pouch</dd>
+                                    <dd class="col-7">{{$singleplasticbarrels->first()->PBcasepack}}</dd>
                                     <hr />
                                     <dt class="col-5">ORIGIN</dt>
-                                    <dd class="col-7">USA</dd>
+                                    <dd class="col-7">{{$singleplasticbarrels->first()->PBorigin}}</dd>
                                     <hr />
 
                                     <dt class="col-5">INGREDIENTS</dt>
-                                    <dd class="col-7">mushrooms, water, soybean oil, red peppers, distilled vinegar,
-                                        garlic, salt, oregano, marjoram</dd>
+                                    <dd class="col-7">{{$singleplasticbarrels->first()->PBingridients}}</dd>
                                     <hr />
 
                                     <dt class="col-5">SEALED SHELF LIFE</dt>
-                                    <dd class="col-7">24 months dry</dd>
+                                    <dd class="col-7">{{$singleplasticbarrels->first()->PBsealedshelflife}}</dd>
                                     <hr />
 
                                     <dt class="col-5">STORAGE</dt>
-                                    <dd class="col-7">Dry</dd>
+                                    <dd class="col-7">{{$singleplasticbarrels->first()->PBstorage}}</dd>
                                     <hr />
 
                                     <dt class="col-5">ATTRIBUTES</dt>
-                                    <dd class="col-7">Dairy Free, Gluten Free, Non-GMO, Vegan, Vegetarian</dd>
+                                    <dd class="col-7">{{$singleplasticbarrels->first()->PBattributes}}</dd>
                                     <hr />
 
                                     <dt class="col-5">DRAINED WEIGHT</dt>
-                                    <dd class="col-7">8.5 lb</dd>
+                                    <dd class="col-7">{{$singleplasticbarrels->first()->PBdrainedweight}}</dd>
                                     <hr />
 
                                     <dt class="col-5">GROSS CASE WEIGHT</dt>
-                                    <dd class="col-7">8.5 lb</dd>
+                                    <dd class="col-7">{{$singleplasticbarrels->first()->PBgrosscaseweight}}</dd>
                                     <hr />
 
                                     <dt class="col-5">CASE DIMENSIONS</dt>
-                                    <dd class="col-7">14.3" x 8.3" x 5.7" (LxWxH)</dd>
+                                    <dd class="col-7">{{$singleplasticbarrels->first()->PBcasedimensions}}</dd>
                                     <hr />
 
                                     <dt class="col-5">CASE CUBE</dt>
-                                    <dd class="col-7">0.39</dd>
+                                    <dd class="col-7">{{$singleplasticbarrels->first()->PBcasecube}}</dd>
                                     <hr />
 
                                     <dt class="col-5">TI-HI</dt>
-                                    <dd class="col-7">15x11</dd>
+                                    <dd class="col-7">{{$singleplasticbarrels->first()->PBtihi}}</dd>
                                     <hr />
 
                                     <dt class="col-5">ALLERGENS</dt>
-                                    <dd class="col-7">None</dd>
+                                    <dd class="col-7">{{$singleplasticbarrels->first()->PBallergens}}</dd>
                                     <hr />
                                 </div>
 
