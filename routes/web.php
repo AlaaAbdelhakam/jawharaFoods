@@ -42,6 +42,9 @@ Route::group(['namespace' => 'App\Http\Controllers\admin','prefix' => 'admin'], 
     Route::get('/single_plastic_pails_page_contents', 'SinglePlasticPailsPageContentsController@create')->name('create_single_plastic_pails_page_contents');
     Route::post('/single_plastic_pails_page_contentss', 'SinglePlasticPailsPageContentsController@insert')->name('insert_single_plastic_pails_page_contents_page');
 
+    Route::get('/single_plastic_pouch_page_contents', 'SinglePlasticPouchPageContentController@create')->name('create_single_plastic_pouch_page_contents');
+    Route::post('/single_plastic_pouch_page_contents', 'SinglePlasticPouchPageContentController@insert')->name('insert_single_plastic_pouch_page_contents_page');
+
 
     Route::get('/single_metallic_tins_page_contents', 'SingleMetallicTinsPageController@create')->name('create_single_metallic_tins_page_contents');
     Route::post('/single_metallic_tins_page_contentsinsert', 'SingleMetallicTinsPageController@insert')->name('insert_single_metallic_tins_page_contents');

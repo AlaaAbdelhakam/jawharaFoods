@@ -1015,21 +1015,21 @@ height: 100% !important; */
                                     </div>
                                     <div class="carousel-inner">
                                         <div class="carousel-item active" data-bs-interval="10000">
-                                            <img src="{{ asset('singleproduct/img/first.jpg') }}"
+                                            <img src="{{ Storage::url($singleplasticpouchpage->first()->img_PPfirst) }}"
                                                 class="d-block w-100" alt="...">
                                             <div class="carousel-caption d-none d-md-block">
 
                                             </div>
                                         </div>
                                         <div class="carousel-item" data-bs-interval="2000">
-                                            <img src="{{ asset('singleproduct/img/second.jpg') }}"
+                                            <img src="{{ Storage::url($singleplasticpouchpage->first()->img_PPsecond) }}"
                                                 class="d-block w-100" alt="...">
                                             <div class="carousel-caption d-none d-md-block">
 
                                             </div>
                                         </div>
                                         <div class="carousel-item">
-                                            <img src="{{ asset('singleproduct/img/third.jpg') }}"
+                                            <img src="{{ Storage::url($singleplasticpouchpage->first()->img_PPthird) }}"
                                                 class="d-block w-100" alt="...">
                                             <div class="carousel-caption d-none d-md-block">
 
@@ -1149,15 +1149,13 @@ height: 100% !important; */
                         <main class="col-lg-6">
                             <div class="ps-lg-3">
                                 <h4 class="title text-dark">
-                                    Mushrooms Marinated with Garlic & Herbs #2
+                                    {{ $singleplasticpouchpage->first()->title }}
                                 </h4>
 
                                 <hr />
 
                                 <p>
-                                    Succulent and savory, our Divina mushrooms are grown and harvested in Kennett
-                                    Square, PA, (the mushroom capital of the world) before being preserved in a bright
-                                    and vinegary garlic and herb marinade.
+                                    {{ $singleplasticpouchpage->first()->description }}
                                 </p>
                                 <br>
                                 <h5>PRODUCT DETAILS</h5>
@@ -1165,57 +1163,56 @@ height: 100% !important; */
                                 <hr />
                                 <div class="row ">
                                     <dt class="col-5">ITEM #</dt>
-                                    <dd class="col-7">55000</dd>
+                                    <dd class="col-7">{{ $singleplasticpouchpage->first()->PPitem }}</dd>
                                     <hr />
                                     <dt class="col-5">BRAND</dt>
-                                    <dd class="col-7">Divina</dd>
+                                    <dd class="col-7">{{ $singleplasticpouchpage->first()->PPbrand }}</dd>
                                     <hr />
                                     <dt class="col-5">CASE PACK</dt>
-                                    <dd class="col-7">2/6.25 lb Pouch</dd>
+                                    <dd class="col-7">{{ $singleplasticpouchpage->first()->PPcasepack }}</dd>
                                     <hr />
                                     <dt class="col-5">ORIGIN</dt>
-                                    <dd class="col-7">USA</dd>
+                                    <dd class="col-7">{{ $singleplasticpouchpage->first()->PPorigin }}</dd>
                                     <hr />
 
                                     <dt class="col-5">INGREDIENTS</dt>
-                                    <dd class="col-7">mushrooms, water, soybean oil, red peppers, distilled vinegar,
-                                        garlic, salt, oregano, marjoram</dd>
+                                    <dd class="col-7">{{ $singleplasticpouchpage->first()->PPingridients }}</dd>
                                     <hr />
 
                                     <dt class="col-5">SEALED SHELF LIFE</dt>
-                                    <dd class="col-7">24 months dry</dd>
+                                    <dd class="col-7">{{ $singleplasticpouchpage->first()->PPsealedshelflife }}</dd>
                                     <hr />
 
                                     <dt class="col-5">STORAGE</dt>
-                                    <dd class="col-7">Dry</dd>
+                                    <dd class="col-7">{{ $singleplasticpouchpage->first()->PPstorage }}</dd>
                                     <hr />
 
                                     <dt class="col-5">ATTRIBUTES</dt>
-                                    <dd class="col-7">Dairy Free, Gluten Free, Non-GMO, Vegan, Vegetarian</dd>
+                                    <dd class="col-7">{{ $singleplasticpouchpage->first()->PPattributes }}</dd>
                                     <hr />
 
                                     <dt class="col-5">DRAINED WEIGHT</dt>
-                                    <dd class="col-7">8.5 lb</dd>
+                                    <dd class="col-7">{{ $singleplasticpouchpage->first()->PPdrainedweight }}</dd>
                                     <hr />
 
                                     <dt class="col-5">GROSS CASE WEIGHT</dt>
-                                    <dd class="col-7">8.5 lb</dd>
+                                    <dd class="col-7">{{ $singleplasticpouchpage->first()->PPgrosscaseweight }}</dd>
                                     <hr />
 
                                     <dt class="col-5">CASE DIMENSIONS</dt>
-                                    <dd class="col-7">14.3" x 8.3" x 5.7" (LxWxH)</dd>
+                                    <dd class="col-7">{{ $singleplasticpouchpage->first()->PPcasedimensions }}</dd>
                                     <hr />
 
                                     <dt class="col-5">CASE CUBE</dt>
-                                    <dd class="col-7">0.39</dd>
+                                    <dd class="col-7">{{ $singleplasticpouchpage->first()->PPcasecube }}</dd>
                                     <hr />
 
                                     <dt class="col-5">TI-HI</dt>
-                                    <dd class="col-7">15x11</dd>
+                                    <dd class="col-7">{{ $singleplasticpouchpage->first()->PPtihi }}</dd>
                                     <hr />
 
                                     <dt class="col-5">ALLERGENS</dt>
-                                    <dd class="col-7">None</dd>
+                                    <dd class="col-7">{{ $singleplasticpouchpage->first()->PPallergens }}</dd>
                                     <hr />
                                 </div>
 
