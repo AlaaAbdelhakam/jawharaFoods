@@ -10,6 +10,7 @@ use Illuminate\Http\Request;
 use App\Models\SingleMetallicTinsPageContent;
 use App\Models\SinglePetJarPageContent;
 use App\Models\SinglePlasticBarrelsPageContent;
+use App\Models\SinglePlasticPailsPageContent;
 
 class PostsController extends Controller
 {
@@ -22,6 +23,7 @@ class PostsController extends Controller
     {
         // $posts = Post::latest()->paginate(10);
         $singleplasticbarrels = SinglePlasticBarrelsPageContent::where('jawharacproducts_id',$id)->get();
+        $singleplasticpailspage = SinglePlasticPailsPageContent::where('jawharacproducts_id',$id)->get();
         $singleglassjar = SingleGlassJarPageContent::where('jawharacproducts_id',$id)->get();
         $singlemetallictins = SingleMetallicTinsPageContent::where('jawharacproducts_id',$id)->get();
         $singlepetjar = SinglePetJarPageContent::where('jawharacproducts_id',$id)->get();
@@ -31,6 +33,7 @@ class PostsController extends Controller
         return view('front.singleproduct',compact('singleglassjar','product','title',
         'singlemetallictins'
         ,'singlepetjar'
+        ,'singleplasticpailspage'
         ,'singleplasticbarrels'
 
     ));

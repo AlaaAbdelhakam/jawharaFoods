@@ -1297,21 +1297,21 @@ height: 100% !important; */
                                     </div>
                                     <div class="carousel-inner">
                                         <div class="carousel-item active" data-bs-interval="10000">
-                                            <img src="{{ asset('singleproduct/img/first.jpg') }}"
+                                            <img src="{{ Storage::url($singleplasticpailspage->first()->img_PPailsfirst) }}"
                                                 class="d-block w-100" alt="...">
                                             <div class="carousel-caption d-none d-md-block">
 
                                             </div>
                                         </div>
                                         <div class="carousel-item" data-bs-interval="2000">
-                                            <img src="{{ asset('singleproduct/img/second.jpg') }}"
+                                            <img src="{{ Storage::url($singleplasticpailspage->first()->img_PPailssecond) }}"
                                                 class="d-block w-100" alt="...">
                                             <div class="carousel-caption d-none d-md-block">
 
                                             </div>
                                         </div>
                                         <div class="carousel-item">
-                                            <img src="{{ asset('singleproduct/img/third.jpg') }}"
+                                            <img src="{{ Storage::url($singleplasticpailspage->first()->img_PPailsthird) }}"
                                                 class="d-block w-100" alt="...">
                                             <div class="carousel-caption d-none d-md-block">
 
@@ -1432,15 +1432,14 @@ height: 100% !important; */
                         <main class="col-lg-6">
                             <div class="ps-lg-3">
                                 <h4 class="title text-dark">
-                                    Mushrooms Marinated with Garlic & Herbs #3
+                                    {{ $singleplasticpailspage->first()->title }}
+
                                 </h4>
 
                                 <hr />
 
                                 <p>
-                                    Succulent and savory, our Divina mushrooms are grown and harvested in Kennett
-                                    Square, PA, (the mushroom capital of the world) before being preserved in a bright
-                                    and vinegary garlic and herb marinade.
+                                    {{ $singleplasticpailspage->first()->description }}
                                 </p>
                                 <br>
                                 <h5>PRODUCT DETAILS</h5>
@@ -1448,57 +1447,56 @@ height: 100% !important; */
                                 <hr />
                                 <div class="row ">
                                     <dt class="col-5">ITEM #</dt>
-                                    <dd class="col-7">55000</dd>
+                                    <dd class="col-7"> {{ $singleplasticpailspage->first()->PPailsitem }}</dd>
                                     <hr />
                                     <dt class="col-5">BRAND</dt>
-                                    <dd class="col-7">Divina</dd>
+                                    <dd class="col-7"> {{ $singleplasticpailspage->first()->PPailsbrand }}</dd>
                                     <hr />
                                     <dt class="col-5">CASE PACK</dt>
-                                    <dd class="col-7">2/6.25 lb Pouch</dd>
+                                    <dd class="col-7"> {{ $singleplasticpailspage->first()->PPailscasepack }}</dd>
                                     <hr />
                                     <dt class="col-5">ORIGIN</dt>
-                                    <dd class="col-7">USA</dd>
+                                    <dd class="col-7"> {{ $singleplasticpailspage->first()->PPailsorigin }}</dd>
                                     <hr />
 
                                     <dt class="col-5">INGREDIENTS</dt>
-                                    <dd class="col-7">mushrooms, water, soybean oil, red peppers, distilled vinegar,
-                                        garlic, salt, oregano, marjoram</dd>
+                                    <dd class="col-7"> {{ $singleplasticpailspage->first()->PPailsingridients }}</dd>
                                     <hr />
 
                                     <dt class="col-5">SEALED SHELF LIFE</dt>
-                                    <dd class="col-7">24 months dry</dd>
+                                    <dd class="col-7"> {{ $singleplasticpailspage->first()->PPailssealedshelflife }}</dd>
                                     <hr />
 
                                     <dt class="col-5">STORAGE</dt>
-                                    <dd class="col-7">Dry</dd>
+                                    <dd class="col-7"> {{ $singleplasticpailspage->first()->PPailsstorage }}</dd>
                                     <hr />
 
                                     <dt class="col-5">ATTRIBUTES</dt>
-                                    <dd class="col-7">Dairy Free, Gluten Free, Non-GMO, Vegan, Vegetarian</dd>
+                                    <dd class="col-7"> {{ $singleplasticpailspage->first()->PPailsattributes }}</dd>
                                     <hr />
 
                                     <dt class="col-5">DRAINED WEIGHT</dt>
-                                    <dd class="col-7">8.5 lb</dd>
+                                    <dd class="col-7"> {{ $singleplasticpailspage->first()->PPailsdrainedweight }}</dd>
                                     <hr />
 
                                     <dt class="col-5">GROSS CASE WEIGHT</dt>
-                                    <dd class="col-7">8.5 lb</dd>
+                                    <dd class="col-7"> {{ $singleplasticpailspage->first()->PPailsgrosscaseweight }}</dd>
                                     <hr />
 
                                     <dt class="col-5">CASE DIMENSIONS</dt>
-                                    <dd class="col-7">14.3" x 8.3" x 5.7" (LxWxH)</dd>
+                                    <dd class="col-7"> {{ $singleplasticpailspage->first()->PPailscasedimensions }}</dd>
                                     <hr />
 
                                     <dt class="col-5">CASE CUBE</dt>
-                                    <dd class="col-7">0.39</dd>
+                                    <dd class="col-7"> {{ $singleplasticpailspage->first()->PPailscasecube }}</dd>
                                     <hr />
 
                                     <dt class="col-5">TI-HI</dt>
-                                    <dd class="col-7">15x11</dd>
+                                    <dd class="col-7"> {{ $singleplasticpailspage->first()->PPailstihi }}</dd>
                                     <hr />
 
                                     <dt class="col-5">ALLERGENS</dt>
-                                    <dd class="col-7">None</dd>
+                                    <dd class="col-7"> {{ $singleplasticpailspage->first()->PPailsallergens }}</dd>
                                     <hr />
                                 </div>
 

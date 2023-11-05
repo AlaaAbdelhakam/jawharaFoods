@@ -142,6 +142,17 @@
                         </a>
                     </li>
                     </li>
+                    <li class="active"><a class="menu-item" href=""
+                            data-i18n="nav.dash.ecommerce">single_plastic_pails_page_contents </a>
+                    </li>
+                        {{-- @endrole
+                        @role('superadmin') --}}
+
+                        <li><a class="menu-item" href="{{ route('create_single_plastic_pails_page_contents') }}" data-i18n="nav.dash.crypto">
+                            create new
+                        </a>
+                    </li>
+                    </li>
 
 
 
