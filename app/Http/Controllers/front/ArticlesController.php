@@ -39,7 +39,7 @@ class ArticlesController extends Controller
         return redirect()->back();
     }
     public function comment_delete($id){
-      
+
             try {
                 $comments = Comments::findOrFail($id);
                 // $comments = DB::table('comments')->where('article_id',$id)->where('id',$id);
@@ -59,12 +59,12 @@ class ArticlesController extends Controller
                 return redirect()->route('article')->with(['error' => 'error it was not deleted']);
             }
         }
-        
+
     public function search(Request $request){
         $articles = DB::table('articles')->join('category', 'articles.category_id', '=', 'category.id')
         ->select('articles.*', 'category.name')->where('articles.title','like','%'.$request->find.'%')
         ->Orwhere('articles.content','like','%'.$request->find.'%')->get();
-        return view('front.search')->with('articles',$articles);
+        return view('front.index')->with('articles',$articles);
     }
 
 }

@@ -374,7 +374,7 @@ Route::group([
       Route::get('/articles/remove/{id}','ArticlesController@remove')->name('articles.remove');
       Route::get('/articles/edit/{id}','ArticlesController@edit')->name('articles.edit');
       Route::post('/articles/update/{id}','ArticlesController@update')->name('articles.update');
-        Route::post('/articlessearch','ArticlesController@search')->name('search');
+        // Route::post('/articlessearch','ArticlesController@search')->name('search');
 
     });
       ########################################################################################################
