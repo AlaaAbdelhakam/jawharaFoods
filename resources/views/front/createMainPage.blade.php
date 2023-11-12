@@ -177,7 +177,7 @@
                                                     
 
 
-
+{{-- 
 
 
                                                 <div class="col-md-6">
@@ -553,7 +553,7 @@
                 <label for="">img_third_categorythree</label>
                 <input type="file" name="img_third_categorythree" class="form-control" placeholder="ارفق صورة">
             </div>
-
+ --}}
 
 
 

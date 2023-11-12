@@ -31,6 +31,7 @@ class PostsController extends Controller
         $singlepetjar = SinglePetJarPageContent::where('jawharacproducts_id',$id)->get();
         $product = Jawharacproduct::find($id);
         $title=Jawharacproduct::where('id',$id)->first()->title;
+        $categories = Jawharacategory::all();
 
         return view('front.singleproduct',compact('singleglassjar','product','title',
         'singlemetallictins'
@@ -38,7 +39,7 @@ class PostsController extends Controller
         ,'singleplasticpailspage'
         ,'singleplasticpouchpage'
         ,'singleplasticbarrels'
-
+        ,'categories'
     ));
     }
     public function categoryproduct($id)
@@ -46,7 +47,9 @@ class PostsController extends Controller
         // $posts = Post::latest()->paginate(10);
         $category = Jawharacategory::find($id);
         $title=Jawharacategory::where('id',$id)->first()->title;
-        return view('front.categoryproduct', compact('category','title'));
+        $categories = Jawharacategory::all();
+
+        return view('front.categoryproduct', compact('category','title','categories'));
     }
 
     /**
@@ -56,7 +59,9 @@ class PostsController extends Controller
      */
     public function contact()
     {
-        return view('front.contactus');
+        $categories = Jawharacategory::all();
+
+        return view('front.contactus', compact('categories'));
     }
 
     /**

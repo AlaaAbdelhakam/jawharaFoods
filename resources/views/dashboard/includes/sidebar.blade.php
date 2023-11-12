@@ -62,133 +62,139 @@
                     </li> --}}
 
 
-                    <li class="nav-item"><a href="">
-                        <span class="menu-title" data-i18n="nav.dash.main">categories </span>
-                          {{-- <span
+                        <li class="nav-item"><a href="">
+                                <span class="menu-title" data-i18n="nav.dash.main">categories </span>
+                                {{-- <span
                               class="badge badge badge-danger badge-pill float-right mr-2">
                          {{ \App\Models\Category::count() }}
                           </span>  --}}
-                   </a>
-                      <ul class="menu-content">
-                          <li class="active"><a class="menu-item" href="{{ route('admin.category') }}"
-                                  data-i18n="nav.dash.ecommerce"> show all </a>
-                          </li>
-                          <li><a class="menu-item" href="{{ route('admin.category.create') }}"
-                                  data-i18n="nav.dash.crypto">add new
-                                   </a>
-                          </li>
-                      </ul>
-                  </li>
+                            </a>
+                            <ul class="menu-content">
+                                <li class="active"><a class="menu-item" href="{{ route('admin.category') }}"
+                                        data-i18n="nav.dash.ecommerce"> show all </a>
+                                </li>
+                                <li><a class="menu-item" href="{{ route('admin.category.create') }}"
+                                        data-i18n="nav.dash.crypto">add new
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
 
 
-                   <li class="nav-item"><a href="">
-                          <span class="menu-title" data-i18n="nav.dash.main">products   </span>
-                          <span
-                              class="badge badge badge-danger badge-pill float-right mr-2">
-                               {{-- {{ \App\Models\Category::child()->count()}} --}}
-                   </a>
-                      <ul class="menu-content">
-                          <li class="active"><a class="menu-item" href="{{route('admin.product')}}"
-                                                  data-i18n="nav.dash.ecommerce"> show all </a>
-                          </li>
-                   <li><a class="menu-item" href="{{route('admin.product.create')}}" data-i18n="nav.dash.crypto">add new
-                                   </a>
-                          </li>
-                   </ul>
-                  </li>
-
-
-                    <li class="active"><a class="menu-item" href=""
-                            data-i18n="nav.dash.ecommerce">single_glass_jar_page </a>
-                    </li>
-                        {{-- @endrole
-                        @role('superadmin') --}}
-
-                        <li><a class="menu-item" href="{{ route('create_single_glass_jar_page') }}" data-i18n="nav.dash.crypto">
-                            create new
-                        </a>
-                    </li>
-                    </li>
-                    <li class="active"><a class="menu-item" href=""
-                            data-i18n="nav.dash.ecommerce">single_metallic_tins_page </a>
-                    </li>
-                        {{-- @endrole
-                        @role('superadmin') --}}
-
-                        <li><a class="menu-item" href="{{ route('create_single_metallic_tins_page_contents') }}" data-i18n="nav.dash.crypto">
-                            create new
-                        </a>
-                    </li>
-                    </li>
-                    <li class="active"><a class="menu-item" href=""
-                            data-i18n="nav.dash.ecommerce">single_pet_jar_page_contents </a>
-                    </li>
-                        {{-- @endrole
-                        @role('superadmin') --}}
-
-                        <li><a class="menu-item" href="{{ route('create_single_pet_jar_page_contents') }}" data-i18n="nav.dash.crypto">
-                            create new
-                        </a>
-                    </li>
-                    </li>
-                    <li class="active"><a class="menu-item" href=""
-                            data-i18n="nav.dash.ecommerce">single_plastic_barrels_page_contents </a>
-                    </li>
-                        {{-- @endrole
-                        @role('superadmin') --}}
-
-                        <li><a class="menu-item" href="{{ route('create_single_plastic_barrels_page_content') }}" data-i18n="nav.dash.crypto">
-                            create new
-                        </a>
-                    </li>
-                    </li>
-                    <li class="active"><a class="menu-item" href=""
-                            data-i18n="nav.dash.ecommerce">single_plastic_pails_page_contents </a>
-                    </li>
-                        {{-- @endrole
-                        @role('superadmin') --}}
-
-                        <li><a class="menu-item" href="{{ route('create_single_plastic_pails_page_contents') }}" data-i18n="nav.dash.crypto">
-                            create new
-                        </a>
-                    </li>
-                    </li>
-                    <li class="active"><a class="menu-item" href=""
-                            data-i18n="nav.dash.ecommerce">single_plastic_pouch_page_contents </a>
-                    </li>
-                        {{-- @endrole
-                        @role('superadmin') --}}
-
-                        <li><a class="menu-item" href="{{ route('create_single_plastic_pouch_page_contents') }}" data-i18n="nav.dash.crypto">
-                            create new
-                        </a>
-                    </li>
-                    </li>
-
-
-
-
+                        <li class="nav-item"><a href="">
+                                <span class="menu-title" data-i18n="nav.dash.main">products </span>
+                                <span class="badge badge badge-danger badge-pill float-right mr-2">
+                                    {{-- {{ \App\Models\Category::child()->count()}} --}}
+                            </a>
+                            <ul class="menu-content">
+                                <li class="active"><a class="menu-item" href="{{ route('admin.product') }}"
+                                        data-i18n="nav.dash.ecommerce"> show all </a>
+                                </li>
+                                <li><a class="menu-item" href="{{ route('admin.product.create') }}"
+                                        data-i18n="nav.dash.crypto">add new
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
 
 
                         <li class="active"><a class="menu-item" href=""
-                            data-i18n="nav.dash.ecommerce"> Main Page content </a>
-                    </li>
-                        {{-- @endrole --}}
-                        {{-- @role('superadmin') --}}
+                                data-i18n="nav.dash.ecommerce">single_glass_jar_page </a>
+                        </li>
+                        {{-- @endrole
+                        @role('superadmin') --}}
 
-                         <li><a class="menu-item" href="{{ route('createMainPage') }}" data-i18n="nav.dash.crypto">
-                            Update Content
-                        </a>
-                    </li>
-                    </li>
+                        <li><a class="menu-item" href="{{ route('create_single_glass_jar_page') }}"
+                                data-i18n="nav.dash.crypto">
+                                create new
+                            </a>
+                        </li>
+                </li>
+                <li class="active"><a class="menu-item" href=""
+                        data-i18n="nav.dash.ecommerce">single_metallic_tins_page </a>
+                </li>
+                {{-- @endrole
+                        @role('superadmin') --}}
 
-                    {{-- <li class="active"><a class="menu-item" href="{{ route('admin.company') }}"
+                <li><a class="menu-item" href="{{ route('create_single_metallic_tins_page_contents') }}"
+                        data-i18n="nav.dash.crypto">
+                        create new
+                    </a>
+                </li>
+                </li>
+                <li class="active"><a class="menu-item" href=""
+                        data-i18n="nav.dash.ecommerce">single_pet_jar_page_contents </a>
+                </li>
+                {{-- @endrole
+                        @role('superadmin') --}}
+
+                <li><a class="menu-item" href="{{ route('create_single_pet_jar_page_contents') }}"
+                        data-i18n="nav.dash.crypto">
+                        create new
+                    </a>
+                </li>
+                </li>
+                <li class="active"><a class="menu-item" href=""
+                        data-i18n="nav.dash.ecommerce">single_plastic_barrels_page_contents </a>
+                </li>
+                {{-- @endrole
+                        @role('superadmin') --}}
+
+                <li><a class="menu-item" href="{{ route('create_single_plastic_barrels_page_content') }}"
+                        data-i18n="nav.dash.crypto">
+                        create new
+                    </a>
+                </li>
+                </li>
+                <li class="active"><a class="menu-item" href=""
+                        data-i18n="nav.dash.ecommerce">single_plastic_pails_page_contents </a>
+                </li>
+                {{-- @endrole
+                        @role('superadmin') --}}
+
+                <li><a class="menu-item" href="{{ route('create_single_plastic_pails_page_contents') }}"
+                        data-i18n="nav.dash.crypto">
+                        create new
+                    </a>
+                </li>
+                </li>
+                <li class="active"><a class="menu-item" href=""
+                        data-i18n="nav.dash.ecommerce">single_plastic_pouch_page_contents </a>
+                </li>
+                {{-- @endrole
+                        @role('superadmin') --}}
+
+                <li><a class="menu-item" href="{{ route('create_single_plastic_pouch_page_contents') }}"
+                        data-i18n="nav.dash.crypto">
+                        create new
+                    </a>
+                </li>
+                </li>
+
+
+
+
+
+
+                <li class="active"><a class="menu-item" href="" data-i18n="nav.dash.ecommerce"> Main Page content
+                    </a>
+                </li>
+                {{-- @endrole --}}
+                {{-- @role('superadmin') --}}
+
+                <li><a class="menu-item" href="{{ route('createMainPage') }}" data-i18n="nav.dash.crypto">
+                        Update Content
+                    </a>
+                </li>
+                </li>
+
+                {{-- <li class="active"><a class="menu-item" href="{{ route('admin.company') }}"
                             data-i18n="nav.dash.ecommerce">الشركة المتعامل معها </a>
                     </li> --}}
-                        {{-- @endrole --}}
-                        {{-- @role('superadmin') --}}
+                {{-- @endrole --}}
+                {{-- @role('superadmin') --}}
 
-                        {{-- <li><a class="menu-item" href="{{ route('admin.company.create') }}" data-i18n="nav.dash.crypto">أضافة
+                {{-- <li><a class="menu-item" href="{{ route('admin.company.create') }}" data-i18n="nav.dash.crypto">أضافة
                             شركة جديدة
                         </a>
                     </li>
@@ -197,24 +203,24 @@
                     <li class="active"><a class="menu-item" href="{{ route('admin.city') }}"
                             data-i18n="nav.dash.ecommerce"> المدينة </a>
                     </li> --}}
-                        {{-- @endrole --}}
-                        {{-- @role('superadmin') --}}
+                {{-- @endrole --}}
+                {{-- @role('superadmin') --}}
 
-                        {{-- <li><a class="menu-item" href="{{ route('admin.city.create') }}" data-i18n="nav.dash.crypto">أضافة
+                {{-- <li><a class="menu-item" href="{{ route('admin.city.create') }}" data-i18n="nav.dash.crypto">أضافة
                             مدينة
                         </a>
                     </li> --}}
-                        {{-- @endrole --}}
-                        {{-- <li><a class="menu-item" href="{{ route('search.drivers') }}"
+                {{-- @endrole --}}
+                {{-- <li><a class="menu-item" href="{{ route('search.drivers') }}"
                     data-i18n="nav.dash.crypto">بحث سائق
                 </a>
             </li> --}}
-                        <li class="active"><a class="menu-item" href="{{ route('admin.users') }}"
-                                data-i18n="nav.dash.ecommerce"> users </a>
-                        </li>
+                <li class="active"><a class="menu-item" href="{{ route('admin.users') }}"
+                        data-i18n="nav.dash.ecommerce"> users </a>
+                </li>
                 </li>
                 <li><a class="menu-item" href="{{ route('admin.users.create') }}" data-i18n="nav.dash.crypto">
-                    add new
+                        add new
                     </a>
                 </li>
                 {{-- @endrole --}}
@@ -226,7 +232,8 @@
                     </span>
                 </a>
                 <ul class="menu-content">
-                    <li><a class="menu-item" href="{{ route('category.index') }}" data-i18n="nav.dash.ecommerce">categories
+                    <li><a class="menu-item" href="{{ route('category.index') }}"
+                            data-i18n="nav.dash.ecommerce">categories
                         </a>
                     </li>
                     <li class="active"><a class="menu-item" href="{{ route('articles.index') }}"
@@ -286,7 +293,7 @@
                 </li> --}}
             {{-- @auth --}}
 
-            <li class="nav-item">
+            {{-- <li class="nav-item">
                 <a href="{{ route('roles.index') }}">
                     <i class="la la-male"></i>
                     <span class="menu-title" data-i18n="nav.dash.main">roles </span>
@@ -296,14 +303,14 @@
                     <li class="active">
                         <a class="menu-item" href="{{ route('roles.index') }}" data-i18n="nav.dash.ecommerce">
                             عرض الكل </a>
-                    </li>
-                    {{-- <li><a class="menu-item" href="" data-i18n="nav.dash.crypto">أضافة
+                    </li> --}}
+            {{-- <li><a class="menu-item" href="" data-i18n="nav.dash.crypto">أضافة
                                 طالب </a>
                         </li> --}}
-                </ul>
-            </li>
+            {{-- </ul>
+            </li> --}}
 
-
+            {{-- 
             <li class="nav-item">
                 <a href="{{ route('permissions.index') }}"><i class="la la-male"></i>
                     <span class="menu-title" data-i18n="nav.dash.main">permissions</span>
@@ -313,12 +320,12 @@
                     <li class="active">
                         <a class="menu-item" href="{{ route('permissions.index') }}" data-i18n="nav.dash.ecommerce"> عرض
                             الكل </a>
-                    </li>
-                    {{-- <li><a class="menu-item" href="" data-i18n="nav.dash.crypto">أضافة
+                    </li> --}}
+            {{-- <li><a class="menu-item" href="" data-i18n="nav.dash.crypto">أضافة
                                 طالب </a>
                         </li> --}}
-                </ul>
-            </li>
+            {{-- </ul>
+            </li> --}}
             {{-- @endrole --}}
             {{-- @endauth --}}
             {{-- <li class=" nav-item"><a href="#"><i class="la la-television"></i><span class="menu-title"

@@ -33,6 +33,45 @@
     <!-- Template Stylesheet -->
     <link href="{{ asset('contactus/css/style.css') }}" rel="stylesheet">
     <style>
+          .mybtn-link::before {
+    /* Your styles for the ::before pseudo-element here */
+    content: "\f105"; /* This is required for the pseudo-element */
+    position: relative;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    margin-right: 10px; /* This creates a circular shape, adjust as needed */
+}
+        /* Basic styles for btn class */
+.mybtn {
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 0.25rem;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+/* Styles for btn-link class */
+.mybtn-link {
+    font-weight: 400;
+    color: #007bff;
+    background-color: transparent;
+    border: none;
+}
+
+.mybtn-link:hover {
+    color: #0056b3;
+    text-decoration: underline;
+    background-color: transparent;
+    border-color: transparent;
+}
+
         ::placeholder {
             /* Chrome, Firefox, Opera, Safari 10.1+ */
             color: #234b91 !important;
@@ -333,7 +372,7 @@ height: 100% !important; */
                 <div class="h-100 bg-secondary topphone d-inline-flex align-items-center text-dark py-2 px-4">
                     <span class="me-2 fw-semi-bold" style="color: #234b91;"><i class="fa fa-phone-alt me-2"></i>Call
                         Us:</span>
-                    <span style="color: #234b91;">+012 345 6789</span>
+                    <span style="color: #234b91;">+2010 906 85674</span>
                 </div>
             </div>
         </div>
@@ -345,7 +384,7 @@ height: 100% !important; */
 
     <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top px-4 px-lg-5">
-        <a href="index.html" class="navbar-brand d-flex align-items-center">
+        <a href="{{ route('welcome') }}" class="navbar-brand d-flex align-items-center">
             <h1 class="m-0" style="color: #234b91;font-size:43px;">JAWHARA</h1>
         </a>
         <button type="button" class="navbar-toggler me-0" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
@@ -371,23 +410,16 @@ height: 100% !important; */
                 <a href="product.html" class="nav-item nav-link" style="color: #234b91;">Products</a> --}}
                 <div class="nav-item dropdown">
                     <a href="#" style="color: #234b91;" class="nav-link dropdown-toggle"
-                        data-bs-toggle="dropdown">PRODUCTS</a>
+                        data-bs-toggle="dropdown">PRODUCTS CATEGORIES</a>
                     <div class="dropdown-menu bg-light m-0">
-                        <a href="" style="color: #234b91;" class="dropdown-item">Pickled
-                            Peppers</a>
-                        <a href="" style="color: #234b91;" class="dropdown-item">Pickled
-                            Olives</a>
-                        <a href="" style="color: #234b91;" class="dropdown-item">Pickled
-                            Artichokes</a>
-                        <a href="" style="color: #234b91;" class="dropdown-item">Pepper
-                            Paste</a>
-                        <a href="" style="color: #234b91;" class="dropdown-item">Roasted
-                            Peppers</a>
-                        <a href="" style="color: #234b91;"
-                            class="dropdown-item">Banderillas</a>
+                        @foreach ($categories as $post)
+
+                        <a href="{{ route('categoryproducts', $post->id) }}" style="color: #234b91;" class="dropdown-item">{{ $post->title }}</a>
+
+                        @endforeach
                     </div>
                 </div>
-                <a href="contact.html" class="nav-item nav-link active" style="color: #234b91;">CONTACT</a>
+                <a href="{{ route('contactus') }}" class="nav-item nav-link active" style="color: #234b91;">CONTACT</a>
             </div>
             {{-- <div class="border-start ps-4 d-none d-lg-block">
                 <button type="button" class="btn btn-sm p-0"><i class="fa fa-search"></i></button>
@@ -400,14 +432,14 @@ height: 100% !important; */
     <!-- Page Header Start -->
     <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="container text-center py-5">
-            <h1 class="display-3 text-white mb-4 animated slideInDown">Contact</h1>
-            <nav aria-label="breadcrumb animated slideInDown">
+            <h1 class="display-3 text-white mb-4 animated slideInDown">Contact Us</h1>
+            {{-- <nav aria-label="breadcrumb animated slideInDown">
                 <ol class="breadcrumb justify-content-center mb-0">
                     <li class="breadcrumb-item"><a href="#">Home</a></li>
                     <li class="breadcrumb-item"><a href="#">Pages</a></li>
                     <li class="breadcrumb-item active" aria-current="page">Contact</li>
                 </ol>
-            </nav>
+            </nav> --}}
         </div>
     </div>
     <!-- Page Header End -->
@@ -431,32 +463,36 @@ height: 100% !important; */
                         and working contact form with Ajax & PHP in a few minutes. Just copy and paste the files, add a
                         little code and you're done. <a href="https://htmlcodex.com/contact-form"
                             style="color: #234b91;font-weight: bolder;">Download Now</a>.</p>
-                    <form>
+                            <form class="form"
+                            action="{{route('emails')}}"
+                            method="POST"
+                            enctype="multipart/form-data">
+                          @csrf
                         <div class="row g-3">
                             <div class="col-md-6">
                                 <div class="form-floating">
                                     <input type="text" class="form-control" id="name"
-                                        placeholder="Your Name">
+                                        placeholder="Your Name" name="name">
                                     <!-- <label for="name">Your Name</label> -->
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-floating">
                                     <input type="email" class="form-control" id="email"
-                                        placeholder="Your Email">
+                                        placeholder="Your Email" name="email">
                                     <!-- <label for="email">Your Email</label> -->
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="form-floating">
                                     <input type="text" class="form-control" id="company"
-                                        placeholder="Company Name">
+                                        placeholder="Company Name" name="company_name">
                                     <!-- <label for="subject">Subject</label> -->
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="form-floating">
-                                    <textarea class="form-control" placeholder="Leave a message here" id="message" style="height: 250px"></textarea>
+                                    <textarea name="message" class="form-control" placeholder="Leave a message here" id="message" style="height: 250px"></textarea>
                                     <!-- <label for="message">Message</label> -->
                                 </div>
                             </div>
@@ -476,7 +512,7 @@ height: 100% !important; */
                         </div>
                         <div class="ms-3">
                             <h6 style="color: #234b91;">Our Office</h6>
-                            <span style="color: #234b91;">123 Street, New York, USA</span>
+                            <span style="color: #234b91;">5th settelment, Cairo, Egypt</span>
                         </div>
                     </div>
                     <div class="d-flex border-bottom pb-3 mb-3">
@@ -485,9 +521,9 @@ height: 100% !important; */
                         </div>
                         <div class="ms-3">
                             <h6 style="color: #234b91;">Call Us</h6>
-                            <span style="color: #234b91;">Office No. : +2012 345 67890</span>
+                            <span style="color: #234b91;">Office No. : +2010 906 85674</span>
                             <br>
-                            <span style="color: #234b91;">Phone No. : +2012 345 67890</span>
+                            <span style="color: #234b91;">Phone No. : +2010 906 85674</span>
 
                         </div>
                     </div>
@@ -500,7 +536,7 @@ height: 100% !important; */
                         </div>
                         <div class="ms-3">
                             <h6 style="color: #234b91;">WhatsApp No. :</h6>
-                            <span style="color: #234b91;">+2012 345 67890</span>
+                            <span style="color: #234b91;">+2010 906 85674</span>
                         </div>
                     </div>
                     <div class="d-flex border-bottom-0 pb-3 mb-3">
@@ -509,7 +545,7 @@ height: 100% !important; */
                         </div>
                         <div class="ms-3">
                             <h6 style="color: #234b91;">Mail Us</h6>
-                            <span style="color: #234b91;">info@example.com</span>
+                            <span style="color: #234b91;">info@jawharafoods.com</span>
                         </div>
                     </div>
 
@@ -533,12 +569,12 @@ height: 100% !important; */
                 <div class="col-lg-1 "></div>
                 <div class="col-lg-3 col-md-6">
                     <h5 class="text-white mb-4">Our Office</h5>
-                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</p>
-                    <p class="mb-2"><i class="fas fa-building me-3"></i>+2012 345 67890</p>
-                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+2012 345 67890</p>
-                    <p class="mb-2"><i class="fab fa-whatsapp me-3" style="font-size:x-large;"></i>+2012 345 67890
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>5th settelment, Cairo, Egypt</p>
+                    <p class="mb-2"><i class="fas fa-building me-3"></i>+2010 906 85674</p>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+2010 906 85674</p>
+                    <p class="mb-2"><i class="fab fa-whatsapp me-3" style="font-size:x-large;"></i>+2010 906 85674
                     </p>
-                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@example.com</p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@jawharafoods.com</p>
                     <div class="d-flex pt-3">
                         <a class="btn btn-square btn-secondary rounded-circle me-2" href=""><i
                                 style="color: #234b91;" class="fab fa-twitter"></i></a>
@@ -554,11 +590,11 @@ height: 100% !important; */
 
                 <div class="col-lg-2 col-md-6">
                     <h5 class="text-white mb-4">Quick Links</h5>
-                    <a class="btn btn-link" href="" style="color: white;">About Us</a>
-                    <a class="btn btn-link" href="" style="color: white;">Contact Us</a>
-                    <a class="btn btn-link" href="" style="color: white;">Our Services</a>
-                    <a class="btn btn-link" href="" style="color: white;">Terms & Condition</a>
-                    <a class="btn btn-link" href="" style="color: white;">Support</a>
+                    <a class="mybtn mybtn-link" href="" style="color: white;">About Us</a>
+                    <a class="mybtn mybtn-link" href="{{ route('contactus') }}" style="color: white;">Contact Us</a>
+                    <a class="mybtn mybtn-link" href="" style="color: white;">Our Services</a>
+                    <a class="mybtn mybtn-link" href="" style="color: white;">Terms & Condition</a>
+                    <a class="mybtn mybtn-link" href="" style="color: white;">Support</a>
                 </div>
                 {{-- <div class="col-lg-1"></div> --}}
 
@@ -575,18 +611,23 @@ height: 100% !important; */
                 <div class="col-lg-3 col-md-6">
                     <div class="aside-stretch-right " style="background-color: #234b91;">
                         <h2 class="footer-heading " style="font-family: Libre Baskerville,serif;font-size:1.25rem;font-weight:700;line-height:1.2;">Free consultation</h2>
-                        <form action="#" class="form-consultation">
+                        {{-- <form action="#" class=""> --}}
+                            <form class="form-consultation"
+                            action="{{route('emails')}}"
+                            method="POST"
+                            enctype="multipart/form-data">
+                          @csrf
                             <div class="form-group mb-2">
-                                <input type="text" class="form-control" placeholder="Your Name">
+                                <input type="text" class="form-control" placeholder="Your Name" name="name">
                             </div>
                             <div class="form-group mb-2">
-                                <input type="text" class="form-control" placeholder="Your Email">
+                                <input type="text" class="form-control" placeholder="Your Email" name="email">
                             </div>
                             <div class="form-group mb-2">
-                                <input type="text" class="form-control" placeholder="Subject">
+                                <input type="text" class="form-control" placeholder="Company Name" name="company_name">
                             </div>
                             <div class="form-group mb-2">
-                                <textarea name="" id="" cols="30" rows="3" class="form-control" placeholder="Message"></textarea>
+                                <textarea name="message" id="" cols="30" rows="3" class="form-control" placeholder="Message"></textarea>
                             </div>
                             <div class="form-group mb-2">
                                 <button type="submit" class="form-control submit px-3">Send A Message</button>

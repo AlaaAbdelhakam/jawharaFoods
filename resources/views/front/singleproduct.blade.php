@@ -37,6 +37,74 @@
     {{-- <link rel="stylesheet" type="text/css" href="{{ asset('mainpage/css/style2.css') }}"> --}}
     {{-- <link rel="stylesheet" type="text/css" href="{{ asset('mainpage/css/style3.css') }}"> --}}
     <style>
+        .btn-primary {
+            /* Your styles for the .btn.btn-warning combination here */
+            color: #212529 !important;
+            /* Adjust text color as needed */
+            background-color: #ffc107 !important;
+            /* Adjust background color for the warning style */
+            border-color: #ffc107 !important;
+            /* Adjust border color for the warning style */
+        }
+
+        .btn-base {
+            margin: 0;
+            height: 30px;
+            outline: none;
+            border-radius: 3px;
+            border: 2px solid currentColor;
+            font-size: 12px;
+            transition: 0.5s;
+            padding: 5px 15px;
+            font-size: 12px;
+            position: relative;
+            background: #ffc107;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        .mybtn-link::before {
+            /* Your styles for the ::before pseudo-element here */
+            content: "\f105";
+            /* This is required for the pseudo-element */
+            position: relative;
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            margin-right: 10px;
+            /* This creates a circular shape, adjust as needed */
+        }
+
+        /* Basic styles for btn class */
+        .mybtn {
+            display: inline-block;
+            font-weight: 400;
+            text-align: center;
+            white-space: nowrap;
+            vertical-align: middle;
+            user-select: none;
+            border: 1px solid transparent;
+            padding: 0.375rem 0.75rem;
+            font-size: 1rem;
+            line-height: 1.5;
+            border-radius: 0.25rem;
+            transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+        }
+
+        /* Styles for btn-link class */
+        .mybtn-link {
+            font-weight: 400;
+            color: #007bff;
+            background-color: transparent;
+            border: none;
+        }
+
+        .mybtn-link:hover {
+            color: #0056b3;
+            text-decoration: underline;
+            background-color: transparent;
+            border-color: transparent;
+        }
+
         ::placeholder {
             /* Chrome, Firefox, Opera, Safari 10.1+ */
             color: #234b91 !important;
@@ -363,7 +431,7 @@ height: 100% !important; */
                 <div class="h-100 bg-secondary d-inline-flex align-items-center text-dark py-2 px-4">
                     <span class="me-2 fw-semi-bold" style="color: #234b91;"><i class="fa fa-phone-alt me-2"></i>Call
                         Us:</span>
-                    <span style="color: #234b91;">+012 345 6789</span>
+                    <span style="color: #234b91;">+2010 906 85674</span>
                 </div>
             </div>
         </div>
@@ -373,7 +441,7 @@ height: 100% !important; */
 
     <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top px-4 px-lg-5">
-        <a href="index.html" class="navbar-brand d-flex align-items-center">
+        <a href="{{ route('welcome') }}" class="navbar-brand d-flex align-items-center">
             <h1 class="m-0" style="color: #234b91;font-size:43px;">JAWHARA</h1>
         </a>
         <button type="button" class="navbar-toggler me-0" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
@@ -396,27 +464,21 @@ height: 100% !important; */
                     </div>
                 </div>
 
-                
+
                 {{-- <a href="service.html" class="nav-item nav-link" style="color: #234b91;">Services</a>
                 <a href="product.html" class="nav-item nav-link" style="color: #234b91;">Products</a> --}}
                 <div class="nav-item dropdown">
                     <a href="#" style="color: #234b91;" class="nav-link dropdown-toggle"
-                        data-bs-toggle="dropdown">PRODUCTS</a>
+                        data-bs-toggle="dropdown">PRODUCTS CATEGORIES</a>
                     <div class="dropdown-menu bg-light m-0">
-                        <a href="" style="color: #234b91;" class="dropdown-item">Pickled
-                            Peppers</a>
-                        <a href="" style="color: #234b91;" class="dropdown-item">Pickled
-                            Olives</a>
-                        <a href="" style="color: #234b91;" class="dropdown-item">Pickled
-                            Artichokes</a>
-                        <a href="" style="color: #234b91;" class="dropdown-item">Pepper
-                            Paste</a>
-                        <a href="" style="color: #234b91;" class="dropdown-item">Roasted
-                            Peppers</a>
-                        <a href="" style="color: #234b91;" class="dropdown-item">Banderillas</a>
+                        @foreach ($categories as $post)
+                            <a href="{{ route('categoryproducts', $post->id) }}" style="color: #234b91;"
+                                class="dropdown-item">{{ $post->title }}</a>
+                        @endforeach
                     </div>
                 </div>
-                <a href="contact.html" class="nav-item nav-link active" style="color: #234b91;">CONTACT</a>
+                <a href="{{ route('contactus') }}" class="nav-item nav-link active"
+                    style="color: #234b91;">CONTACT</a>
             </div>
             {{-- <div class="border-start ps-4 d-none d-lg-block">
                 <button type="button" class="btn btn-sm p-0"><i class="fa fa-search"></i></button>
@@ -864,14 +926,14 @@ height: 100% !important; */
                         <main class="col-lg-6">
                             <div class="ps-lg-3">
                                 <h4 class="title text-dark">
-                                    {{$singleplasticbarrels->first()->title}}
+                                    {{ $singleplasticbarrels->first()->title }}
 
                                 </h4>
 
                                 <hr />
 
                                 <p>
-                                    {{$singleplasticbarrels->first()->description}}
+                                    {{ $singleplasticbarrels->first()->description }}
 
                                 </p>
                                 <br>
@@ -880,56 +942,56 @@ height: 100% !important; */
                                 <hr />
                                 <div class="row ">
                                     <dt class="col-5">ITEM #</dt>
-                                    <dd class="col-7">{{$singleplasticbarrels->first()->PBitem}}</dd>
+                                    <dd class="col-7">{{ $singleplasticbarrels->first()->PBitem }}</dd>
                                     <hr />
                                     <dt class="col-5">BRAND</dt>
-                                    <dd class="col-7">{{$singleplasticbarrels->first()->PBbrand}}</dd>
+                                    <dd class="col-7">{{ $singleplasticbarrels->first()->PBbrand }}</dd>
                                     <hr />
                                     <dt class="col-5">CASE PACK</dt>
-                                    <dd class="col-7">{{$singleplasticbarrels->first()->PBcasepack}}</dd>
+                                    <dd class="col-7">{{ $singleplasticbarrels->first()->PBcasepack }}</dd>
                                     <hr />
                                     <dt class="col-5">ORIGIN</dt>
-                                    <dd class="col-7">{{$singleplasticbarrels->first()->PBorigin}}</dd>
+                                    <dd class="col-7">{{ $singleplasticbarrels->first()->PBorigin }}</dd>
                                     <hr />
 
                                     <dt class="col-5">INGREDIENTS</dt>
-                                    <dd class="col-7">{{$singleplasticbarrels->first()->PBingridients}}</dd>
+                                    <dd class="col-7">{{ $singleplasticbarrels->first()->PBingridients }}</dd>
                                     <hr />
 
                                     <dt class="col-5">SEALED SHELF LIFE</dt>
-                                    <dd class="col-7">{{$singleplasticbarrels->first()->PBsealedshelflife}}</dd>
+                                    <dd class="col-7">{{ $singleplasticbarrels->first()->PBsealedshelflife }}</dd>
                                     <hr />
 
                                     <dt class="col-5">STORAGE</dt>
-                                    <dd class="col-7">{{$singleplasticbarrels->first()->PBstorage}}</dd>
+                                    <dd class="col-7">{{ $singleplasticbarrels->first()->PBstorage }}</dd>
                                     <hr />
 
                                     <dt class="col-5">ATTRIBUTES</dt>
-                                    <dd class="col-7">{{$singleplasticbarrels->first()->PBattributes}}</dd>
+                                    <dd class="col-7">{{ $singleplasticbarrels->first()->PBattributes }}</dd>
                                     <hr />
 
                                     <dt class="col-5">DRAINED WEIGHT</dt>
-                                    <dd class="col-7">{{$singleplasticbarrels->first()->PBdrainedweight}}</dd>
+                                    <dd class="col-7">{{ $singleplasticbarrels->first()->PBdrainedweight }}</dd>
                                     <hr />
 
                                     <dt class="col-5">GROSS CASE WEIGHT</dt>
-                                    <dd class="col-7">{{$singleplasticbarrels->first()->PBgrosscaseweight}}</dd>
+                                    <dd class="col-7">{{ $singleplasticbarrels->first()->PBgrosscaseweight }}</dd>
                                     <hr />
 
                                     <dt class="col-5">CASE DIMENSIONS</dt>
-                                    <dd class="col-7">{{$singleplasticbarrels->first()->PBcasedimensions}}</dd>
+                                    <dd class="col-7">{{ $singleplasticbarrels->first()->PBcasedimensions }}</dd>
                                     <hr />
 
                                     <dt class="col-5">CASE CUBE</dt>
-                                    <dd class="col-7">{{$singleplasticbarrels->first()->PBcasecube}}</dd>
+                                    <dd class="col-7">{{ $singleplasticbarrels->first()->PBcasecube }}</dd>
                                     <hr />
 
                                     <dt class="col-5">TI-HI</dt>
-                                    <dd class="col-7">{{$singleplasticbarrels->first()->PBtihi}}</dd>
+                                    <dd class="col-7">{{ $singleplasticbarrels->first()->PBtihi }}</dd>
                                     <hr />
 
                                     <dt class="col-5">ALLERGENS</dt>
-                                    <dd class="col-7">{{$singleplasticbarrels->first()->PBallergens}}</dd>
+                                    <dd class="col-7">{{ $singleplasticbarrels->first()->PBallergens }}</dd>
                                     <hr />
                                 </div>
 
@@ -958,8 +1020,8 @@ height: 100% !important; */
                                 <!-- </div> -->
                                 <br>
 
-                                <a href="#" class="btn btn-warning shadow-0 p-3"> Ask For Quotation </a>
-
+                                <a href="https://api.whatsapp.com/send?phone=201090685674" target="_blank"
+                                    class="btn-base btn-primary shadow-0 p-3"> Ask For Quotation </a>
                                 <!-- <a href="#" class="btn btn-light border border-secondary py-2 icon-hover px-3"> <i class="me-1 fa fa-heart fa-lg"></i> Save </a> -->
                             </div>
                         </main>
@@ -1243,8 +1305,8 @@ height: 100% !important; */
                                 <!-- </div> -->
                                 <br>
 
-                                <a href="#" class="btn btn-warning shadow-0 p-3"> Ask For Quotation </a>
-
+                                <a href="https://api.whatsapp.com/send?phone=201090685674" target="_blank"
+                                    class="btn-base btn-primary shadow-0 p-3"> Ask For Quotation </a>
                                 <!-- <a href="#" class="btn btn-light border border-secondary py-2 icon-hover px-3"> <i class="me-1 fa fa-heart fa-lg"></i> Save </a> -->
                             </div>
                         </main>
@@ -1463,7 +1525,8 @@ height: 100% !important; */
                                     <hr />
 
                                     <dt class="col-5">SEALED SHELF LIFE</dt>
-                                    <dd class="col-7"> {{ $singleplasticpailspage->first()->PPailssealedshelflife }}</dd>
+                                    <dd class="col-7"> {{ $singleplasticpailspage->first()->PPailssealedshelflife }}
+                                    </dd>
                                     <hr />
 
                                     <dt class="col-5">STORAGE</dt>
@@ -1475,15 +1538,18 @@ height: 100% !important; */
                                     <hr />
 
                                     <dt class="col-5">DRAINED WEIGHT</dt>
-                                    <dd class="col-7"> {{ $singleplasticpailspage->first()->PPailsdrainedweight }}</dd>
+                                    <dd class="col-7"> {{ $singleplasticpailspage->first()->PPailsdrainedweight }}
+                                    </dd>
                                     <hr />
 
                                     <dt class="col-5">GROSS CASE WEIGHT</dt>
-                                    <dd class="col-7"> {{ $singleplasticpailspage->first()->PPailsgrosscaseweight }}</dd>
+                                    <dd class="col-7"> {{ $singleplasticpailspage->first()->PPailsgrosscaseweight }}
+                                    </dd>
                                     <hr />
 
                                     <dt class="col-5">CASE DIMENSIONS</dt>
-                                    <dd class="col-7"> {{ $singleplasticpailspage->first()->PPailscasedimensions }}</dd>
+                                    <dd class="col-7"> {{ $singleplasticpailspage->first()->PPailscasedimensions }}
+                                    </dd>
                                     <hr />
 
                                     <dt class="col-5">CASE CUBE</dt>
@@ -1524,8 +1590,8 @@ height: 100% !important; */
                                 <!-- </div> -->
                                 <br>
 
-                                <a href="#" class="btn btn-warning shadow-0 p-3"> Ask For Quotation </a>
-
+                                <a href="https://api.whatsapp.com/send?phone=201090685674" target="_blank"
+                                    class="btn-base btn-primary shadow-0 p-3"> Ask For Quotation </a>
                                 <!-- <a href="#" class="btn btn-light border border-secondary py-2 icon-hover px-3"> <i class="me-1 fa fa-heart fa-lg"></i> Save </a> -->
                             </div>
                         </main>
@@ -1803,8 +1869,8 @@ height: 100% !important; */
                                 <!-- </div> -->
                                 <br>
 
-                                <a href="#" class="btn btn-warning shadow-0 p-3"> Ask For Quotation </a>
-
+                                <a href="https://api.whatsapp.com/send?phone=201090685674" target="_blank"
+                                    class="btn-base btn-primary shadow-0 p-3"> Ask For Quotation </a>
                                 <!-- <a href="#" class="btn btn-light border border-secondary py-2 icon-hover px-3"> <i class="me-1 fa fa-heart fa-lg"></i> Save </a> -->
                             </div>
                         </main>
@@ -2083,8 +2149,8 @@ height: 100% !important; */
                                 <!-- </div> -->
                                 <br>
 
-                                <a href="#" class="btn btn-warning shadow-0 p-3"> Ask For Quotation </a>
-
+                                <a href="https://api.whatsapp.com/send?phone=201090685674" target="_blank"
+                                    class="btn-base btn-primary shadow-0 p-3"> Ask For Quotation </a>
                                 <!-- <a href="#" class="btn btn-light border border-secondary py-2 icon-hover px-3"> <i class="me-1 fa fa-heart fa-lg"></i> Save </a> -->
                             </div>
                         </main>
@@ -2368,7 +2434,8 @@ height: 100% !important; */
                                 <!-- </div> -->
                                 <br>
 
-                                <a href="#" class="btn btn-warning shadow-0 p-3"> Ask For Quotation </a>
+                                <a href="https://api.whatsapp.com/send?phone=201090685674" target="_blank"
+                                    class="btn-base btn-primary shadow-0 p-3"> Ask For Quotation </a>
 
                                 <!-- <a href="#" class="btn btn-light border border-secondary py-2 icon-hover px-3"> <i class="me-1 fa fa-heart fa-lg"></i> Save </a> -->
                             </div>
@@ -2433,13 +2500,13 @@ height: 100% !important; */
                 <div class="col-lg-1 "></div>
                 <div class="col-lg-3 col-md-6">
                     <h5 class="text-white mb-4">Our Office</h5>
-                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</p>
-                    <p class="mb-2"><i class="fas fa-building me-3"></i>+2012 345 67890</p>
-                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+2012 345 67890</p>
-                    <p class="mb-2"><i class="fab fa-whatsapp me-3" style="font-size:x-large;"></i>+2012 345
-                        67890
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>5th settelment, Cairo, Egypt</p>
+                    <p class="mb-2"><i class="fas fa-building me-3"></i>+2010 906 85674</p>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+2010 906 85674</p>
+                    <p class="mb-2"><i class="fab fa-whatsapp me-3" style="font-size:x-large;"></i>+2010 906
+                        85674
                     </p>
-                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@example.com</p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@jawharafoods.com</p>
                     <div class="d-flex pt-3">
                         <a class="btn btn-square btn-secondary rounded-circle me-2" href=""><i
                                 style="color: #234b91;" class="fab fa-twitter"></i></a>
@@ -2455,11 +2522,12 @@ height: 100% !important; */
 
                 <div class="col-lg-2 col-md-6">
                     <h5 class="text-white mb-4">Quick Links</h5>
-                    <a class="btn btn-link" href="" style="color: white;">About Us</a>
-                    <a class="btn btn-link" href="" style="color: white;">Contact Us</a>
-                    <a class="btn btn-link" href="" style="color: white;">Our Services</a>
-                    <a class="btn btn-link" href="" style="color: white;">Terms & Condition</a>
-                    <a class="btn btn-link" href="" style="color: white;">Support</a>
+                    <a class="mybtn mybtn-link" href="" style="color: white;">About Us</a>
+                    <a class="mybtn mybtn-link" href="{{ route('contactus') }}" style="color: white;">Contact
+                        Us</a>
+                    <a class="mybtn mybtn-link" href="" style="color: white;">Our Services</a>
+                    <a class="mybtn mybtn-link" href="" style="color: white;">Terms & Condition</a>
+                    <a class="mybtn mybtn-link" href="" style="color: white;">Support</a>
                 </div>
                 {{-- <div class="col-lg-1"></div> --}}
 
@@ -2478,18 +2546,23 @@ height: 100% !important; */
                         <h2 class="footer-heading "
                             style="font-family: Libre Baskerville,serif;font-size:1.25rem;font-weight:700;line-height:1.2;">
                             Free consultation</h2>
-                        <form action="#" class="form-consultation">
+                        <form class="form-consultation" action="{{ route('emails') }}" method="POST"
+                            enctype="multipart/form-data">
+                            @csrf
                             <div class="form-group mb-2">
-                                <input type="text" class="form-control" placeholder="Your Name">
+                                <input type="text" class="form-control" placeholder="Your Name"
+                                    name="name">
                             </div>
                             <div class="form-group mb-2">
-                                <input type="text" class="form-control" placeholder="Your Email">
+                                <input type="text" class="form-control" placeholder="Your Email"
+                                    name="email">
                             </div>
                             <div class="form-group mb-2">
-                                <input type="text" class="form-control" placeholder="Subject">
+                                <input type="text" class="form-control" placeholder="Company Name"
+                                    name="company_name">
                             </div>
                             <div class="form-group mb-2">
-                                <textarea name="" id="" cols="30" rows="3" class="form-control"
+                                <textarea name="message" id="" cols="30" rows="3" class="form-control"
                                     placeholder="Message"></textarea>
                             </div>
                             <div class="form-group mb-2">

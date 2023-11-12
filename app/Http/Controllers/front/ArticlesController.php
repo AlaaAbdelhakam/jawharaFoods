@@ -8,26 +8,30 @@ use Illuminate\Http\Request;
 use App\Models\Articles;
 use App\Models\Comments;
 use Illuminate\Support\Facades\DB;
+use App\Models\Jawharacategory;
 
 class ArticlesController extends Controller
 {
     public function index(){
         $articles = DB::table('articles')->join('category', 'articles.category_id', '=', 'category.id')
         ->select('articles.*', 'category.name')->get();
+        $categories = Jawharacategory::all();
 
-        return view('front.index')->with('articles',$articles);
+        return view('front.index')->with('articles',$articles)->with('categories',$categories);
     }
     public function article($id){
         $article = DB::table('articles')->join('category', 'articles.category_id', '=', 'category.id')
         ->select('articles.*', 'category.name')->where('articles.id',$id)->first();
+        $categories = Jawharacategory::all();
 
         $comments = DB::table('comments')->where('article_id',$id)->get();
-        return view('front.articles')->with('article',$article)->with('comments',$comments);
+        return view('front.articles')->with('article',$article)->with('comments',$comments)->with('categories',$categories);
     }
     public function category($id){
         $articles = DB::table('articles')->where('category_id',$id)->get();
+        $categories = Jawharacategory::all();
 
-        return view('front.category')->with('articles',$articles);
+        return view('front.category')->with('articles',$articles)->with('categories',$categories);
     }
     public function comment_insert(Request $request,$id){
         Comments::create([
