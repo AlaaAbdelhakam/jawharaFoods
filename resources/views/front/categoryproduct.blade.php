@@ -37,7 +37,6 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('singleproduct/assets/css/slick-theme.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('singleproduct/assets/css/templatemo.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('singleproduct/assets/css/custom.css') }}">
-
     <style>
         .btn-base {
   margin: 0;
