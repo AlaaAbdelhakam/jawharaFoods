@@ -9,6 +9,7 @@ use App\Http\Controllers\CalenderController;
 use App\Http\Controllers\FullCalendarController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PostsController;
+use App\Http\Controllers\UploadPDF;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -19,6 +20,9 @@ use App\Http\Controllers\PostsController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::post('file-upload', [UploadPDF::class, 'upload'])->name('file.store');
+Route::post('/download', [App\Http\Controllers\UploadPDF::class, 'download'])->name('reports.download');
+
 // Assuming your namespace is 'App\Http\Controllers'
 Route::get('/singleproduct/{id}', [PostsController::class, 'index'])->name('singleproduct');
 // Assuming your namespace is 'App\Http\Controllers'

@@ -12,10 +12,10 @@ class HomeControllerr extends Controller
         $mainpage = MainPageContent::all();
         $categories = Jawharacategory::all();
 
-        return view('front.main', compact('mainpage','categories'));
+        return view('front.mainpage', compact('mainpage','categories'));
     }
 
-    
+
     // public function singleproduct(){
     //     return view('singleproduct');
     // }

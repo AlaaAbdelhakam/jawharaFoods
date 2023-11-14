@@ -68,7 +68,7 @@
                                                         <div class="form-group">
                                                             <label for="projectinput1"> main_page_title_first
                                                                  </label>
-                                                            <input type="text" 
+                                                            <input type="text"
                                                                    class="form-control"
                                                                    placeholder="  "
                                                                    value="{{old('main_page_title_first')}}"
@@ -82,7 +82,7 @@
                                                         <div class="form-group">
                                                             <label for="projectinput1"> slogan_first
                                                                  </label>
-                                                            <input type="text" 
+                                                            <input type="text"
                                                                    class="form-control"
                                                                    placeholder="  "
                                                                    value="{{old('slogan_first')}}"
@@ -92,8 +92,8 @@
                                                             @enderror
                                                         </div>
                                                     </div>
-                                                    
-                                        
+
+
                                     <div class="form-group">
                                                     <label for="">img_first</label>
                                                     <input type="file" name="img_first" class="form-control" placeholder="ارفق صورة">
@@ -105,7 +105,7 @@
                                                         <div class="form-group">
                                                             <label for="projectinput1"> main_page_title_second
                                                                  </label>
-                                                            <input type="text" 
+                                                            <input type="text"
                                                                    class="form-control"
                                                                    placeholder="  "
                                                                    value="{{old('main_page_title_second')}}"
@@ -119,7 +119,7 @@
                                                         <div class="form-group">
                                                             <label for="projectinput1"> slogan_second
                                                                  </label>
-                                                            <input type="text" 
+                                                            <input type="text"
                                                                    class="form-control"
                                                                    placeholder="  "
                                                                    value="{{old('slogan_second')}}"
@@ -129,8 +129,8 @@
                                                             @enderror
                                                         </div>
                                                     </div>
-                                                    
-                                        
+
+
                                     <div class="form-group">
                                                     <label for="">img_second</label>
                                                     <input type="file" name="img_second" class="form-control" placeholder="ارفق صورة">
@@ -142,7 +142,7 @@
                                                         <div class="form-group">
                                                             <label for="projectinput1"> main_page_title_third
                                                                  </label>
-                                                            <input type="text" 
+                                                            <input type="text"
                                                                    class="form-control"
                                                                    placeholder="  "
                                                                    value="{{old('main_page_title_third')}}"
@@ -156,7 +156,7 @@
                                                         <div class="form-group">
                                                             <label for="projectinput1"> slogan_third
                                                                  </label>
-                                                            <input type="text" 
+                                                            <input type="text"
                                                                    class="form-control"
                                                                    placeholder="  "
                                                                    value="{{old('slogan_third')}}"
@@ -166,25 +166,25 @@
                                                             @enderror
                                                         </div>
                                                     </div>
-                                                    
-                                        
+
+
                                     <div class="form-group">
                                                     <label for="">img_third</label>
                                                     <input type="file" name="img_third" class="form-control" placeholder="ارفق صورة">
                                                 </div>
-                                                  
-                                                   
-                                                    
 
 
-{{-- 
+
+
+
+{{--
 
 
                                                 <div class="col-md-6">
                                                     <div class="form-group">
                                                         <label for="projectinput1"> category_first_title_1
                                                              </label>
-                                                        <input type="text" 
+                                                        <input type="text"
                                                                class="form-control"
                                                                placeholder="  "
                                                                value="{{old('category_first_title_1')}}"
@@ -198,7 +198,7 @@
                                                     <div class="form-group">
                                                         <label for="projectinput1"> category_first_description_1
                                                              </label>
-                                                        <input type="text" 
+                                                        <input type="text"
                                                                class="form-control"
                                                                placeholder="  "
                                                                value="{{old('category_first_description_1')}}"
@@ -208,14 +208,14 @@
                                                         @enderror
                                                     </div>
                                                 </div>
-                                                
-                                    
+
+
                                 <div class="form-group">
                                                 <label for="">img_first_categoryone</label>
                                                 <input type="file" name="img_first_categoryone" class="form-control" placeholder="ارفق صورة">
                                             </div>
-                                              
-                                               
+
+
 
 
 
@@ -227,7 +227,7 @@
                                                 <div class="form-group">
                                                     <label for="projectinput1"> category_first_title_2
                                                          </label>
-                                                    <input type="text" 
+                                                    <input type="text"
                                                            class="form-control"
                                                            placeholder="  "
                                                            value="{{old('category_first_title_2')}}"
@@ -241,7 +241,7 @@
                                                 <div class="form-group">
                                                     <label for="projectinput1"> category_first_description_2
                                                          </label>
-                                                    <input type="text" 
+                                                    <input type="text"
                                                            class="form-control"
                                                            placeholder="  "
                                                            value="{{old('category_first_description_2')}}"
@@ -251,8 +251,8 @@
                                                     @enderror
                                                 </div>
                                             </div>
-                                            
-                                
+
+
                             <div class="form-group">
                                             <label for="">img_second_categoryone</label>
                                             <input type="file" name="img_second_categoryone" class="form-control" placeholder="ارفق صورة">
@@ -271,7 +271,7 @@
                                             <div class="form-group">
                                                 <label for="projectinput1"> category_first_title_3
                                                      </label>
-                                                <input type="text" 
+                                                <input type="text"
                                                        class="form-control"
                                                        placeholder="  "
                                                        value="{{old('category_first_title_3')}}"
@@ -285,7 +285,7 @@
                                             <div class="form-group">
                                                 <label for="projectinput1"> category_first_description_3
                                                      </label>
-                                                <input type="text" 
+                                                <input type="text"
                                                        class="form-control"
                                                        placeholder="  "
                                                        value="{{old('category_first_description_3')}}"
@@ -295,8 +295,8 @@
                                                 @enderror
                                             </div>
                                         </div>
-                                        
-                            
+
+
                         <div class="form-group">
                                         <label for="">img_third_categoryone</label>
                                         <input type="file" name="img_third_categoryone" class="form-control" placeholder="ارفق صورة">
@@ -312,7 +312,7 @@
                                         <div class="form-group">
                                             <label for="projectinput1"> category_second_title_1
                                                  </label>
-                                            <input type="text" 
+                                            <input type="text"
                                                    class="form-control"
                                                    placeholder="  "
                                                    value="{{old('category_second_title_1')}}"
@@ -326,7 +326,7 @@
                                         <div class="form-group">
                                             <label for="projectinput1"> category_second_description_1
                                                  </label>
-                                            <input type="text" 
+                                            <input type="text"
                                                    class="form-control"
                                                    placeholder="  "
                                                    value="{{old('category_second_description_1')}}"
@@ -336,8 +336,8 @@
                                             @enderror
                                         </div>
                                     </div>
-                                    
-                        
+
+
                     <div class="form-group">
                                     <label for="">img_first_categorytwo</label>
                                     <input type="file" name="img_first_categorytwo" class="form-control" placeholder="ارفق صورة">
@@ -354,7 +354,7 @@
                                     <div class="form-group">
                                         <label for="projectinput1"> category_second_title_2
                                              </label>
-                                        <input type="text" 
+                                        <input type="text"
                                                class="form-control"
                                                placeholder="  "
                                                value="{{old('category_second_title_2')}}"
@@ -368,7 +368,7 @@
                                     <div class="form-group">
                                         <label for="projectinput1"> category_second_description_2
                                              </label>
-                                        <input type="text" 
+                                        <input type="text"
                                                class="form-control"
                                                placeholder="  "
                                                value="{{old('category_second_description_2')}}"
@@ -378,8 +378,8 @@
                                         @enderror
                                     </div>
                                 </div>
-                                
-                    
+
+
                 <div class="form-group">
                                 <label for="">img_second_categorytwo</label>
                                 <input type="file" name="img_second_categorytwo" class="form-control" placeholder="ارفق صورة">
@@ -397,7 +397,7 @@
                                 <div class="form-group">
                                     <label for="projectinput1"> category_second_title_3
                                          </label>
-                                    <input type="text" 
+                                    <input type="text"
                                            class="form-control"
                                            placeholder="  "
                                            value="{{old('category_second_title_3')}}"
@@ -411,7 +411,7 @@
                                 <div class="form-group">
                                     <label for="projectinput1"> category_second_description_3
                                          </label>
-                                    <input type="text" 
+                                    <input type="text"
                                            class="form-control"
                                            placeholder="  "
                                            value="{{old('category_second_description_3')}}"
@@ -421,8 +421,8 @@
                                     @enderror
                                 </div>
                             </div>
-                            
-                
+
+
             <div class="form-group">
                             <label for="">img_third_categorytwo</label>
                             <input type="file" name="img_third_categorytwo" class="form-control" placeholder="ارفق صورة">
@@ -439,7 +439,7 @@
                             <div class="form-group">
                                 <label for="projectinput1"> category_third_title_1
                                      </label>
-                                <input type="text" 
+                                <input type="text"
                                        class="form-control"
                                        placeholder="  "
                                        value="{{old('category_third_title_1')}}"
@@ -453,7 +453,7 @@
                             <div class="form-group">
                                 <label for="projectinput1"> category_third_description_1
                                      </label>
-                                <input type="text" 
+                                <input type="text"
                                        class="form-control"
                                        placeholder="  "
                                        value="{{old('category_third_description_1')}}"
@@ -463,8 +463,8 @@
                                 @enderror
                             </div>
                         </div>
-                        
-            
+
+
         <div class="form-group">
                         <label for="">img_first_categorythree</label>
                         <input type="file" name="img_first_categorythree" class="form-control" placeholder="ارفق صورة">
@@ -481,7 +481,7 @@
                         <div class="form-group">
                             <label for="projectinput1"> category_third_title_2
                                  </label>
-                            <input type="text" 
+                            <input type="text"
                                    class="form-control"
                                    placeholder="  "
                                    value="{{old('category_third_title_2')}}"
@@ -495,7 +495,7 @@
                         <div class="form-group">
                             <label for="projectinput1"> category_third_description_2
                                  </label>
-                            <input type="text" 
+                            <input type="text"
                                    class="form-control"
                                    placeholder="  "
                                    value="{{old('category_third_description_2')}}"
@@ -505,8 +505,8 @@
                             @enderror
                         </div>
                     </div>
-                    
-        
+
+
     <div class="form-group">
                     <label for="">img_second_categorythree</label>
                     <input type="file" name="img_second_categorythree" class="form-control" placeholder="ارفق صورة">
@@ -523,7 +523,7 @@
                     <div class="form-group">
                         <label for="projectinput1"> category_third_title_3
                              </label>
-                        <input type="text" 
+                        <input type="text"
                                class="form-control"
                                placeholder="  "
                                value="{{old('category_third_title_3')}}"
@@ -537,7 +537,7 @@
                     <div class="form-group">
                         <label for="projectinput1"> category_third_description_3
                              </label>
-                        <input type="text" 
+                        <input type="text"
                                class="form-control"
                                placeholder="  "
                                value="{{old('category_third_description_3')}}"
@@ -547,8 +547,8 @@
                         @enderror
                     </div>
                 </div>
-                
-    
+
+
 <div class="form-group">
                 <label for="">img_third_categorythree</label>
                 <input type="file" name="img_third_categorythree" class="form-control" placeholder="ارفق صورة">
@@ -597,8 +597,21 @@
                                                 </button>
                                             </div>
                                         </form>
-
                                     </div>
+                                    <div class="form-group container">
+                                        <label for="">PDF</label>
+                                        <form class="form"
+                                        action="{{route('file.store')}}"
+                                        method="POST"
+                                        enctype="multipart/form-data">
+                                      @csrf
+                                      <input type="file" name="Pdf" class="form-control" placeholder="ارفق صورة">
+
+ <button type="submit" class="btn btn-primary">
+                                                    <i class="la la-check-square-o"></i> submit
+                                                </button>
+                                                    </div>
+                                                </form>
                                 </div>
                             </div>
                         </div>
