@@ -683,9 +683,15 @@ height: 100% !important; */
     <br>
     <br>
     <br>
+
     <div style="width: 100%;display:flex;justify-content:center;">
-<a href="https://online.fliphtml5.com/rdjom/affi/?1699867226778#p=1" target="_blank"
-class="btn-base btn-primary shadow-0 p-3 text-center" download="https://online.fliphtml5.com/rdjom/affi/?1699867226778#p=1"> DOWNLOAD OUR CATALOG </a>
+        @if(isset($pdfPath))
+        <a href="{{ route('pdf.download') }}" class="btn-base btn-primary shadow-0 p-3 text-center" target="_blank">DOWNLOAD OUR CATALOG </a>
+
+    @endif
+
+{{-- <a href="https://online.fliphtml5.com/rdjom/affi/?1699867226778#p=1" target="_blank"
+class="btn-base btn-primary shadow-0 p-3 text-center" download="https://online.fliphtml5.com/rdjom/affi/?1699867226778#p=1"> DOWNLOAD OUR CATALOG </a> --}}
 </div>
     <!-- Footer Start -->
     <div class="container-fluid footer mt-5 py-5 wow fadeIn" data-wow-delay="0.1s"

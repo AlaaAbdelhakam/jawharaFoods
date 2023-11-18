@@ -605,7 +605,7 @@
                                         method="POST"
                                         enctype="multipart/form-data">
                                       @csrf
-                                      <input type="file" name="Pdf" class="form-control" placeholder="ارفق صورة">
+                                      <input type="file" name="catalogpdf" class="form-control" placeholder="ارفق صورة">
 
  <button type="submit" class="btn btn-primary">
                                                     <i class="la la-check-square-o"></i> submit

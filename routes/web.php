@@ -20,8 +20,10 @@ use App\Http\Controllers\UploadPDF;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::post('file-upload', [UploadPDF::class, 'upload'])->name('file.store');
-Route::post('/download', [App\Http\Controllers\UploadPDF::class, 'download'])->name('reports.download');
+Route::post('file-upload', [UploadPDF::class, 'store'])->name('file.store');
+// Route::post('/download', [App\Http\Controllers\UploadPDF::class, 'download'])->name('reports.download');
+// Route::post('/pdf/{pdfPath}/download', [App\Http\Controllers\UploadPDF::class, 'download'])->name('pdf.download');
+Route::get('/pdf/download', [App\Http\Controllers\UploadPDF::class, 'download'])->name('pdf.download');
 
 // Assuming your namespace is 'App\Http\Controllers'
 Route::get('/singleproduct/{id}', [PostsController::class, 'index'])->name('singleproduct');
