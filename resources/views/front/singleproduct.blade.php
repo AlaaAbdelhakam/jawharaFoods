@@ -1,13 +1,49 @@
+@extends('front.mainpage')
+
+@push('styles')
+
+<link rel="stylesheet" type="text/css" href="{{ asset('singleproduct/lib/animate/animate.min.css') }}">
+<link rel="stylesheet" type="text/css"
+    href="{{ asset('singleproduct/lib/owlcarousel/assets/owl.carousel.min.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ asset('singleproduct/lib/lightbox/css/lightbox.min.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ asset('singleproduct/css/bootstrap.min.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ asset('singleproduct/css/style.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ asset('singleproduct/assets/css/slick.min.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ asset('singleproduct/assets/css/slick-theme.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ asset('singleproduct/assets/css/templatemo.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ asset('singleproduct/assets/css/custom.css') }}">
+
+<style>
+
+@media (max-width: 767.98px) {
+    .qoutation{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+}
+
+</style>
+
+
+@endpush
+
+
+
+
+
+
+{{--
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="utf-8">
     <title>Jawhara Website</title>
-    <!-- <meta content="width=device-width, initial-scale=1.0" name="viewport"> -->
     <meta content="" name="keywords">
     <meta content="" name="description">
-    {{-- <meta name="viewport" content="width=device-width, initial-scale=-1"> --}}
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Favicon -->
@@ -23,19 +59,8 @@
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="{{ asset('singleproduct/lib/animate/animate.min.css') }}">
-    <link rel="stylesheet" type="text/css"
-        href="{{ asset('singleproduct/lib/owlcarousel/assets/owl.carousel.min.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('singleproduct/lib/lightbox/css/lightbox.min.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('singleproduct/css/bootstrap.min.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('singleproduct/css/style.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('singleproduct/assets/css/slick.min.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('singleproduct/assets/css/slick-theme.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('singleproduct/assets/css/templatemo.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('singleproduct/assets/css/custom.css') }}">
-    {{-- <link rel="stylesheet" type="text/css" href="{{ asset('mainpage/css/style.css') }}"> --}}
-    {{-- <link rel="stylesheet" type="text/css" href="{{ asset('mainpage/css/style2.css') }}"> --}}
-    {{-- <link rel="stylesheet" type="text/css" href="{{ asset('mainpage/css/style3.css') }}"> --}}
+
+
     <style>
         .btn-primary {
             /* Your styles for the .btn.btn-warning combination here */
@@ -401,91 +426,10 @@ height: 100% !important; */
             -webkit-text-size-adjust: 100% !important;
         }
     </style>
-</head>
-
-<body>
-    <!-- Spinner Start -->
-    <div id="spinner"
-        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-        <div class="spinner-border text-primary" role="status"
-            style="width: 3rem; height: 3rem;color: #234b91 !important;"></div>
-    </div>
-    <!-- Spinner End -->
-    <!-- Topbar Start -->
-    <div class="container-fluid px-0" style="background-color: #234b91;">
-        <div class="row g-0 d-none d-lg-flex">
-            <div class="col-lg-6 ps-5 text-start">
-                <div class="h-100 d-inline-flex align-items-center text-light">
-                    <span style="color: white;">Follow Us:</span>
-                    <a class="btn btn-link text-light" href=""><i style="color: white;"
-                            class="fab fa-facebook-f"></i></a>
-                    <a class="btn btn-link text-light" href=""><i style="color: white;"
-                            class="fab fa-twitter"></i></a>
-                    <a class="btn btn-link text-light" href=""><i style="color: white;"
-                            class="fab fa-linkedin-in"></i></a>
-                    <a class="btn btn-link text-light" href=""><i style="color: white;"
-                            class="fab fa-instagram"></i></a>
-                </div>
-            </div>
-            <div class="col-lg-6 text-end">
-                <div class="h-100 bg-secondary d-inline-flex align-items-center text-dark py-2 px-4">
-                    <span class="me-2 fw-semi-bold" style="color: #234b91;"><i class="fa fa-phone-alt me-2"></i>Call
-                        Us:</span>
-                    <span style="color: #234b91;">+2010 906 85674</span>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Topbar End -->
+</head> --}}
 
 
-    <!-- Navbar Start -->
-    <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top px-4 px-lg-5">
-        <a href="{{ route('welcome') }}" class="navbar-brand d-flex align-items-center">
-            <h1 class="m-0" style="color: #234b91;font-size:43px;">JAWHARA</h1>
-        </a>
-        <button type="button" class="navbar-toggler me-0" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-            <div class="navbar-nav ms-auto p-4 p-lg-0">
-                <a href="{{ route('welcome') }}" class="nav-item nav-link"
-                    style="color: #234b91;font-size:20px;font-weight:500;">HOME</a>
-                <div class="nav-item dropdown">
-                    <a href="#" style="color: #234b91;" class="nav-link dropdown-toggle"
-                        data-bs-toggle="dropdown">ABOUT</a>
-                    <div class="dropdown-menu bg-light m-0">
-                        <a href="gallery.html" style="color: #234b91;" class="dropdown-item">Our Story</a>
-                        <a href="feature.html" style="color: #234b91;" class="dropdown-item">press</a>
-                        <a href="team.html" style="color: #234b91;" class="dropdown-item">FAQ</a>
-                        <a href="testimonial.html" style="color: #234b91;" class="dropdown-item">Certificates</a>
-                        <a href="{{ route('contactus') }}" style="color: #234b91;" class="dropdown-item">Contact
-                            Us</a>
-                    </div>
-                </div>
-
-
-                {{-- <a href="service.html" class="nav-item nav-link" style="color: #234b91;">Services</a>
-                <a href="product.html" class="nav-item nav-link" style="color: #234b91;">Products</a> --}}
-                <div class="nav-item dropdown">
-                    <a href="#" style="color: #234b91;" class="nav-link dropdown-toggle"
-                        data-bs-toggle="dropdown">PRODUCTS CATEGORIES</a>
-                    <div class="dropdown-menu bg-light m-0">
-                        @foreach ($categories as $post)
-                            <a href="{{ route('categoryproducts', $post->id) }}" style="color: #234b91;"
-                                class="dropdown-item">{{ $post->title }}</a>
-                        @endforeach
-                    </div>
-                </div>
-                <a href="{{ route('contactus') }}" class="nav-item nav-link active"
-                    style="color: #234b91;">CONTACT</a>
-            </div>
-            {{-- <div class="border-start ps-4 d-none d-lg-block">
-                <button type="button" class="btn btn-sm p-0"><i class="fa fa-search"></i></button>
-            </div> --}}
-        </div>
-    </nav>
-    <!-- Navbar End -->
+@section('content')
 
 
     <!-- Page Header Start -->
@@ -504,219 +448,6 @@ height: 100% !important; */
     <!-- Page Header End -->
 
 
-    <!-- <section class="py-5">
-        <div class="container">
-          <div class="row gx-5">
-
-                        <div class="col-lg-5 mt-5 ml-3 mb-5">
-                            <div class="card mb-3">
-                                <img class="card-img img-fluid" src="./img/first.jpg" alt="Card image cap" id="product-detail">
-                            </div>
-                            <div class="row">
-                                Start Controls-->
-    <!-- <div class="col-1 align-self-center">
-                                    <a href="#multi-item-example" role="button" data-bs-slide="prev">
-                                        <i class="text-dark fas fa-chevron-left"></i>
-                                        <span class="sr-only">Previous</span>
-                                    </a>
-                                </div> -->
-    <!--End Controls-->
-    <!--Start Carousel Wrapper
-                                <div id="multi-item-example" class="col-10 carousel slide carousel-multi-item" data-bs-ride="carousel">
-                                    Start Slides
-                                    <div class="carousel-inner product-links-wap" role="listbox">
-
-                                        First slide-->
-    <!-- <div class="carousel-item active">
-                                            <div class="row">
-                                                <div class="col-4">
-                                                    <a href="#">
-                                                        <img class="card-img img-fluid" src="./img/first.jpg" alt="Product Image 1">
-                                                    </a>
-                                                </div>
-                                                <div class="col-4">
-                                                    <a href="#">
-                                                        <img class="card-img img-fluid" src="./img/second.jpg" alt="Product Image 2">
-                                                    </a>
-                                                </div>
-                                                <div class="col-4">
-                                                    <a href="#">
-                                                        <img class="card-img img-fluid" src="./img/third.jpg" alt="Product Image 3">
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div> -->
-    <!--/.First slide-->
-
-    <!--Second slide-->
-    <!-- <div class="carousel-item">
-                                            <div class="row">
-                                                <div class="col-4">
-                                                    <a href="#">
-                                                        <img class="card-img img-fluid" src="assets/img/product_single_04.jpg" alt="Product Image 4">
-                                                    </a>
-                                                </div>
-                                                <div class="col-4">
-                                                    <a href="#">
-                                                        <img class="card-img img-fluid" src="assets/img/product_single_05.jpg" alt="Product Image 5">
-                                                    </a>
-                                                </div>
-                                                <div class="col-4">
-                                                    <a href="#">
-                                                        <img class="card-img img-fluid" src="assets/img/product_single_06.jpg" alt="Product Image 6">
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div> -->
-    <!--/.Second slide-->
-
-    <!--Third slide-->
-    <!-- <div class="carousel-item">
-                                            <div class="row">
-                                                <div class="col-4">
-                                                    <a href="#">
-                                                        <img class="card-img img-fluid" src="assets/img/product_single_07.jpg" alt="Product Image 7">
-                                                    </a>
-                                                </div>
-                                                <div class="col-4">
-                                                    <a href="#">
-                                                        <img class="card-img img-fluid" src="assets/img/product_single_08.jpg" alt="Product Image 8">
-                                                    </a>
-                                                </div>
-                                                <div class="col-4">
-                                                    <a href="#">
-                                                        <img class="card-img img-fluid" src="assets/img/product_single_09.jpg" alt="Product Image 9">
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div> -->
-    <!--/.Third slide-->
-    <!-- </div> -->
-    <!--End Slides-->
-    <!-- </div> -->
-    <!--End Carousel Wrapper-->
-    <!--Start Controls-->
-    <!-- <div class="col-1 align-self-center">
-                                    <a href="#multi-item-example" role="button" data-bs-slide="next">
-                                        <i class="text-dark fas fa-chevron-right"></i>
-                                        <span class="sr-only">Next</span>
-                                    </a>
-                                </div> -->
-    <!--End Controls-->
-    <!-- </div>
-                        </div> -->
-    <!-- col end -->
-    <!--
-
-        <div class="col-lg-1"></div>
-
-            <main class="col-lg-6">
-              <div class="ps-lg-3">
-                <h4 class="title text-dark">
-                    Mushrooms Marinated with Garlic & Herbs
-                </h4>
-
-                <hr />
-
-                <p>
-                    Succulent and savory, our Divina mushrooms are grown and harvested in Kennett Square, PA, (the mushroom capital of the world) before being preserved in a bright and vinegary garlic and herb marinade.
-                </p>
-                <br>
-                <h5>PRODUCT DETAILS</h5>
-
-               <hr />
-                <div class="row ">
-                  <dt class="col-5">ITEM #</dt>
-                  <dd class="col-7">55000</dd>
-                  <hr />
-                  <dt class="col-5">BRAND</dt>
-                  <dd class="col-7">Divina</dd>
-                  <hr />
-                  <dt class="col-5">CASE PACK</dt>
-                  <dd class="col-7">2/6.25 lb Pouch</dd>
-                  <hr />
-                  <dt class="col-5">ORIGIN</dt>
-                  <dd class="col-7">USA</dd>
-                  <hr />
-
-                  <dt class="col-5">INGREDIENTS</dt>
-                  <dd class="col-7">mushrooms, water, soybean oil, red peppers, distilled vinegar, garlic, salt, oregano, marjoram</dd>
-                  <hr />
-
-                  <dt class="col-5">SEALED SHELF LIFE</dt>
-                  <dd class="col-7">24 months dry</dd>
-                  <hr />
-
-                  <dt class="col-5">STORAGE</dt>
-                  <dd class="col-7">Dry</dd>
-                  <hr />
-
-                  <dt class="col-5">ATTRIBUTES</dt>
-                  <dd class="col-7">Dairy Free, Gluten Free, Non-GMO, Vegan, Vegetarian</dd>
-                  <hr />
-
-                  <dt class="col-5">DRAINED WEIGHT</dt>
-                  <dd class="col-7">8.5 lb</dd>
-                  <hr />
-
-                  <dt class="col-5">GROSS CASE WEIGHT</dt>
-                  <dd class="col-7">8.5 lb</dd>
-                  <hr />
-
-                  <dt class="col-5">CASE DIMENSIONS</dt>
-                  <dd class="col-7">14.3" x 8.3" x 5.7" (LxWxH)</dd>
-                  <hr />
-
-                  <dt class="col-5">CASE CUBE</dt>
-                  <dd class="col-7">0.39</dd>
-                  <hr />
-
-                  <dt class="col-5">TI-HI</dt>
-                  <dd class="col-7">15x11</dd>
-                  <hr />
-
-                  <dt class="col-5">ALLERGENS</dt>
-                  <dd class="col-7">None</dd>
-                  <hr />
-                </div>
-       -->
-    <!-- <div class="row mb-4"> -->
-    <!-- <div class="col-md-4 col-6">
-                    <label class="mb-2">Size</label>
-                    <select class="form-select border border-secondary" style="height: 35px;">
-                      <option>Small</option>
-                      <option>Medium</option>
-                      <option>Large</option>
-                    </select>
-                  </div> -->
-    <!-- col.// -->
-    <!-- <div class="col-md-4 col-6 mb-3">
-                    <label class="mb-2 d-block">Quantity</label>
-                    <div class="input-group mb-3" style="width: 170px;">
-                      <button class="btn btn-white border border-secondary px-3" type="button" id="button-addon1" data-mdb-ripple-color="dark">
-                        <i class="fas fa-minus"></i>
-                      </button>
-                      <input type="text" class="form-control text-center border border-secondary" placeholder="14" aria-label="Example text with button addon" aria-describedby="button-addon1" />
-                      <button class="btn btn-white border border-secondary px-3" type="button" id="button-addon2" data-mdb-ripple-color="dark">
-                        <i class="fas fa-plus"></i>
-                      </button>
-                    </div>
-                  </div> -->
-    <!-- </div> -->
-    <!-- <br>
-
-                <a href="#" class="btn btn-warning shadow-0 p-3"> Buy now </a>
-                -->
-    <!-- <a href="#" class="btn btn-light border border-secondary py-2 icon-hover px-3"> <i class="me-1 fa fa-heart fa-lg"></i> Save </a> -->
-    <!-- </div>
-            </main>
-          </div>
-        </div>
-      </section> -->
-    <!-- content -->
-
-
-
 
 
 
@@ -725,33 +456,33 @@ height: 100% !important; */
 
     <ul class="nav nav-pills mb-3 d-flex justify-content-center" id="pills-tab" role="tablist">
         <li class="nav-item" role="presentation">
-            <a href="#pills-home" class="nav-link active alaa" id="pills-home-tab" data-bs-toggle="pill"
-                data-bs-target="#pills-home" type="button" role="tab" style="color:#234b91;"
+            <a href="#pills-home" class="nav-link active alaa m-3" id="pills-home-tab" data-bs-toggle="pill"
+                data-bs-target="#pills-home" type="button" role="tab" style="color:white;background-color:#234b91;"
                 aria-controls="pills-home" aria-selected="true">Plastic Barrels</a>
         </li>
         <li class="nav-item" role="presentation">
-            <a href="#pills-profile" class="nav-link alaa" id="pills-profile-tab" data-bs-toggle="pill"
-                data-bs-target="#pills-profile" type="button" role="tab" style="color:#234b91;"
+            <a href="#pills-profile" class="nav-link alaa m-3" id="pills-profile-tab" data-bs-toggle="pill"
+                data-bs-target="#pills-profile" type="button" role="tab" style="color:white;background-color:#234b91;"
                 aria-controls="pills-profile" aria-selected="false">Plastic Pouch</a>
         </li>
         <li class="nav-item " role="presentation">
-            <a href="#" class="nav-link alaa" id="pills-contact-tab" data-bs-toggle="pill"
-                data-bs-target="#pills-contact" type="button" role="tab" style="color:#234b91;"
+            <a href="#" class="nav-link alaa m-3" id="pills-contact-tab" data-bs-toggle="pill"
+                data-bs-target="#pills-contact" type="button" role="tab" style="color:white;background-color:#234b91;"
                 aria-controls="pills-contact" aria-selected="false">Plastic Pails</a>
         </li>
         <li class="nav-item" role="presentation">
-            <a href="#" class="nav-link alaa" id="pills-jar-tab" data-bs-toggle="pill"
-                data-bs-target="#pills-jar" type="button" role="tab" style="color:#234b91;"
+            <a href="#" class="nav-link alaa m-3" id="pills-jar-tab" data-bs-toggle="pill"
+                data-bs-target="#pills-jar" type="button" role="tab" style="color:white;background-color:#234b91;"
                 aria-controls="pills-jar" aria-selected="false">Glass Jar</a>
         </li>
         <li class="nav-item" role="presentation">
-            <a class="nav-link alaa" id="pills-pet-tab" data-bs-toggle="pill" data-bs-target="#pills-pet"
-                type="button" role="tab" style="color:#234b91;" aria-controls="pills-pet"
+            <a class="nav-link alaa m-3" id="pills-pet-tab" data-bs-toggle="pill" data-bs-target="#pills-pet"
+                type="button" role="tab" style="color:white;background-color:#234b91;" aria-controls="pills-pet"
                 aria-selected="false">PET Jar</a>
         </li>
         <li class="nav-item" role="presentation">
-            <a class="nav-link alaa" id="pills-tins-tab" data-bs-toggle="pill" data-bs-target="#pills-tins"
-                type="button" role="tab" style="color:#234b91;" aria-controls="pills-tins"
+            <a class="nav-link alaa m-3" id="pills-tins-tab" data-bs-toggle="pill" data-bs-target="#pills-tins"
+                type="button" role="tab" style="color:white;background-color:#234b91;" aria-controls="pills-tins"
                 aria-selected="false">Metallic Tins</a>
         </li>
     </ul>
@@ -833,89 +564,6 @@ height: 100% !important; */
 
 
 
-
-
-
-
-                                <!-- <div class="carousel-inner product-links-wap" role="listbox"> -->
-
-                                <!--First slide-->
-                                <!-- <div class="carousel-item active">
-                                                    <div class="row">
-                                                        <div class="col-4">
-                                                            <a href="#">
-                                                                <img class="card-img img-fluid" src="./img/first.jpg" alt="Product Image 1">
-                                                            </a>
-                                                        </div>
-                                                        <div class="col-4">
-                                                            <a href="#">
-                                                                <img class="card-img img-fluid" src="./img/second.jpg" alt="Product Image 2">
-                                                            </a>
-                                                        </div>
-                                                        <div class="col-4">
-                                                            <a href="#">
-                                                                <img class="card-img img-fluid" src="./img/third.jpg" alt="Product Image 3">
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                </div> -->
-                                <!--/.First slide-->
-
-                                <!--Second slide-->
-                                <!-- <div class="carousel-item">
-                                                    <div class="row">
-                                                        <div class="col-4">
-                                                            <a href="#">
-                                                                <img class="card-img img-fluid" src="assets/img/product_single_04.jpg" alt="Product Image 4">
-                                                            </a>
-                                                        </div>
-                                                        <div class="col-4">
-                                                            <a href="#">
-                                                                <img class="card-img img-fluid" src="assets/img/product_single_05.jpg" alt="Product Image 5">
-                                                            </a>
-                                                        </div>
-                                                        <div class="col-4">
-                                                            <a href="#">
-                                                                <img class="card-img img-fluid" src="assets/img/product_single_06.jpg" alt="Product Image 6">
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                </div> -->
-                                <!--/.Second slide-->
-
-                                <!--Third slide-->
-                                <!-- <div class="carousel-item">
-                                                    <div class="row">
-                                                        <div class="col-4">
-                                                            <a href="#">
-                                                                <img class="card-img img-fluid" src="assets/img/product_single_07.jpg" alt="Product Image 7">
-                                                            </a>
-                                                        </div>
-                                                        <div class="col-4">
-                                                            <a href="#">
-                                                                <img class="card-img img-fluid" src="assets/img/product_single_08.jpg" alt="Product Image 8">
-                                                            </a>
-                                                        </div>
-                                                        <div class="col-4">
-                                                            <a href="#">
-                                                                <img class="card-img img-fluid" src="assets/img/product_single_09.jpg" alt="Product Image 9">
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                </div> -->
-                                <!--/.Third slide-->
-                                <!-- </div> -->
-                                <!--End Slides-->
-                                <!-- </div> -->
-                                <!--End Carousel Wrapper-->
-                                <!--Start Controls-->
-                                <!-- <div class="col-1 align-self-center">
-                                            <a href="#multi-item-example" role="button" data-bs-slide="next">
-                                                <i class="text-dark fas fa-chevron-right"></i>
-                                                <span class="sr-only">Next</span>
-                                            </a>
-                                        </div> -->
-                                <!--End Controls-->
                             </div>
                         </div>
                         <!-- col end -->
@@ -995,34 +643,14 @@ height: 100% !important; */
                                     <hr />
                                 </div>
 
-                                <!-- <div class="row mb-4"> -->
-                                <!-- <div class="col-md-4 col-6">
-                            <label class="mb-2">Size</label>
-                            <select class="form-select border border-secondary" style="height: 35px;">
-                              <option>Small</option>
-                              <option>Medium</option>
-                              <option>Large</option>
-                            </select>
-                          </div> -->
-                                <!-- col.// -->
-                                <!-- <div class="col-md-4 col-6 mb-3">
-                            <label class="mb-2 d-block">Quantity</label>
-                            <div class="input-group mb-3" style="width: 170px;">
-                              <button class="btn btn-white border border-secondary px-3" type="button" id="button-addon1" data-mdb-ripple-color="dark">
-                                <i class="fas fa-minus"></i>
-                              </button>
-                              <input type="text" class="form-control text-center border border-secondary" placeholder="14" aria-label="Example text with button addon" aria-describedby="button-addon1" />
-                              <button class="btn btn-white border border-secondary px-3" type="button" id="button-addon2" data-mdb-ripple-color="dark">
-                                <i class="fas fa-plus"></i>
-                              </button>
-                            </div>
-                          </div> -->
-                                <!-- </div> -->
+
                                 <br>
+                                <div class="qoutation">
 
                                 <a href="https://api.whatsapp.com/send?phone=201090685674" target="_blank"
-                                    class="btn-base btn-primary shadow-0 p-3"> Ask For Quotation </a>
+                                    class="btn-base btn-primary shadow-0 p-3 "> Ask For Quotation </a>
                                 <!-- <a href="#" class="btn btn-light border border-secondary py-2 icon-hover px-3"> <i class="me-1 fa fa-heart fa-lg"></i> Save </a> -->
+                            </div>
                             </div>
                         </main>
                     </div>
@@ -1051,19 +679,9 @@ height: 100% !important; */
                     <div class="row gx-5">
 
                         <div class="col-lg-5 mt-5 ml-3 mb-5">
-                            <!-- <div class="card mb-3">
-                                        <img class="card-img img-fluid" src="./img/first.jpg" alt="Card image cap" id="product-detail">
-                                    </div> -->
+
                             <div class="row">
-                                <!--Start Controls-->
-                                <!-- <div class="col-1 align-self-center">
-                                            <a href="#multi-item-example" role="button" data-bs-slide="prev">
-                                                <i class="text-dark fas fa-chevron-left"></i>
-                                                <span class="sr-only">Previous</span>
-                                            </a>
-                                        </div> -->
-                                <!--End Controls-->
-                                <!--Start Carousel Wrapper-->
+
 
 
                                 <div id="carouselExampleDark2" class="carousel carousel-dark slide"
@@ -1118,91 +736,6 @@ height: 100% !important; */
 
 
 
-
-
-
-
-                                <!-- <div id="multi-item-box2" class="col-10 carousel slide carousel-multi-item" data-bs-ride="carousel"> -->
-                                <!--Start Slides-->
-                                <!-- <div class="carousel-inner product-links-wap" role="listbox"> -->
-
-                                <!--First slide-->
-                                <!-- <div class="carousel-item active" id="myCarousel1">
-                                                    <div class="row">
-                                                        <div class="col-4">
-                                                            <a href="#">
-                                                                <img class="card-img img-fluid" src="./img/first.jpg" alt="Product Image 1">
-                                                            </a>
-                                                        </div>
-                                                        <div class="col-4">
-                                                            <a href="#">
-                                                                <img class="card-img img-fluid" src="./img/second.jpg" alt="Product Image 2">
-                                                            </a>
-                                                        </div>
-                                                        <div class="col-4">
-                                                            <a href="#">
-                                                                <img class="card-img img-fluid" src="./img/third.jpg" alt="Product Image 3">
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                </div> -->
-                                <!--/.First slide-->
-
-                                <!--Second slide-->
-                                <!-- <div class="carousel-item">
-                                                    <div class="row">
-                                                        <div class="col-4">
-                                                            <a href="#">
-                                                                <img class="card-img img-fluid" src="assets/img/product_single_04.jpg" alt="Product Image 4">
-                                                            </a>
-                                                        </div>
-                                                        <div class="col-4">
-                                                            <a href="#">
-                                                                <img class="card-img img-fluid" src="assets/img/product_single_05.jpg" alt="Product Image 5">
-                                                            </a>
-                                                        </div>
-                                                        <div class="col-4">
-                                                            <a href="#">
-                                                                <img class="card-img img-fluid" src="assets/img/product_single_06.jpg" alt="Product Image 6">
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                </div> -->
-                                <!--/.Second slide-->
-
-                                <!--Third slide-->
-                                <!-- <div class="carousel-item">
-                                                    <div class="row">
-                                                        <div class="col-4">
-                                                            <a href="#">
-                                                                <img class="card-img img-fluid" src="assets/img/product_single_07.jpg" alt="Product Image 7">
-                                                            </a>
-                                                        </div>
-                                                        <div class="col-4">
-                                                            <a href="#">
-                                                                <img class="card-img img-fluid" src="assets/img/product_single_08.jpg" alt="Product Image 8">
-                                                            </a>
-                                                        </div>
-                                                        <div class="col-4">
-                                                            <a href="#">
-                                                                <img class="card-img img-fluid" src="assets/img/product_single_09.jpg" alt="Product Image 9">
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                </div> -->
-                                <!--/.Third slide-->
-                                <!-- </div> -->
-                                <!--End Slides-->
-                                <!-- </div> -->
-                                <!--End Carousel Wrapper-->
-                                <!--Start Controls-->
-                                <!-- <div class="col-1 align-self-center">
-                                            <a href="#multi-item-example" role="button" data-bs-slide="next">
-                                                <i class="text-dark fas fa-chevron-right"></i>
-                                                <span class="sr-only">Next</span>
-                                            </a>
-                                        </div> -->
-                                <!--End Controls-->
                             </div>
                         </div>
                         <!-- col end -->
@@ -1280,34 +813,14 @@ height: 100% !important; */
                                     <hr />
                                 </div>
 
-                                <!-- <div class="row mb-4"> -->
-                                <!-- <div class="col-md-4 col-6">
-                            <label class="mb-2">Size</label>
-                            <select class="form-select border border-secondary" style="height: 35px;">
-                              <option>Small</option>
-                              <option>Medium</option>
-                              <option>Large</option>
-                            </select>
-                          </div> -->
-                                <!-- col.// -->
-                                <!-- <div class="col-md-4 col-6 mb-3">
-                            <label class="mb-2 d-block">Quantity</label>
-                            <div class="input-group mb-3" style="width: 170px;">
-                              <button class="btn btn-white border border-secondary px-3" type="button" id="button-addon1" data-mdb-ripple-color="dark">
-                                <i class="fas fa-minus"></i>
-                              </button>
-                              <input type="text" class="form-control text-center border border-secondary" placeholder="14" aria-label="Example text with button addon" aria-describedby="button-addon1" />
-                              <button class="btn btn-white border border-secondary px-3" type="button" id="button-addon2" data-mdb-ripple-color="dark">
-                                <i class="fas fa-plus"></i>
-                              </button>
-                            </div>
-                          </div> -->
-                                <!-- </div> -->
+
                                 <br>
+                                <div class="qoutation">
 
                                 <a href="https://api.whatsapp.com/send?phone=201090685674" target="_blank"
-                                    class="btn-base btn-primary shadow-0 p-3"> Ask For Quotation </a>
+                                    class="btn-base btn-primary shadow-0 p-3 "> Ask For Quotation </a>
                                 <!-- <a href="#" class="btn btn-light border border-secondary py-2 icon-hover px-3"> <i class="me-1 fa fa-heart fa-lg"></i> Save </a> -->
+                            </div>
                             </div>
                         </main>
                     </div>
@@ -1330,19 +843,8 @@ height: 100% !important; */
                     <div class="row gx-5">
 
                         <div class="col-lg-5 mt-5 ml-3 mb-5">
-                            <!-- <div class="card mb-3">
-                                        <img class="card-img img-fluid" src="./img/first.jpg" alt="Card image cap" id="product-detail">
-                                    </div> -->
+
                             <div class="row">
-                                <!--Start Controls-->
-                                <!-- <div class="col-1 align-self-center">
-                                            <a href="#multi-item-example" role="button" data-bs-slide="prev">
-                                                <i class="text-dark fas fa-chevron-left"></i>
-                                                <span class="sr-only">Previous</span>
-                                            </a>
-                                        </div> -->
-                                <!--End Controls-->
-                                <!--Start Carousel Wrapper-->
 
 
                                 <div id="carouselExampleDark3" class="carousel carousel-dark slide"
@@ -1398,91 +900,6 @@ height: 100% !important; */
 
 
 
-
-
-
-
-                                <!-- <div id="multi-item-box3" class="col-10 carousel slide carousel-multi-item" data-bs-ride="carousel"> -->
-                                <!--Start Slides-->
-                                <!-- <div class="carousel-inner product-links-wap" role="listbox"> -->
-
-                                <!--First slide-->
-                                <!-- <div class="carousel-item active" id="myCarousel2"> -->
-                                <!-- <div class="row">
-                                                        <div class="col-4">
-                                                            <a href="#">
-                                                                <img class="card-img img-fluid" src="./img/first.jpg" alt="Product Image 1">
-                                                            </a>
-                                                        </div>
-                                                        <div class="col-4">
-                                                            <a href="#">
-                                                                <img class="card-img img-fluid" src="./img/second.jpg" alt="Product Image 2">
-                                                            </a>
-                                                        </div>
-                                                        <div class="col-4">
-                                                            <a href="#">
-                                                                <img class="card-img img-fluid" src="./img/third.jpg" alt="Product Image 3">
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                </div> -->
-                                <!--/.First slide-->
-
-                                <!--Second slide-->
-                                <!-- <div class="carousel-item">
-                                                    <div class="row">
-                                                        <div class="col-4">
-                                                            <a href="#">
-                                                                <img class="card-img img-fluid" src="assets/img/product_single_04.jpg" alt="Product Image 4">
-                                                            </a>
-                                                        </div>
-                                                        <div class="col-4">
-                                                            <a href="#">
-                                                                <img class="card-img img-fluid" src="assets/img/product_single_05.jpg" alt="Product Image 5">
-                                                            </a>
-                                                        </div>
-                                                        <div class="col-4">
-                                                            <a href="#">
-                                                                <img class="card-img img-fluid" src="assets/img/product_single_06.jpg" alt="Product Image 6">
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                </div> -->
-                                <!--/.Second slide-->
-
-                                <!--Third slide-->
-                                <!-- <div class="carousel-item">
-                                                    <div class="row">
-                                                        <div class="col-4">
-                                                            <a href="#">
-                                                                <img class="card-img img-fluid" src="assets/img/product_single_07.jpg" alt="Product Image 7">
-                                                            </a>
-                                                        </div>
-                                                        <div class="col-4">
-                                                            <a href="#">
-                                                                <img class="card-img img-fluid" src="assets/img/product_single_08.jpg" alt="Product Image 8">
-                                                            </a>
-                                                        </div>
-                                                        <div class="col-4">
-                                                            <a href="#">
-                                                                <img class="card-img img-fluid" src="assets/img/product_single_09.jpg" alt="Product Image 9">
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                </div> -->
-                                <!--/.Third slide-->
-                                <!-- </div> -->
-                                <!--End Slides-->
-                                <!-- </div> -->
-                                <!--End Carousel Wrapper-->
-                                <!--Start Controls-->
-                                <!-- <div class="col-1 align-self-center">
-                                            <a href="#multi-item-example" role="button" data-bs-slide="next">
-                                                <i class="text-dark fas fa-chevron-right"></i>
-                                                <span class="sr-only">Next</span>
-                                            </a>
-                                        </div> -->
-                                <!--End Controls-->
                             </div>
                         </div>
                         <!-- col end -->
@@ -1565,35 +982,15 @@ height: 100% !important; */
                                     <hr />
                                 </div>
 
-                                <!-- <div class="row mb-4"> -->
-                                <!-- <div class="col-md-4 col-6">
-                            <label class="mb-2">Size</label>
-                            <select class="form-select border border-secondary" style="height: 35px;">
-                              <option>Small</option>
-                              <option>Medium</option>
-                              <option>Large</option>
-                            </select>
-                          </div> -->
-                                <!-- col.// -->
-                                <!-- <div class="col-md-4 col-6 mb-3">
-                            <label class="mb-2 d-block">Quantity</label>
-                            <div class="input-group mb-3" style="width: 170px;">
-                              <button class="btn btn-white border border-secondary px-3" type="button" id="button-addon1" data-mdb-ripple-color="dark">
-                                <i class="fas fa-minus"></i>
-                              </button>
-                              <input type="text" class="form-control text-center border border-secondary" placeholder="14" aria-label="Example text with button addon" aria-describedby="button-addon1" />
-                              <button class="btn btn-white border border-secondary px-3" type="button" id="button-addon2" data-mdb-ripple-color="dark">
-                                <i class="fas fa-plus"></i>
-                              </button>
-                            </div>
-                          </div> -->
-                                <!-- </div> -->
+
                                 <br>
+                                <div class="qoutation">
 
                                 <a href="https://api.whatsapp.com/send?phone=201090685674" target="_blank"
-                                    class="btn-base btn-primary shadow-0 p-3"> Ask For Quotation </a>
-                                <!-- <a href="#" class="btn btn-light border border-secondary py-2 icon-hover px-3"> <i class="me-1 fa fa-heart fa-lg"></i> Save </a> -->
-                            </div>
+                                    class="btn-base btn-primary shadow-0 p-3 "> Ask For Quotation </a>
+
+                                </div>
+                                </div>
                         </main>
                     </div>
                 </div>
@@ -1617,19 +1014,9 @@ height: 100% !important; */
                     <div class="row gx-5">
 
                         <div class="col-lg-5 mt-5 ml-3 mb-5">
-                            <!-- <div class="card mb-3">
-                                        <img class="card-img img-fluid" src="./img/first.jpg" alt="Card image cap" id="product-detail">
-                                    </div> -->
+
                             <div class="row">
-                                <!--Start Controls-->
-                                <!-- <div class="col-1 align-self-center">
-                                            <a href="#multi-item-example" role="button" data-bs-slide="prev">
-                                                <i class="text-dark fas fa-chevron-left"></i>
-                                                <span class="sr-only">Previous</span>
-                                            </a>
-                                        </div> -->
-                                <!--End Controls-->
-                                <!--Start Carousel Wrapper-->
+
 
                                 <div id="carouselExampleDark4" class="carousel carousel-dark slide"
                                     data-bs-ride="carousel">
@@ -1682,91 +1069,6 @@ height: 100% !important; */
 
 
 
-
-
-
-
-                                <!-- <div id="multi-item-box4" class="col-10 carousel slide carousel-multi-item" data-bs-ride="carousel"> -->
-                                <!--Start Slides-->
-                                <!-- <div class="carousel-inner product-links-wap" role="listbox"> -->
-
-                                <!--First slide-->
-                                <!-- <div class="carousel-item active">
-                                                    <div class="row">
-                                                        <div class="col-4">
-                                                            <a href="#">
-                                                                <img class="card-img img-fluid" src="./img/first.jpg" alt="Product Image 1">
-                                                            </a>
-                                                        </div>
-                                                        <div class="col-4">
-                                                            <a href="#">
-                                                                <img class="card-img img-fluid" src="./img/second.jpg" alt="Product Image 2">
-                                                            </a>
-                                                        </div>
-                                                        <div class="col-4">
-                                                            <a href="#">
-                                                                <img class="card-img img-fluid" src="./img/third.jpg" alt="Product Image 3">
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                </div> -->
-                                <!--/.First slide-->
-
-                                <!--Second slide-->
-                                <!-- <div class="carousel-item">
-                                                    <div class="row">
-                                                        <div class="col-4">
-                                                            <a href="#">
-                                                                <img class="card-img img-fluid" src="assets/img/product_single_04.jpg" alt="Product Image 4">
-                                                            </a>
-                                                        </div>
-                                                        <div class="col-4">
-                                                            <a href="#">
-                                                                <img class="card-img img-fluid" src="assets/img/product_single_05.jpg" alt="Product Image 5">
-                                                            </a>
-                                                        </div>
-                                                        <div class="col-4">
-                                                            <a href="#">
-                                                                <img class="card-img img-fluid" src="assets/img/product_single_06.jpg" alt="Product Image 6">
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                </div> -->
-                                <!--/.Second slide-->
-
-                                <!--Third slide-->
-                                <!-- <div class="carousel-item">
-                                                    <div class="row">
-                                                        <div class="col-4">
-                                                            <a href="#">
-                                                                <img class="card-img img-fluid" src="assets/img/product_single_07.jpg" alt="Product Image 7">
-                                                            </a>
-                                                        </div>
-                                                        <div class="col-4">
-                                                            <a href="#">
-                                                                <img class="card-img img-fluid" src="assets/img/product_single_08.jpg" alt="Product Image 8">
-                                                            </a>
-                                                        </div>
-                                                        <div class="col-4">
-                                                            <a href="#">
-                                                                <img class="card-img img-fluid" src="assets/img/product_single_09.jpg" alt="Product Image 9">
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                </div> -->
-                                <!--/.Third slide-->
-                                <!-- </div> -->
-                                <!--End Slides-->
-                                <!-- </div> -->
-                                <!--End Carousel Wrapper-->
-                                <!--Start Controls-->
-                                <!-- <div class="col-1 align-self-center">
-                                            <a href="#multi-item-example" role="button" data-bs-slide="next">
-                                                <i class="text-dark fas fa-chevron-right"></i>
-                                                <span class="sr-only">Next</span>
-                                            </a>
-                                        </div> -->
-                                <!--End Controls-->
                             </div>
                         </div>
                         <!-- col end -->
@@ -1844,34 +1146,14 @@ height: 100% !important; */
                                     <hr />
                                 </div>
 
-                                <!-- <div class="row mb-4"> -->
-                                <!-- <div class="col-md-4 col-6">
-                            <label class="mb-2">Size</label>
-                            <select class="form-select border border-secondary" style="height: 35px;">
-                              <option>Small</option>
-                              <option>Medium</option>
-                              <option>Large</option>
-                            </select>
-                          </div> -->
-                                <!-- col.// -->
-                                <!-- <div class="col-md-4 col-6 mb-3">
-                            <label class="mb-2 d-block">Quantity</label>
-                            <div class="input-group mb-3" style="width: 170px;">
-                              <button class="btn btn-white border border-secondary px-3" type="button" id="button-addon1" data-mdb-ripple-color="dark">
-                                <i class="fas fa-minus"></i>
-                              </button>
-                              <input type="text" class="form-control text-center border border-secondary" placeholder="14" aria-label="Example text with button addon" aria-describedby="button-addon1" />
-                              <button class="btn btn-white border border-secondary px-3" type="button" id="button-addon2" data-mdb-ripple-color="dark">
-                                <i class="fas fa-plus"></i>
-                              </button>
-                            </div>
-                          </div> -->
-                                <!-- </div> -->
+
                                 <br>
+                                <div class="qoutation">
 
                                 <a href="https://api.whatsapp.com/send?phone=201090685674" target="_blank"
-                                    class="btn-base btn-primary shadow-0 p-3"> Ask For Quotation </a>
+                                    class="btn-base btn-primary shadow-0 p-3 "> Ask For Quotation </a>
                                 <!-- <a href="#" class="btn btn-light border border-secondary py-2 icon-hover px-3"> <i class="me-1 fa fa-heart fa-lg"></i> Save </a> -->
+                            </div>
                             </div>
                         </main>
                     </div>
@@ -1896,19 +1178,8 @@ height: 100% !important; */
                     <div class="row gx-5">
 
                         <div class="col-lg-5 mt-5 ml-3 mb-5">
-                            <!-- <div class="card mb-3">
-                                        <img class="card-img img-fluid" src="./img/first.jpg" alt="Card image cap" id="product-detail">
-                                    </div> -->
+
                             <div class="row">
-                                <!--Start Controls-->
-                                <!-- <div class="col-1 align-self-center">
-                                            <a href="#multi-item-example" role="button" data-bs-slide="prev">
-                                                <i class="text-dark fas fa-chevron-left"></i>
-                                                <span class="sr-only">Previous</span>
-                                            </a>
-                                        </div> -->
-                                <!--End Controls-->
-                                <!--Start Carousel Wrapper-->
 
 
                                 <div id="carouselExampleDark5" class="carousel carousel-dark slide"
@@ -1961,92 +1232,6 @@ height: 100% !important; */
 
 
 
-
-
-
-
-
-                                <!-- <div id="multi-item-box5" class="col-10 carousel slide carousel-multi-item" data-bs-ride="carousel"> -->
-                                <!--Start Slides-->
-                                <!-- <div class="carousel-inner product-links-wap" role="listbox"> -->
-
-                                <!--First slide-->
-                                <!-- <div class="carousel-item active">
-                                                    <div class="row">
-                                                        <div class="col-4">
-                                                            <a href="#">
-                                                                <img class="card-img img-fluid" src="./img/first.jpg" alt="Product Image 1">
-                                                            </a>
-                                                        </div>
-                                                        <div class="col-4">
-                                                            <a href="#">
-                                                                <img class="card-img img-fluid" src="./img/second.jpg" alt="Product Image 2">
-                                                            </a>
-                                                        </div>
-                                                        <div class="col-4">
-                                                            <a href="#">
-                                                                <img class="card-img img-fluid" src="./img/third.jpg" alt="Product Image 3">
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                </div> -->
-                                <!--/.First slide-->
-
-                                <!--Second slide-->
-                                <!-- <div class="carousel-item">
-                                                    <div class="row">
-                                                        <div class="col-4">
-                                                            <a href="#">
-                                                                <img class="card-img img-fluid" src="assets/img/product_single_04.jpg" alt="Product Image 4">
-                                                            </a>
-                                                        </div>
-                                                        <div class="col-4">
-                                                            <a href="#">
-                                                                <img class="card-img img-fluid" src="assets/img/product_single_05.jpg" alt="Product Image 5">
-                                                            </a>
-                                                        </div>
-                                                        <div class="col-4">
-                                                            <a href="#">
-                                                                <img class="card-img img-fluid" src="assets/img/product_single_06.jpg" alt="Product Image 6">
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                </div> -->
-                                <!--/.Second slide-->
-
-                                <!--Third slide-->
-                                <!-- <div class="carousel-item">
-                                                    <div class="row">
-                                                        <div class="col-4">
-                                                            <a href="#">
-                                                                <img class="card-img img-fluid" src="assets/img/product_single_07.jpg" alt="Product Image 7">
-                                                            </a>
-                                                        </div>
-                                                        <div class="col-4">
-                                                            <a href="#">
-                                                                <img class="card-img img-fluid" src="assets/img/product_single_08.jpg" alt="Product Image 8">
-                                                            </a>
-                                                        </div>
-                                                        <div class="col-4">
-                                                            <a href="#">
-                                                                <img class="card-img img-fluid" src="assets/img/product_single_09.jpg" alt="Product Image 9">
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                </div> -->
-                                <!--/.Third slide-->
-                                <!-- </div> -->
-                                <!--End Slides-->
-                                <!-- </div> -->
-                                <!--End Carousel Wrapper-->
-                                <!--Start Controls-->
-                                <!-- <div class="col-1 align-self-center">
-                                            <a href="#multi-item-example" role="button" data-bs-slide="next">
-                                                <i class="text-dark fas fa-chevron-right"></i>
-                                                <span class="sr-only">Next</span>
-                                            </a>
-                                        </div> -->
-                                <!--End Controls-->
                             </div>
                         </div>
                         <!-- col end -->
@@ -2124,34 +1309,13 @@ height: 100% !important; */
                                     <hr />
                                 </div>
 
-                                <!-- <div class="row mb-4"> -->
-                                <!-- <div class="col-md-4 col-6">
-                            <label class="mb-2">Size</label>
-                            <select class="form-select border border-secondary" style="height: 35px;">
-                              <option>Small</option>
-                              <option>Medium</option>
-                              <option>Large</option>
-                            </select>
-                          </div> -->
-                                <!-- col.// -->
-                                <!-- <div class="col-md-4 col-6 mb-3">
-                            <label class="mb-2 d-block">Quantity</label>
-                            <div class="input-group mb-3" style="width: 170px;">
-                              <button class="btn btn-white border border-secondary px-3" type="button" id="button-addon1" data-mdb-ripple-color="dark">
-                                <i class="fas fa-minus"></i>
-                              </button>
-                              <input type="text" class="form-control text-center border border-secondary" placeholder="14" aria-label="Example text with button addon" aria-describedby="button-addon1" />
-                              <button class="btn btn-white border border-secondary px-3" type="button" id="button-addon2" data-mdb-ripple-color="dark">
-                                <i class="fas fa-plus"></i>
-                              </button>
-                            </div>
-                          </div> -->
-                                <!-- </div> -->
                                 <br>
+                                <div class="qoutation">
 
                                 <a href="https://api.whatsapp.com/send?phone=201090685674" target="_blank"
-                                    class="btn-base btn-primary shadow-0 p-3"> Ask For Quotation </a>
+                                    class="btn-base btn-primary shadow-0 p-3 "> Ask For Quotation </a>
                                 <!-- <a href="#" class="btn btn-light border border-secondary py-2 icon-hover px-3"> <i class="me-1 fa fa-heart fa-lg"></i> Save </a> -->
+                                </div>
                             </div>
                         </main>
                     </div>
@@ -2177,19 +1341,9 @@ height: 100% !important; */
                     <div class="row gx-5">
 
                         <div class="col-lg-5 mt-5 ml-3 mb-5">
-                            <!-- <div class="card mb-3">
-                                        <img class="card-img img-fluid" src="./img/first.jpg" alt="Card image cap" id="product-detail">
-                                    </div> -->
+
                             <div class="row">
-                                <!--Start Controls-->
-                                <!-- <div class="col-1 align-self-center">
-                                            <a href="#multi-item-example" role="button" data-bs-slide="prev">
-                                                <i class="text-dark fas fa-chevron-left"></i>
-                                                <span class="sr-only">Previous</span>
-                                            </a>
-                                        </div> -->
-                                <!--End Controls-->
-                                <!--Start Carousel Wrapper-->
+
 
                                 <div id="carouselExampleDark6" class="carousel carousel-dark slide"
                                     data-bs-ride="carousel">
@@ -2241,97 +1395,6 @@ height: 100% !important; */
 
 
 
-
-
-
-
-
-
-
-
-
-
-                                <!-- <div id="multi-item-box6" class="col-10 carousel slide carousel-multi-item" data-bs-ride="carousel"> -->
-                                <!--Start Slides-->
-                                <!-- <div class="carousel-inner product-links-wap" role="listbox"> -->
-
-                                <!--First slide-->
-                                <!-- <div class="carousel-item active">
-                                                    <div class="row">
-                                                        <div class="col-4">
-                                                            <a href="#">
-                                                                <img class="card-img img-fluid" src="./img/first.jpg" alt="Product Image 1">
-                                                            </a>
-                                                        </div>
-                                                        <div class="col-4">
-                                                            <a href="#">
-                                                                <img class="card-img img-fluid" src="./img/second.jpg" alt="Product Image 2">
-                                                            </a>
-                                                        </div>
-                                                        <div class="col-4">
-                                                            <a href="#">
-                                                                <img class="card-img img-fluid" src="./img/third.jpg" alt="Product Image 3">
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                </div> -->
-                                <!--/.First slide-->
-
-                                <!--Second slide-->
-                                <!-- <div class="carousel-item">
-                                                    <div class="row">
-                                                        <div class="col-4">
-                                                            <a href="#">
-                                                                <img class="card-img img-fluid" src="assets/img/product_single_04.jpg" alt="Product Image 4">
-                                                            </a>
-                                                        </div>
-                                                        <div class="col-4">
-                                                            <a href="#">
-                                                                <img class="card-img img-fluid" src="assets/img/product_single_05.jpg" alt="Product Image 5">
-                                                            </a>
-                                                        </div>
-                                                        <div class="col-4">
-                                                            <a href="#">
-                                                                <img class="card-img img-fluid" src="assets/img/product_single_06.jpg" alt="Product Image 6">
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                </div> -->
-                                <!--/.Second slide-->
-
-                                <!--Third slide-->
-                                <!-- <div class="carousel-item">
-                                                    <div class="row">
-                                                        <div class="col-4">
-                                                            <a href="#">
-                                                                <img class="card-img img-fluid" src="assets/img/product_single_07.jpg" alt="Product Image 7">
-                                                            </a>
-                                                        </div>
-                                                        <div class="col-4">
-                                                            <a href="#">
-                                                                <img class="card-img img-fluid" src="assets/img/product_single_08.jpg" alt="Product Image 8">
-                                                            </a>
-                                                        </div>
-                                                        <div class="col-4">
-                                                            <a href="#">
-                                                                <img class="card-img img-fluid" src="assets/img/product_single_09.jpg" alt="Product Image 9">
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                </div> -->
-                                <!--/.Third slide-->
-                                <!-- </div> -->
-                                <!--End Slides-->
-                                <!-- </div> -->
-                                <!--End Carousel Wrapper-->
-                                <!--Start Controls-->
-                                <!-- <div class="col-1 align-self-center">
-                                            <a href="#multi-item-example" role="button" data-bs-slide="next">
-                                                <i class="text-dark fas fa-chevron-right"></i>
-                                                <span class="sr-only">Next</span>
-                                            </a>
-                                        </div> -->
-                                <!--End Controls-->
                             </div>
                         </div>
                         <!-- col end -->
@@ -2409,34 +1472,11 @@ height: 100% !important; */
                                     <hr />
                                 </div>
 
-                                <!-- <div class="row mb-4"> -->
-                                <!-- <div class="col-md-4 col-6">
-                            <label class="mb-2">Size</label>
-                            <select class="form-select border border-secondary" style="height: 35px;">
-                              <option>Small</option>
-                              <option>Medium</option>
-                              <option>Large</option>
-                            </select>
-                          </div> -->
-                                <!-- col.// -->
-                                <!-- <div class="col-md-4 col-6 mb-3">
-                            <label class="mb-2 d-block">Quantity</label>
-                            <div class="input-group mb-3" style="width: 170px;">
-                              <button class="btn btn-white border border-secondary px-3" type="button" id="button-addon1" data-mdb-ripple-color="dark">
-                                <i class="fas fa-minus"></i>
-                              </button>
-                              <input type="text" class="form-control text-center border border-secondary" placeholder="14" aria-label="Example text with button addon" aria-describedby="button-addon1" />
-                              <button class="btn btn-white border border-secondary px-3" type="button" id="button-addon2" data-mdb-ripple-color="dark">
-                                <i class="fas fa-plus"></i>
-                              </button>
-                            </div>
-                          </div> -->
-                                <!-- </div> -->
                                 <br>
-
+                                <div class="qoutation">
                                 <a href="https://api.whatsapp.com/send?phone=201090685674" target="_blank"
-                                    class="btn-base btn-primary shadow-0 p-3"> Ask For Quotation </a>
-
+                                    class="btn-base btn-primary shadow-0 p-3 "> Ask For Quotation </a>
+                                </div>
                                 <!-- <a href="#" class="btn btn-light border border-secondary py-2 icon-hover px-3"> <i class="me-1 fa fa-heart fa-lg"></i> Save </a> -->
                             </div>
                         </main>
@@ -2493,7 +1533,7 @@ height: 100% !important; */
 
 
     <!-- Footer Start -->
-    <div class="container-fluid footer mt-5 py-5 wow fadeIn" data-wow-delay="0.1s"
+    {{-- <div class="container-fluid footer mt-5 py-5 wow fadeIn" data-wow-delay="0.1s"
         style="background-color: #234b91;color: white;visibility: visible;">
         <div class=" bottomfooter py-5">
             <div class="row lowerfooter g-5">
@@ -2518,7 +1558,6 @@ height: 100% !important; */
                                 style="color: #234b91;" class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
-                {{-- <div class="col-lg-1"></div> --}}
 
                 <div class="col-lg-2 col-md-6">
                     <h5 class="text-white mb-4">Quick Links</h5>
@@ -2529,7 +1568,6 @@ height: 100% !important; */
                     <a class="mybtn mybtn-link" href="" style="color: white;">Terms & Condition</a>
                     <a class="mybtn mybtn-link" href="" style="color: white;">Support</a>
                 </div>
-                {{-- <div class="col-lg-1"></div> --}}
 
                 <div class="col-lg-2 col-md-6">
                     <h5 class="text-white mb-4">Business Hours</h5>
@@ -2571,7 +1609,6 @@ height: 100% !important; */
                         </form>
                     </div>
                 </div>
-                {{-- <div class="col-lg-1"></div> --}}
 
             </div>
         </div>
@@ -2594,10 +1631,12 @@ height: 100% !important; */
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
     <!-- Copyright End -->
 
     <!-- Start Script -->
+
+    @push('scripts')
     <script src="{{ asset('singleproduct/assets/js/jquery-1.11.0.min.js') }}" type="text/javascript"></script>
     <script src="{{ asset('singleproduct/assets/js/jquery-migrate-1.2.1.min.js') }}" type="text/javascript"></script>
     <script src="{{ asset('singleproduct/assets/js/bootstrap.bundle.min.js') }}" type="text/javascript"></script>
@@ -2615,12 +1654,6 @@ height: 100% !important; */
     <script src="{{ asset('singleproduct/js/main.js') }}" type="text/javascript"></script>
 
 
-    <!-- End Script -->
-
-
-    <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
 
     <script>
         $('#carousel-related-product').slick({
@@ -2653,6 +1686,13 @@ height: 100% !important; */
             ]
         });
     </script>
+    @endpush
+    <!-- End Script -->
+    @endsection
+
+    <!-- JavaScript Libraries -->
+
+{{--
 </body>
 
-</html>
+</html> --}}

@@ -42,7 +42,12 @@
 
     <!-- Template Stylesheet -->
     <link href="{{ asset('contactus/css/style.css') }}" rel="stylesheet">
+    @stack('styles')
+
     <style>
+        .bg-white{
+            background-color: white !important;
+        }
          .btn-primary {
             /* Your styles for the .btn.btn-warning combination here */
             color: #212529 !important;
@@ -148,7 +153,9 @@
             color: white !important;
 
         }
-
+        .terms{
+            display: none;
+        }
 
         .footer .aside-stretch-right {
             background: #333333;
@@ -156,6 +163,15 @@
 
         .footer .aside-stretch-right:after {
             background: #234b91;
+        }
+        @media (min-width:600px) and (max-width:1024px) {
+
+            .terms{
+            display: block;
+        }
+
+
+
         }
 
         @media (max-width: 767.98px) {
@@ -172,9 +188,20 @@
                 min-height: 300px !important;
                 /* background-size: cover !important; */
             }
+            .footer{
+                    width: 100% !important;
+                    display: flex !important;
+                    justify-content: center !important;
+                }
+
+
         }
-
-
+        .navbar{
+            height: 10vh !important;
+        }
+        .uppernav{
+            height:4.5vh !important;
+        }
 
         .aside-stretch-right {
             background: #EDDD5E;
@@ -309,7 +336,11 @@
         }
 
 
+        .quick a{
+                    display: block !important;
+                    text-align: left !important;
 
+                }
 
 
 
@@ -328,6 +359,18 @@ height: 100% !important; */
                     max-height: 500px !important;
                     min-height: 500px !important;
                     /* background-size: cover !important; */
+
+                }
+                .quick a{
+                    display: block;
+                    text-align: left;
+
+                }
+
+                .footer{
+                    width: 100% !important;
+                    display: flex !important;
+                    justify-content: center !important;
                 }
         }
         body {
@@ -385,7 +428,7 @@ height: 100% !important; */
     </div>
     <!-- Spinner End -->
     <!-- Topbar Start -->
-    <div class="container-fluid px-0" style="background-color: #234b91;">
+    <div class="container-fluid px-0 uppernav" style="background-color: #234b91;">
         <div class="row g-0 d-none d-lg-flex">
             <div class="col-lg-6 ps-5 text-start">
                 <div class="h-100 d-inline-flex align-items-center text-light">
@@ -411,7 +454,7 @@ height: 100% !important; */
 
 
     <!-- Navbar Start -->
-    <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top px-4 px-lg-5">
+    <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top px-4 px-lg-5" >
         <a href="{{ route('welcome') }}" class="navbar-brand d-flex align-items-center">
             <h1 class="m-0" style="color: #234b91;font-size:43px;">JAWHARA</h1>
         </a>
@@ -419,8 +462,8 @@ height: 100% !important; */
             <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-            <div class="navbar-nav ms-auto p-4 p-lg-0">
+        <div class="collapse navbar-collapse bg-white" id="navbarCollapse">
+            <div class="navbar-nav ms-auto p-4 p-lg-0 bg-white">
                 <a href="{{ route('welcome') }}" class="nav-item nav-link"
                     style="color: #234b91;font-size:20px;font-weight:500;">HOME</a>
                 <div class="nav-item dropdown">
@@ -458,243 +501,11 @@ height: 100% !important; */
     </nav>
     <!-- Navbar End -->
 
-{{--
-    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
-          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-        </ol>
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img class="d-block w-100" src="{{ Storage::url($mainpage->first()->img_first) }}" alt="First slide">
-          </div>
-          <div class="carousel-item">
-            <img class="d-block w-100" src="{{ Storage::url($mainpage->first()->img_second) }}" alt="Second slide">
-          </div>
-          <div class="carousel-item">
-            <img class="d-block w-100" src="{{ Storage::url($mainpage->first()->img_third) }}" alt="Third slide">
-          </div>
-        </div>
-        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a>
-      </div> --}}
+    @yield('content')
 
-      <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" style="max-height: 100vh;">
-        <div class="carousel-indicators">
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-        </div>
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="{{ Storage::url($mainpage->first()->img_first) }}" class="d-block w-100" style="max-height: 100vh;background-size:cover;" alt="...">
-          </div>
-          <div class="carousel-item">
-            <img src="{{ Storage::url($mainpage->first()->img_second) }}" class="d-block w-100" style="max-height: 100vh;background-size:cover;" alt="...">
-          </div>
-          <div class="carousel-item">
-            <img src="{{ Storage::url($mainpage->first()->img_third) }}" class="d-block w-100" style="max-height: 100vh;background-size:cover;" alt="...">
-          </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-      </div>
-    <!-- Contact Start -->
-    <!-- ======= Portfolio Section ======= -->
-    <section id="portfolio" class="portfolio"
-        style="width:100%;height:100%;justify-content:center;align-items:center;">
-        <div class="container" data-aos="fade-up"
-            style="width:100%;height:100%;justify-content:center;align-items:center;">
 
-            <div class="section-title" style="width:100%;height:100%;justify-content:center;align-items:center;">
-                <h2 style="color: #234b91;">Portfolio</h2>
-                <h3>Check our <span style="color: #234b91;">Portfolio</span></h3>
-                <p style="color: #234b91;">Ut possimus qui ut temporibus culpa velit eveniet modi omnis est adipisci
-                    expedita at voluptas atque
-                    vitae autem.</p>
-            </div>
-
-            <div class="row" data-aos="fade-up" data-aos-delay="100">
-                <div class="col-lg-12 d-flex justify-content-center">
-                    <ul id="portfolio-flters">
-                        <li data-filter="*" class="filter-active" style="color: #234b91;">All</li>
-                        @foreach ($categories as $post)
-                            <li data-filter=".{{ $post->id }}" style="color: #234b91;">{{ $post->title }}</li>
-                        @endforeach
-                        {{-- <li data-filter=".filter-card" style="color: #234b91;">Card</li>
-                        <li data-filter=".filter-web" style="color: #234b91;">Web</li> --}}
-                    </ul>
-                </div>
-            </div>
-
-            <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
-                @foreach ($categories as $post)
-                    <a href="{{ route('categoryproducts', $post->id) }}">
-                        <div class="col-lg-4 col-md-6 portfolio-item {{ $post->id }}">
-                            <img src="{{ asset($post->image) }}" class="img-fluid" alt="">
-                            <div class="portfolio-info">
-                                <h4 style="color: #234b91;">{{ $post->title }}</h4>
-                                <p>{{ $post->description }}</p>
-                                <a href="assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery"
-                                    class="portfolio-lightbox preview-link" title="App 1"><i
-                                        class="bx bx-plus"></i></a>
-                                <a href="portfolio-details.html" class="details-link" title="More Details"><i
-                                        class="bx bx-link"></i></a>
-                            </div>
-                        </div>
-                    </a>
-                @endforeach
-
-                {{-- <div class="col-lg-4 col-md-6 portfolio-item {{ $post->id }}">
-                    <img src="{{ Storage::url($mainpage->first()->img_first_categoryone) }}" class="img-fluid"
-                        alt="">
-                    <div class="portfolio-info">
-                        <h4 style="color: #234b91;">{{ $mainpage->first()->category_first_title_1 }}1</h4>
-                        <p>{{ $mainpage->first()->category_first_description_1 }}</p>
-                        <a href="assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery"
-                            class="portfolio-lightbox preview-link" title="App 1"><i class="bx bx-plus"></i></a>
-                        <a href="portfolio-details.html" class="details-link" title="More Details"><i
-                                class="bx bx-link"></i></a>
-                    </div>
-                </div> --}}
-                {{-- <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-                    <img src="{{ Storage::url($mainpage->first()->img_first_categorytwo) }}" class="img-fluid"
-                        alt="">
-                    <div class="portfolio-info">
-                        <h4 style="color: #234b91;">{{ $mainpage->first()->category_second_title_1 }}</h4>
-                        <p>{{ $mainpage->first()->category_second_description_1 }}</p>
-                        <a href="assets/img/portfolio/portfolio-2.jpg" data-gallery="portfolioGallery"
-                            class="portfolio-lightbox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
-                        <a href="portfolio-details.html" class="details-link" title="More Details"><i
-                                class="bx bx-link"></i></a>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-                    <img src="{{ Storage::url($mainpage->first()->img_second_categoryone) }}" class="img-fluid"
-                        alt="">
-                    <div class="portfolio-info">
-                        <h4 style="color: #234b91;">{{ $mainpage->first()->category_first_title_2 }}</h4>
-                        <p>{{ $mainpage->first()->category_first_description_2 }}</p>
-                        <a href="assets/img/portfolio/portfolio-3.jpg" data-gallery="portfolioGallery"
-                            class="portfolio-lightbox preview-link" title="App 2"><i class="bx bx-plus"></i></a>
-                        <a href="portfolio-details.html" class="details-link" title="More Details"><i
-                                class="bx bx-link"></i></a>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-                    <img src="{{ Storage::url($mainpage->first()->img_first_categorythree) }}" class="img-fluid"
-                        alt="">
-                    <div class="portfolio-info">
-                        <h4 style="color: #234b91;">{{ $mainpage->first()->category_third_title_1 }}</h4>
-                        <p>{{ $mainpage->first()->category_third_description_1 }}</p>
-                        <a href="assets/img/portfolio/portfolio-4.jpg" data-gallery="portfolioGallery"
-                            class="portfolio-lightbox preview-link" title="Card 2"><i class="bx bx-plus"></i></a>
-                        <a href="portfolio-details.html" class="details-link" title="More Details"><i
-                                class="bx bx-link"></i></a>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-                    <img src="{{ Storage::url($mainpage->first()->img_second_categorytwo) }}" class="img-fluid"
-                        alt="">
-                    <div class="portfolio-info">
-                        <h4 style="color: #234b91;">{{ $mainpage->first()->category_second_title_2 }}</h4>
-                        <p>{{ $mainpage->first()->category_second_description_2 }}</p>
-                        <a href="assets/img/portfolio/portfolio-5.jpg" data-gallery="portfolioGallery"
-                            class="portfolio-lightbox preview-link" title="Web 2"><i class="bx bx-plus"></i></a>
-                        <a href="portfolio-details.html" class="details-link" title="More Details"><i
-                                class="bx bx-link"></i></a>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-                    <img src="{{ Storage::url($mainpage->first()->img_third_categoryone) }}" class="img-fluid"
-                        alt="">
-                    <div class="portfolio-info">
-                        <h4 style="color: #234b91;">{{ $mainpage->first()->category_first_title_3 }}</h4>
-                        <p>{{ $mainpage->first()->category_first_description_3 }}</p>
-                        <a href="assets/img/portfolio/portfolio-6.jpg" data-gallery="portfolioGallery"
-                            class="portfolio-lightbox preview-link" title="App 3"><i class="bx bx-plus"></i></a>
-                        <a href="portfolio-details.html" class="details-link" title="More Details"><i
-                                class="bx bx-link"></i></a>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-                    <img src="{{ Storage::url($mainpage->first()->img_second_categorythree) }}" class="img-fluid"
-                        alt="">
-                    <div class="portfolio-info">
-                        <h4 style="color: #234b91;">{{ $mainpage->first()->category_third_title_2 }}</h4>
-                        <p>{{ $mainpage->first()->category_third_description_2 }}</p>
-                        <a href="assets/img/portfolio/portfolio-7.jpg" data-gallery="portfolioGallery"
-                            class="portfolio-lightbox preview-link" title="Card 1"><i class="bx bx-plus"></i></a>
-                        <a href="portfolio-details.html" class="details-link" title="More Details"><i
-                                class="bx bx-link"></i></a>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-                    <img src="{{ Storage::url($mainpage->first()->img_third_categorythree) }}" class="img-fluid"
-                        alt="">
-                    <div class="portfolio-info">
-                        <h4 style="color: #234b91;">{{ $mainpage->first()->category_third_title_3 }}</h4>
-                        <p>{{ $mainpage->first()->category_third_description_3 }}</p>
-                        <a href="assets/img/portfolio/portfolio-8.jpg" data-gallery="portfolioGallery"
-                            class="portfolio-lightbox preview-link" title="Card 3"><i class="bx bx-plus"></i></a>
-                        <a href="portfolio-details.html" class="details-link" title="More Details"><i
-                                class="bx bx-link"></i></a>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-                    <img src="{{ Storage::url($mainpage->first()->img_third_categorytwo) }}" class="img-fluid"
-                        alt="">
-                    <div class="portfolio-info">
-                        <h4 style="color: #234b91;">{{ $mainpage->first()->category_second_title_3 }}</h4>
-                        <p>{{ $mainpage->first()->category_second_description_3 }}</p>
-                        <a href="assets/img/portfolio/portfolio-9.jpg" data-gallery="portfolioGallery"
-                            class="portfolio-lightbox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
-                        <a href="portfolio-details.html" class="details-link" title="More Details"><i
-                                class="bx bx-link"></i></a>
-                    </div>
-                </div> --}}
-
-            </div>
-
-        </div>
-    </section>
-
-    <!-- Contact End -->
-    <br>
-    <br>
-    <br>
-
-    <div style="width: 100%;display:flex;justify-content:center;">
-        @if(isset($pdfPath))
-        <a href="{{ route('pdf.download') }}" class="btn-base btn-primary shadow-0 p-3 text-center" target="_blank">DOWNLOAD OUR CATALOG </a>
-
-    @endif
-
-{{-- <a href="https://online.fliphtml5.com/rdjom/affi/?1699867226778#p=1" target="_blank"
-class="btn-base btn-primary shadow-0 p-3 text-center" download="https://online.fliphtml5.com/rdjom/affi/?1699867226778#p=1"> DOWNLOAD OUR CATALOG </a> --}}
-</div>
     <!-- Footer Start -->
-    <div class="container-fluid footer mt-5 py-5 wow fadeIn" data-wow-delay="0.1s"
+       <div class="container-fluid footer mt-5 py-5 wow fadeIn" data-wow-delay="0.1s"
         style="background-color: #234b91;color: white;visibility: visible;">
         <div class=" bottomfooter py-5">
             <div class="row lowerfooter g-5">
@@ -704,7 +515,8 @@ class="btn-base btn-primary shadow-0 p-3 text-center" download="https://online.f
                     <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>5th settelment, Cairo, Egypt</p>
                     <p class="mb-2"><i class="fas fa-building me-3"></i>+2010 906 85674</p>
                     <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+2010 906 85674</p>
-                    <p class="mb-2"><i class="fab fa-whatsapp me-3" style="font-size:x-large;"></i>+2010 906 85674
+                    <p class="mb-2"><i class="fab fa-whatsapp me-3" style="font-size:x-large;"></i>+2010 906
+                        85674
                     </p>
                     <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@jawharafoods.com</p>
                     <div class="d-flex pt-3">
@@ -718,48 +530,50 @@ class="btn-base btn-primary shadow-0 p-3 text-center" download="https://online.f
                                 style="color: #234b91;" class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
-                {{-- <div class="col-lg-1"></div> --}}
 
-                <div class="col-lg-2 col-md-6">
+                <div class="col-lg-2 col-md-6 quick">
                     <h5 class="text-white mb-4">Quick Links</h5>
                     <a class="mybtn mybtn-link" href="" style="color: white;">About Us</a>
-                    <a class="mybtn mybtn-link" href="{{ route('contactus') }}" style="color: white;">Contact Us</a>
+                    <a class="mybtn mybtn-link" href="{{ route('contactus') }}" style="color: white;">Contact
+                        Us</a>
                     <a class="mybtn mybtn-link" href="" style="color: white;">Our Services</a>
-                    <a class="mybtn mybtn-link" href="" style="color: white;">Terms & Condition</a>
+                    <a class="mybtn mybtn-link" href="" style="color: white;">Terms & <br class="terms"> Condition</a>
                     <a class="mybtn mybtn-link" href="" style="color: white;">Support</a>
                 </div>
-                {{-- <div class="col-lg-1"></div> --}}
 
                 <div class="col-lg-2 col-md-6">
                     <h5 class="text-white mb-4">Business Hours</h5>
                     <p class="mb-1">Monday - Friday</p>
-                    <h6 class="text-light">09:00 am - 07:00 pm</h6>
+                    <h6 class="text-white" style="color: white;">09:00 am - 07:00 pm</h6>
                     <p class="mb-1">Saturday</p>
-                    <h6 class="text-light">09:00 am - 12:00 pm</h6>
+                    <h6 class="text-white" style="color: white;">09:00 am - 12:00 pm</h6>
                     <p class="mb-1">Sunday</p>
-                    <h6 class="text-light">Closed</h6>
+                    <h6 class="text-white" style="color: white;">Closed</h6>
                 </div>
 
                 <div class="col-lg-3 col-md-6">
                     <div class="aside-stretch-right " style="background-color: #234b91;">
-                        <h2 class="footer-heading " style="font-family: Libre Baskerville,serif;font-size:1.25rem;font-weight:700;line-height:1.2;">Free consultation</h2>
-                        {{-- <form action="#" class=""> --}}
-                            <form class="form-consultation"
-                            action="{{route('emails')}}"
-                            method="POST"
+                        <h2 class="footer-heading "
+                            style="font-family: Libre Baskerville,serif;font-size:1.25rem;font-weight:700;line-height:1.2;">
+                            Free consultation</h2>
+                        <form class="form-consultation" action="{{ route('emails') }}" method="POST"
                             enctype="multipart/form-data">
-                          @csrf
+                            @csrf
                             <div class="form-group mb-2">
-                                <input type="text" class="form-control" placeholder="Your Name" name="name">
+                                <input type="text" class="form-control" placeholder="Your Name"
+                                    name="name">
                             </div>
                             <div class="form-group mb-2">
-                                <input type="text" class="form-control" placeholder="Your Email" name="email">
+                                <input type="text" class="form-control" placeholder="Your Email"
+                                    name="email">
                             </div>
                             <div class="form-group mb-2">
-                                <input type="text" class="form-control" placeholder="Company Name" name="company_name">
+                                <input type="text" class="form-control" placeholder="Company Name"
+                                    name="company_name">
                             </div>
                             <div class="form-group mb-2">
-                                <textarea name="message" id="" cols="30" rows="3" class="form-control" placeholder="Message"></textarea>
+                                <textarea name="message" id="" cols="30" rows="3" class="form-control"
+                                    placeholder="Message"></textarea>
                             </div>
                             <div class="form-group mb-2">
                                 <button type="submit" class="form-control submit px-3">Send A Message</button>
@@ -767,7 +581,6 @@ class="btn-base btn-primary shadow-0 p-3 text-center" download="https://online.f
                         </form>
                     </div>
                 </div>
-                                {{-- <div class="col-lg-1"></div> --}}
 
             </div>
         </div>
@@ -843,6 +656,8 @@ integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9E
     <script src="{{ asset('assetsGallery/vendor/php-email-form/validate.js') }}"></script>
 
     <script src="{{ asset('assetsGallery/js/main.js') }}"></script>
+
+    @stack('scripts')
 
 
     <script src="{{ asset('contactus/lib/wow/wow.min.js') }}"></script>

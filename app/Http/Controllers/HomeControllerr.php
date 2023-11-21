@@ -14,7 +14,7 @@ class HomeControllerr extends Controller
         $categories = Jawharacategory::all();
         $pdfPath = Catalog::all(); // Retrieve the pdfPath from the query parameters
 
-        return view('front.mainpage',compact('mainpage', 'categories', 'pdfPath'));
+        return view('front.frontindex',compact('mainpage', 'categories', 'pdfPath'));
     }
 
 

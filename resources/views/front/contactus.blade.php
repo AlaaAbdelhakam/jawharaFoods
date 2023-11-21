@@ -1,4 +1,6 @@
-<!DOCTYPE html>
+@extends('front.mainpage')
+
+{{-- <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -20,9 +22,9 @@
 
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet"> --}}
+    @push('styles')
 
-    <!-- Libraries Stylesheet -->
     <link href="{{ asset('contactus/lib/animate/animate.min.css') }}" rel="stylesheet">
     <link href="{{ asset('contactus/lib/owlcarousel/assets/owl.carousel.min.css') }}" rel="stylesheet">
     <link href="{{ asset('contactus/lib/lightbox/css/lightbox.min.css') }}" rel="stylesheet">
@@ -32,7 +34,59 @@
 
     <!-- Template Stylesheet -->
     <link href="{{ asset('contactus/css/style.css') }}" rel="stylesheet">
+
     <style>
+         @media (max-width: 767.98px) {
+            .footer .aside-stretch-right {
+                background: transparent;
+            }
+
+            .footer .aside-stretch-right:after {
+                background: transparent;
+                display: none;
+            }
+            #left{
+                display: block !important;
+            }
+            #right{
+                display: BLOCK !important;
+                margin-top: 50px !important;
+            }
+            .midllecontent{
+                display: block !important;
+            }
+        }
+
+
+
+
+        @media screen and (max-width: 1200px) {
+            /* #left{
+                display: block !important;
+            }
+            #right{
+                display: BLOCK !important;
+            }
+            .midllecontent{
+                display: block !important;
+            } */
+            html,
+            body {
+                /* width: 100% !important;
+height: 100% !important; */
+                margin: 0px !important;
+                padding: 0px !important;
+                overflow-x: hidden !important;
+            }
+
+        }
+
+    </style>
+
+
+    @endpush
+    <!-- Libraries Stylesheet -->
+    {{-- <style>
           .mybtn-link::before {
     /* Your styles for the ::before pseudo-element here */
     content: "\f105"; /* This is required for the pseudo-element */
@@ -295,31 +349,6 @@
         }
 
 
-
-
-
-
-        @media screen and (max-width: 1200px) {
-            /* #left{
-                display: block !important;
-            }
-            #right{
-                display: BLOCK !important;
-            }
-            .midllecontent{
-                display: block !important;
-            } */
-            html,
-            body {
-                /* width: 100% !important;
-height: 100% !important; */
-                margin: 0px !important;
-                padding: 0px !important;
-                overflow-x: hidden !important;
-            }
-
-        }
-
         body {
             zoom: 86% !important;
 
@@ -364,87 +393,10 @@ height: 100% !important; */
     -webkit-text-size-adjust: 100% !important;
         }
     </style>
-</head>
+</head> --}}
 
-<body>
-    <!-- Spinner Start -->
-    <div id="spinner"
-        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-        <div class="spinner-border text-primary" role="status"
-            style="width: 3rem; height: 3rem;color: #234b91 !important;"></div>
-    </div>
-    <!-- Spinner End -->
-    <!-- Topbar Start -->
-    <div class="container-fluid px-0" style="background-color: #234b91;">
-        <div class="row g-0 d-none d-lg-flex">
-            <div class="col-lg-6 ps-5 text-start">
-                <div class="h-100 d-inline-flex align-items-center text-light">
-                    <span>Follow Us:</span>
-                    <a class="btn btn-link text-light" href=""><i class="fab fa-facebook-f"></i></a>
-                    <a class="btn btn-link text-light" href=""><i class="fab fa-twitter"></i></a>
-                    <a class="btn btn-link text-light" href=""><i class="fab fa-linkedin-in"></i></a>
-                    <a class="btn btn-link text-light" href=""><i class="fab fa-instagram"></i></a>
-                </div>
-            </div>
-            <div class="col-lg-6 text-end">
-                <div class="h-100 bg-secondary topphone d-inline-flex align-items-center text-dark py-2 px-4">
-                    <span class="me-2 fw-semi-bold" style="color: #234b91;"><i class="fa fa-phone-alt me-2"></i>Call
-                        Us:</span>
-                    <span style="color: #234b91;">+2010 906 85674</span>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Topbar End -->
+@section('content')
 
-
-
-
-    <!-- Navbar Start -->
-    <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top px-4 px-lg-5">
-        <a href="{{ route('welcome') }}" class="navbar-brand d-flex align-items-center">
-            <h1 class="m-0" style="color: #234b91;font-size:43px;">JAWHARA</h1>
-        </a>
-        <button type="button" class="navbar-toggler me-0" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-            <div class="navbar-nav ms-auto p-4 p-lg-0">
-                <a href="{{ route('welcome') }}" class="nav-item nav-link"
-                    style="color: #234b91;font-size:20px;font-weight:500;">HOME</a>
-                <div class="nav-item dropdown">
-                    <a href="#" style="color: #234b91;" class="nav-link dropdown-toggle"
-                        data-bs-toggle="dropdown">ABOUT</a>
-                    <div class="dropdown-menu bg-light m-0">
-                        <a href="gallery.html" style="color: #234b91;" class="dropdown-item">Our Story</a>
-                        <a href="feature.html" style="color: #234b91;" class="dropdown-item">press</a>
-                        <a href="team.html" style="color: #234b91;" class="dropdown-item">FAQ</a>
-                        <a href="testimonial.html" style="color: #234b91;" class="dropdown-item">Certificates</a>
-                        <a href="{{ route('contactus') }}" style="color: #234b91;" class="dropdown-item">Contact
-                            Us</a>
-                    </div>
-                </div>
-                {{-- <a href="service.html" class="nav-item nav-link" style="color: #234b91;">Services</a>
-                <a href="product.html" class="nav-item nav-link" style="color: #234b91;">Products</a> --}}
-                <div class="nav-item dropdown">
-                    <a href="#" style="color: #234b91;" class="nav-link dropdown-toggle"
-                        data-bs-toggle="dropdown">PRODUCTS CATEGORIES</a>
-                    <div class="dropdown-menu bg-light m-0">
-                        @foreach ($categories as $post)
-
-                        <a href="{{ route('categoryproducts', $post->id) }}" style="color: #234b91;" class="dropdown-item">{{ $post->title }}</a>
-
-                        @endforeach
-                    </div>
-                </div>
-                <a href="{{ route('contactus') }}" class="nav-item nav-link active" style="color: #234b91;">CONTACT</a>
-            </div>
-            {{-- <div class="border-start ps-4 d-none d-lg-block">
-                <button type="button" class="btn btn-sm p-0"><i class="fa fa-search"></i></button>
-            </div> --}}
-        </div>
-    </nav>
-    <!-- Navbar End -->
 
 
     <!-- Page Header Start -->
@@ -521,7 +473,7 @@ height: 100% !important; */
                         </div>
                     </form>
                 </div>
-                <div class="col-lg-1 col-md-1"></div>
+                <div class="col-lg-3 col-md-1"></div>
                 <div class="col-lg-5 col-md-5 wow fadeInUp" data-wow-delay="0.5s" id="right">
                     <h3 class="mb-4" style="color: #234b91;">Contact Details</h3>
                     <div class="d-flex border-bottom pb-3 mb-3">
@@ -577,115 +529,11 @@ height: 100% !important; */
         {{-- </div> --}}
     </div>
     <!-- Contact End -->
+    @endsection
+
+    @push('scripts')
 
 
-    <!-- Footer Start -->
-    <div class="container-fluid footer mt-5 py-5 wow fadeIn" data-wow-delay="0.1s"
-        style="background-color: #234b91;color: white;visibility: visible;">
-        <div class=" bottomfooter py-5">
-            <div class="row lowerfooter g-5">
-                <div class="col-lg-1 "></div>
-                <div class="col-lg-3 col-md-6">
-                    <h5 class="text-white mb-4">Our Office</h5>
-                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>5th settelment, Cairo, Egypt</p>
-                    <p class="mb-2"><i class="fas fa-building me-3"></i>+2010 906 85674</p>
-                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+2010 906 85674</p>
-                    <p class="mb-2"><i class="fab fa-whatsapp me-3" style="font-size:x-large;"></i>+2010 906 85674
-                    </p>
-                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@jawharafoods.com</p>
-                    <div class="d-flex pt-3">
-                        <a class="btn btn-square btn-secondary rounded-circle me-2" href=""><i
-                                style="color: #234b91;" class="fab fa-twitter"></i></a>
-                        <a class="btn btn-square btn-secondary rounded-circle me-2" href=""><i
-                                style="color: #234b91;" class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-square btn-secondary rounded-circle me-2" href=""><i
-                                style="color: #234b91;" class="fab fa-youtube"></i></a>
-                        <a class="btn btn-square btn-secondary rounded-circle me-2" href=""><i
-                                style="color: #234b91;" class="fab fa-linkedin-in"></i></a>
-                    </div>
-                </div>
-                {{-- <div class="col-lg-1"></div> --}}
-
-                <div class="col-lg-2 col-md-6">
-                    <h5 class="text-white mb-4">Quick Links</h5>
-                    <a class="mybtn mybtn-link" href="" style="color: white;">About Us</a>
-                    <a class="mybtn mybtn-link" href="{{ route('contactus') }}" style="color: white;">Contact Us</a>
-                    <a class="mybtn mybtn-link" href="" style="color: white;">Our Services</a>
-                    <a class="mybtn mybtn-link" href="" style="color: white;">Terms & Condition</a>
-                    <a class="mybtn mybtn-link" href="" style="color: white;">Support</a>
-                </div>
-                {{-- <div class="col-lg-1"></div> --}}
-
-                <div class="col-lg-2 col-md-6">
-                    <h5 class="text-white mb-4">Business Hours</h5>
-                    <p class="mb-1">Monday - Friday</p>
-                    <h6 class="text-light">09:00 am - 07:00 pm</h6>
-                    <p class="mb-1">Saturday</p>
-                    <h6 class="text-light">09:00 am - 12:00 pm</h6>
-                    <p class="mb-1">Sunday</p>
-                    <h6 class="text-light">Closed</h6>
-                </div>
-
-                <div class="col-lg-3 col-md-6">
-                    <div class="aside-stretch-right " style="background-color: #234b91;">
-                        <h2 class="footer-heading " style="font-family: Libre Baskerville,serif;font-size:1.25rem;font-weight:700;line-height:1.2;">Free consultation</h2>
-                        {{-- <form action="#" class=""> --}}
-                            <form class="form-consultation"
-                            action="{{route('emails')}}"
-                            method="POST"
-                            enctype="multipart/form-data">
-                          @csrf
-                            <div class="form-group mb-2">
-                                <input type="text" class="form-control" placeholder="Your Name" name="name">
-                            </div>
-                            <div class="form-group mb-2">
-                                <input type="text" class="form-control" placeholder="Your Email" name="email">
-                            </div>
-                            <div class="form-group mb-2">
-                                <input type="text" class="form-control" placeholder="Company Name" name="company_name">
-                            </div>
-                            <div class="form-group mb-2">
-                                <textarea name="message" id="" cols="30" rows="3" class="form-control" placeholder="Message"></textarea>
-                            </div>
-                            <div class="form-group mb-2">
-                                <button type="submit" class="form-control submit px-3">Send A Message</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-                                {{-- <div class="col-lg-1"></div> --}}
-
-            </div>
-        </div>
-    </div>
-    <!-- Footer End -->
-
-
-    <!-- Copyright Start -->
-    <div class="container-fluid bg-secondary text-body copyright py-4">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0" style="color: #234b91;">
-                    &copy; <a class="fw-semi-bold" href="#" style="color: #234b91;">Your Site Name</a>, All
-                    Right Reserved.
-                </div>
-                <div class="col-md-6 text-center text-md-end" style="color: #234b91;">
-                    <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-                    Designed By <a class="fw-semi-bold" href="https://htmlcodex.com" style="color: #234b91;">HTML
-                        Codex</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Copyright End -->
-
-
-    <!-- Back to Top -->
-
-
-    <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="{{ asset('contactus/lib/wow/wow.min.js') }}"></script>
     <script src="{{ asset('contactus/lib/easing/easing.min.js') }}"></script>
     <script src="{{ asset('contactus/lib/waypoints/waypoints.min.js') }}"></script>
@@ -696,6 +544,6 @@ height: 100% !important; */
 
     <!-- Template Javascript -->
     <script src="{{ asset('contactus/js/main.js') }}"></script>
-</body>
 
-</html>
+
+    @endpush
