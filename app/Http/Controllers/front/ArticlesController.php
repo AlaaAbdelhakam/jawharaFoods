@@ -65,10 +65,12 @@ class ArticlesController extends Controller
         }
 
     public function search(Request $request){
+        $categories = Jawharacategory::all();
+
         $articles = DB::table('articles')->join('category', 'articles.category_id', '=', 'category.id')
         ->select('articles.*', 'category.name')->where('articles.title','like','%'.$request->find.'%')
         ->Orwhere('articles.content','like','%'.$request->find.'%')->get();
-        return view('front.index')->with('articles',$articles);
+        return view('front.index')->with('articles',$articles)->with('categories',$categories);
     }
 
 }

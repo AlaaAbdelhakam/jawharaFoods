@@ -4,7 +4,7 @@
 <style>
 
     .carousel{
-        height: 110vh !important;
+        height: 103vh !important;
     }
 @media (max-width: 767.98px) {
     .carousel{
@@ -27,13 +27,13 @@
     </div>
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <img src="{{ Storage::url($mainpage->first()->img_first) }}" class="d-block w-100" style="max-height:110vh;min-height:100vh;background-size:cover;" alt="...">
+        <img src="{{ Storage::url($mainpage->first()->img_first) }}" class="d-block w-100" style="max-height:103vh;min-height:100vh;background-size:cover;" alt="...">
       </div>
       <div class="carousel-item">
-        <img src="{{ Storage::url($mainpage->first()->img_second) }}" class="d-block w-100" style="max-height:110vh;min-height:100vh;background-size:cover;" alt="...">
+        <img src="{{ Storage::url($mainpage->first()->img_second) }}" class="d-block w-100" style="max-height:103vh;min-height:100vh;background-size:cover;" alt="...">
       </div>
       <div class="carousel-item">
-        <img src="{{ Storage::url($mainpage->first()->img_third) }}" class="d-block w-100" style="max-height:110vh;min-height:100vh;background-size:cover;" alt="...">
+        <img src="{{ Storage::url($mainpage->first()->img_third) }}" class="d-block w-100" style="max-height:103vh;min-height:100vh;background-size:cover;" alt="...">
       </div>
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">

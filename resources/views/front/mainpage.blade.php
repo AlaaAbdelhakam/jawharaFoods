@@ -45,6 +45,12 @@
     @stack('styles')
 
     <style>
+        .dropdown-item:active {
+    background-color:#234b91 ; /* Change to your preferred color */
+}
+        .mybtn:hover {
+    background-color:#234b91 ; /* Change to your preferred color */
+}
         .bg-white{
             background-color: white !important;
         }
@@ -468,13 +474,13 @@ height: 100% !important; */
                     style="color: #234b91;font-size:20px;font-weight:500;">HOME</a>
                 <div class="nav-item dropdown">
                     <a href="#" style="color: #234b91;" class="nav-link dropdown-toggle"
-                        data-bs-toggle="dropdown" id="dropdown-menu-link">ABOUT</a>
-                    <div class="dropdown-menu bg-light m-0">
-                        <a href="gallery.html" style="color: #234b91;" class="dropdown-item">Our Story</a>
-                        <a href="feature.html" style="color: #234b91;" class="dropdown-item">press</a>
-                        <a href="team.html" style="color: #234b91;" class="dropdown-item">FAQ</a>
-                        <a href="testimonial.html" style="color: #234b91;" class="dropdown-item">Certificates</a>
-                        <a href="{{ route('contactus') }}" style="color: #234b91;" class="dropdown-item">Contact
+                        data-bs-toggle="dropdown" id="dropdown-menu-link" >ABOUT</a>
+                    <div class="dropdown-menu bg-light m-0" style="border: 3px solid #234b91;">
+                        <a href="gallery.html" style="color: #234b91;" class="dropdown-item px-4 py-2">Our Story</a>
+                        <a href="feature.html" style="color: #234b91;" class="dropdown-item px-4 py-2">press</a>
+                        <a href="team.html" style="color: #234b91;" class="dropdown-item px-4 py-2">FAQ</a>
+                        <a href="testimonial.html" style="color: #234b91;" class="dropdown-item px-4 py-2">Certificates</a>
+                        <a href="{{ route('contactus') }}" style="color: #234b91;" class="dropdown-item px-4 py-2">Contact
                             Us</a>
                     </div>
                 </div>
@@ -483,14 +489,15 @@ height: 100% !important; */
                 <div class="nav-item dropdown">
                     <a href="#" style="color: #234b91;" class="nav-link dropdown-toggle"
                         data-bs-toggle="dropdown" id="products-dropdown">PRODUCTS CATEGORIES</a>
-                    <div class="dropdown-menu bg-light m-0" id="products-dropdown-menu">
+                    <div class="dropdown-menu bg-light m-0" id="products-dropdown-menu" style="border: 3px solid #234b91;">
                         @foreach ($categories as $post)
 
-                        <a href="{{ route('categoryproducts', $post->id) }}" style="color: #234b91;" class="dropdown-item">{{ $post->title }}</a>
+                        <a href="{{ route('categoryproducts', $post->id) }}" style="color: #234b91;" class="dropdown-item px-4 py-2">{{ $post->title }}</a>
 
                         @endforeach
                     </div>
                 </div>
+                <a href="{{ route('index') }}" class="nav-item nav-link active" style="color: #234b91;">OUR BLOG</a>
                 <a href="{{ route('contactus') }}" class="nav-item nav-link active" style="color: #234b91;">CONTACT</a>
                 <a href="https://online.fliphtml5.com/rdjom/affi/?1699867226778#p=1" class="nav-item nav-link active" style="color: #234b91;">OUR CATALOG</a>
             </div>

@@ -22,6 +22,9 @@ padding: 6% 0%;
     width: 80% !important;
     margin: auto !important;
 }
+
+
+
         }
 
 
@@ -56,16 +59,18 @@ padding: 6% 0%;
     <!-- Page Header End -->
 
 
-    <div class="container">
-      <div class="row">
-        <div class="col-8"></div>
-        <div class="col-12">
-    <form class="form-inline my-2 my-lg-0 d-flex text-left justify-content-left" action="{{ route('search') }}" method="POST">
+    <div class="container ">
+      <div class="row ">
+        {{-- <div class="col-8"></div> --}}
+        <div class="col-12 col-lg-8" style="display: flex;justify-content:center;width:100%;align-items:center;">
+            <div style="display: flex;justify-content:center;width:100%;align-items:center;">
+    <form class="form-inline d-flex m-5" action="{{ route('search') }}" method="POST">
         @csrf
-        <input class="form-control mr-sm-2" name="find" type="search" placeholder="Search"
+        <input class="form-control" name="find" type="search" placeholder="Search"
             aria-label="Search">
-        <button class="btn-base btn-outline-primary mx-2 m-2" type="submit">Search</button>
+        <button class="mybtn btn-outline-primary mx-2 m-2" type="submit">Search</button>
     </form>
+</div>
 </div>
 </div>
 </div>
@@ -80,7 +85,7 @@ padding: 6% 0%;
             <p class="lead">{{ $article->title }}</p>
             <div class="mt-3 pt-3">
 
-                <a id="indexpage" class="btn-base btn-primary" href="{{ route('article', ['id' => $article->id]) }}">Read More</a>
+                <a id="indexpage" class="mybtn btn-primary" href="{{ route('article', ['id' => $article->id]) }}">Read More</a>
 
             </div>
             <hr>
