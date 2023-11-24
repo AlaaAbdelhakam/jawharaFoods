@@ -37,7 +37,7 @@ class EmailsController extends Controller
                ];
                Mail::to('sales1@jawharafoods.com')->send(new MyDemoMail($data));
   
-            //    dispatch(new SendDataUsers($data));
+            //sales1@jawharafoods.com    dispatch(new SendDataUsers($data));
             //    dispatch(new UserMailsJob($data));
         
         return redirect()->back()->withSuccess(__('Email Sent Successfully'));

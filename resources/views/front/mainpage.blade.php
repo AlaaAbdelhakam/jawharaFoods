@@ -203,10 +203,10 @@
 
         }
         .navbar{
-            height: 10vh !important;
+            height: 100px !important;
         }
         .uppernav{
-            height:4.5vh !important;
+            height:40px !important;
         }
 
         .aside-stretch-right {
