@@ -18,6 +18,7 @@
 @endpush
 @section('content')
 
+@include('sweetalert::alert')
 
 <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" style="">
     <div class="carousel-indicators">
@@ -109,3 +110,4 @@
 
 </div>
 @endsection
+

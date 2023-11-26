@@ -182,6 +182,7 @@ return [
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
         Kris\LaravelFormBuilder\FormBuilderServiceProvider::class,
+        RealRashid\SweetAlert\SweetAlertServiceProvider::class,
 
         /*
          * Package Service Providers...
@@ -213,6 +214,8 @@ return [
         'Carbon' => 'Carbon\Carbon',
         // 'ExampleClass' => App\Example\ExampleClass::class,
         'FormBuilder' => Kris\LaravelFormBuilder\Facades\FormBuilder::class,
+        'Alert' => RealRashid\SweetAlert\Facades\Alert::class,
+
     ])->toArray(),
 
 ];

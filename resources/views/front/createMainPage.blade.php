@@ -598,21 +598,26 @@
                                             </div>
                                         </form>
                                     </div>
-                                    <div class="form-group container">
+                                    <div class="form-group ml-1">
                                         <label for="">PDF</label>
                                         <form class="form"
                                         action="{{route('file.store')}}"
                                         method="POST"
                                         enctype="multipart/form-data">
                                       @csrf
+                                      <div class="row ">
+                                        <div class="col-md-7">
                                       <input type="file" name="catalogpdf" class="form-control" placeholder="ارفق صورة">
 
- <button type="submit" class="btn btn-primary">
+                                            <button type="submit" class="btn btn-primary mt-3">
                                                     <i class="la la-check-square-o"></i> submit
                                                 </button>
                                                     </div>
                                                 </form>
-                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-5"></div>
+                                     </div>
                             </div>
                         </div>
                     </div>

@@ -62,10 +62,11 @@ height: 100% !important; */
 
 
     @endpush
-   
+
 
 @section('content')
 
+@include('sweetalert::alert')
 
 
     <!-- Page Header Start -->
