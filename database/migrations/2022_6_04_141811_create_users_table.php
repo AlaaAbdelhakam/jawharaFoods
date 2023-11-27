@@ -29,10 +29,10 @@ return new class extends Migration
             $table->text('deleted_by')->nullable();
             $table->text('updated_by')->nullable();
             $table->softDeletes();
-            $table->bigInteger('city_id')->unsigned()->nullable(); 
-            $table->foreign('city_id')->references('id')->on('city')->onDelete('cascade');
+            // $table->bigInteger('city_id')->unsigned()->nullable(); 
+            // $table->foreign('city_id')->references('id')->on('city')->onDelete('cascade');
             $table->timestamps();
-            // $table->bigInteger('team_id')->unsigned(); 
+            // $table->bigInteger('team_id')->unsigned();
             // $table->foreign('team_id')->references('id')->on('teams')->onDelete('cascade');
         });
     }

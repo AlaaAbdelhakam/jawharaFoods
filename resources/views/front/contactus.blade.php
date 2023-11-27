@@ -190,9 +190,11 @@ height: 100% !important; */
                     </div>
 
                     <iframe class="w-100 rounded"
-                        src="https://maps.google.com/maps?q=Asharqeya&t=&z=10&ie=UTF8&iwloc=&output=embed"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3454.942805631199!2d31.465332523916544!3d30.00979862021051!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1458238638bdc52d%3A0xbaecf0ef02e48a1!2s5th%20settlement!5e0!3m2!1sar!2seg!4v1701065978218!5m2!1sar!2seg"
                         frameborder="0" style="min-height: 300px; border:0;" allowfullscreen="" aria-hidden="false"
                         tabindex="0"></iframe>
+
+                        {{-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3454.942805631199!2d31.465332523916544!3d30.00979862021051!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1458238638bdc52d%3A0xbaecf0ef02e48a1!2s5th%20settlement!5e0!3m2!1sar!2seg!4v1701065978218!5m2!1sar!2seg" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> --}}
                 </div>
              </div>
             </div>
