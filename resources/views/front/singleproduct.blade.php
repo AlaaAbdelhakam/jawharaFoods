@@ -645,12 +645,10 @@ height: 100% !important; */
 
 
                                 <br>
-                                <div class="qoutation">
-
-                                <a href="https://api.whatsapp.com/send?phone=201090685674" target="_blank"
-                                    class="btn-base btn-primary shadow-0 p-3 "> Ask For Quotation </a>
-                                <!-- <a href="#" class="btn btn-light border border-secondary py-2 icon-hover px-3"> <i class="me-1 fa fa-heart fa-lg"></i> Save </a> -->
-                            </div>
+                                <div class="qoutation ">
+                                    <a href="https://api.whatsapp.com/send?phone=201090685674" target="_blank"
+                                        class="btn-base btn-primary shadow-0 p-3"> Ask For Quotation <span><i class="fab fa-whatsapp m-1" style="font-size:x-large;"></i></span></a>
+                                    </div>
                             </div>
                         </main>
                     </div>
@@ -815,12 +813,10 @@ height: 100% !important; */
 
 
                                 <br>
-                                <div class="qoutation">
-
-                                <a href="https://api.whatsapp.com/send?phone=201090685674" target="_blank"
-                                    class="btn-base btn-primary shadow-0 p-3 "> Ask For Quotation </a>
-                                <!-- <a href="#" class="btn btn-light border border-secondary py-2 icon-hover px-3"> <i class="me-1 fa fa-heart fa-lg"></i> Save </a> -->
-                            </div>
+                                <div class="qoutation ">
+                                    <a href="https://api.whatsapp.com/send?phone=201090685674" target="_blank"
+                                        class="btn-base btn-primary shadow-0 p-3"> Ask For Quotation <span><i class="fab fa-whatsapp m-1" style="font-size:x-large;"></i></span></a>
+                                    </div>
                             </div>
                         </main>
                     </div>
@@ -984,12 +980,10 @@ height: 100% !important; */
 
 
                                 <br>
-                                <div class="qoutation">
-
-                                <a href="https://api.whatsapp.com/send?phone=201090685674" target="_blank"
-                                    class="btn-base btn-primary shadow-0 p-3 "> Ask For Quotation </a>
-
-                                </div>
+                                <div class="qoutation ">
+                                    <a href="https://api.whatsapp.com/send?phone=201090685674" target="_blank"
+                                        class="btn-base btn-primary shadow-0 p-3"> Ask For Quotation <span><i class="fab fa-whatsapp m-1" style="font-size:x-large;"></i></span></a>
+                                    </div>
                                 </div>
                         </main>
                     </div>
@@ -1148,12 +1142,10 @@ height: 100% !important; */
 
 
                                 <br>
-                                <div class="qoutation">
-
-                                <a href="https://api.whatsapp.com/send?phone=201090685674" target="_blank"
-                                    class="btn-base btn-primary shadow-0 p-3 "> Ask For Quotation </a>
-                                <!-- <a href="#" class="btn btn-light border border-secondary py-2 icon-hover px-3"> <i class="me-1 fa fa-heart fa-lg"></i> Save </a> -->
-                            </div>
+                                <div class="qoutation ">
+                                    <a href="https://api.whatsapp.com/send?phone=201090685674" target="_blank"
+                                        class="btn-base btn-primary shadow-0 p-3"> Ask For Quotation <span><i class="fab fa-whatsapp m-1" style="font-size:x-large;"></i></span></a>
+                                    </div>
                             </div>
                         </main>
                     </div>
@@ -1310,12 +1302,10 @@ height: 100% !important; */
                                 </div>
 
                                 <br>
-                                <div class="qoutation">
-
-                                <a href="https://api.whatsapp.com/send?phone=201090685674" target="_blank"
-                                    class="btn-base btn-primary shadow-0 p-3 "> Ask For Quotation </a>
-                                <!-- <a href="#" class="btn btn-light border border-secondary py-2 icon-hover px-3"> <i class="me-1 fa fa-heart fa-lg"></i> Save </a> -->
-                                </div>
+                                <div class="qoutation ">
+                                    <a href="https://api.whatsapp.com/send?phone=201090685674" target="_blank"
+                                        class="btn-base btn-primary shadow-0 p-3"> Ask For Quotation <span><i class="fab fa-whatsapp m-1" style="font-size:x-large;"></i></span></a>
+                                    </div>
                             </div>
                         </main>
                     </div>
@@ -1473,9 +1463,9 @@ height: 100% !important; */
                                 </div>
 
                                 <br>
-                                <div class="qoutation">
+                                <div class="qoutation ">
                                 <a href="https://api.whatsapp.com/send?phone=201090685674" target="_blank"
-                                    class="btn-base btn-primary shadow-0 p-3 "> Ask For Quotation </a>
+                                    class="btn-base btn-primary shadow-0 p-3"> Ask For Quotation <span><i class="fab fa-whatsapp m-1" style="font-size:x-large;"></i></span></a>
                                 </div>
                                 <!-- <a href="#" class="btn btn-light border border-secondary py-2 icon-hover px-3"> <i class="me-1 fa fa-heart fa-lg"></i> Save </a> -->
                             </div>
